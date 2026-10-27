@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Line Six is the Calderford light-rail line from Eastgate to Calderbank. Eight stops, trams every eight minutes, and live-looking departures.">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Line Six — Calderford Transit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top">
+      <span class="brand__badge" aria-hidden="true">6</span>
+      <span class="brand__name">Line Six</span>
+      <span class="brand__sub">Calderford Transit</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#route">Route</a>
+      <a href="#status">Status</a>
+      <a href="#fares">Fares</a>
+      <a href="#access">Access</a>
+    </nav>
+    <p class="top__meta"><time id="clock" datetime="">08:42:07</time><br>Local time</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker"><span aria-hidden="true"></span> Light rail / Eastgate—Calderbank</p>
+        <h1 id="hero-title">Line Six</h1>
+        <p class="hero__sub">Eastgate to Calderbank / 22 minutes end to end.</p>
+        <p class="lede">
+          Eight stops through the middle of Calderford, from the bus station at
+          Eastgate to the park-and-ride at Calderbank. Trams every eight minutes
+          at peak and twelve off-peak, until 23:30, with a night service on
+          Fridays and Saturdays.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#route">See the route <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#status">Check service status <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Stops</dt><dd>08</dd></div>
+          <div><dt>End to end</dt><dd>22 min</dd></div>
+          <div><dt>Peak frequency</dt><dd>8 min</dd></div>
+        </dl>
+      </div>
+
+      <figure class="board" aria-labelledby="board-title">
+        <div class="board__head">
+          <span id="board-title">Departures / <span id="board-stop">Eastgate</span></span>
+          <span class="board__live"><i aria-hidden="true"></i> Live</span>
+        </div>
+
+        <div class="board__controls">
+          <div class="board__directions" role="group" aria-label="Direction">
+            <button class="is-active" type="button" data-dir="out" aria-pressed="true">→ Calderbank</button>
+            <button type="button" data-dir="in" aria-pressed="false">→ Eastgate</button>
+          </div>
+          <div class="board__select">
+            <label for="board-stop-select">Boarding at</label>
+            <select id="board-stop-select">
+              <option>Eastgate</option>
+              <option>St Anne's</option>
+              <option>Corn Exchange</option>
+              <option>Victoria Bridge</option>
+              <option>Northgate</option>
+              <option>Saltworks</option>
+              <option>Bramble Hill</option>
+              <option>Calderbank</option>
+            </select>
+          </div>
+        </div>
+
+        <table class="board__table">
+          <caption class="visually-hidden" id="board-caption">Next departures from Eastgate towards Calderbank.</caption>
+          <thead>
+            <tr>
+              <th scope="col">Time</th>
+              <th scope="col">To</th>
+              <th scope="col">Platform</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="board-body">
+            <tr><td>08:46</td><td>Calderbank</td><td>1</td><td>4 min</td></tr>
+            <tr><td>08:54</td><td>Calderbank</td><td>1</td><td>On time</td></tr>
+            <tr><td>09:02</td><td>Calderbank</td><td>1</td><td>On time</td></tr>
+            <tr><td>09:10</td><td>Calderbank</td><td>1</td><td>On time</td></tr>
+          </tbody>
+        </table>
+
+        <figcaption class="board__foot">
+          <span>Times refresh every 30 seconds.</span>
+          <span id="board-note">Signal testing at Victoria Bridge</span>
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="route-section" id="route" aria-labelledby="route-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Route</p>
+          <h2 id="route-title">Eight stops, one line.</h2>
+        </div>
+        <p class="section-note">
+          Zone 1 is the city centre. Zone 2 starts at Northgate. Zone 3 is the
+          park-and-ride and everything after it. The whole line takes 22 minutes
+          end to end, which is nine minutes faster than the 44 bus.
+        </p>
+      </header>
+
+      <ol class="route">
+        <li class="route__stop">
+          <span class="route__num">01</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Eastgate</h3>
+          <p class="route__meta">Zone 1 · Bus interchange</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">02</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>St Anne's</h3>
+          <p class="route__meta">Zone 1 · Step-free</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">03</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Corn Exchange</h3>
+          <p class="route__meta">Zone 1 · Step-free</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">04</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Victoria Bridge</h3>
+          <p class="route__meta">Zone 1 · 14 steps</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">05</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Northgate</h3>
+          <p class="route__meta">Zone 2 · Lift to platform 2</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">06</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Saltworks</h3>
+          <p class="route__meta">Zone 2 · Step-free</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">07</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Bramble Hill</h3>
+          <p class="route__meta">Zone 3 · Step-free</p>
+        </li>
+        <li class="route__stop">
+          <span class="route__num">08</span>
+          <span class="route__dot" aria-hidden="true"></span>
+          <h3>Calderbank</h3>
+          <p class="route__meta">Zone 3 · Park &amp; ride</p>
+        </li>
+      </ol>
+
+      <dl class="route__facts">
+        <div><dt>First tram</dt><dd>05:40</dd></div>
+        <div><dt>Last tram</dt><dd>23:30</dd></div>
+        <div><dt>Off-peak</dt><dd>12 min</dd></div>
+        <div><dt>Night service</dt><dd>Fri—Sat</dd></div>
+      </dl>
+    </section>
+
+    <section class="status-section" id="status" aria-labelledby="status-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">02 / Status</p>
+          <h2 id="status-title">This morning.</h2>
+        </div>
+        <p class="section-note">
+          Last updated 08:42, Thursday 12 February. Status is written by the
+          control room, not by a timetable.
+        </p>
+      </header>
+
+      <div class="status-board">
+        <div class="status-board__head">
+          <span>Line Six / whole line</span>
+          <span>Good service overall</span>
+        </div>
+        <ul class="status-list">
+          <li>
+            <div>
+              <h3>Eastgate — Corn Exchange</h3>
+              <p>A tram every eight minutes in each direction. No reported issues.</p>
+            </div>
+            <span class="chip chip--good">Good service</span>
+          </li>
+          <li>
+            <div>
+              <h3>Corn Exchange — Northgate</h3>
+              <p>Signal testing at Victoria Bridge. Allow 6—8 minutes extra.</p>
+            </div>
+            <span class="chip chip--minor">Minor delays</span>
+          </li>
+          <li>
+            <div>
+              <h3>Northgate — Calderbank</h3>
+              <p>Normal service. The park-and-ride is filling after 09:00.</p>
+            </div>
+            <span class="chip chip--good">Good service</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="works">
+        <h3>Planned works</h3>
+        <ul>
+          <li>
+            <span>Sat 21 — Sun 22 Feb</span>
+            <p>No trams between Northgate and Saltworks. Replacement bus 6A from Northgate stand C, every 15 minutes.</p>
+          </li>
+          <li>
+            <span>Mon—Wed, 23:30—05:00, until 6 Mar</span>
+            <p>Engineering work at Bramble Hill. Trams terminate at Saltworks; the last through service leaves Eastgate at 22:50.</p>
+          </li>
+          <li>
+            <span>Sun 8 Mar, all day</span>
+            <p>Calderbank park-and-ride closed for resurfacing. Use Bramble Hill, 400 spaces, four minutes by tram.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="fares" id="fares" aria-labelledby="fares-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">03 / Fares</p>
+          <h2 id="fares-title">Three zones. No surprises.</h2>
+        </div>
+        <p class="section-note section-note--light">
+          Buy at the platform machine, tap a contactless card at the gate, or use
+          the app. The fare is the same either way. Cash is not accepted on board.
+        </p>
+      </header>
+
+      <div class="zones">
+        <div>
+          <span>Zone 1</span>
+          <strong>Eastgate — Victoria Bridge</strong>
+          <p>Four stops in the city centre.</p>
+        </div>
+        <div>
+          <span>Zone 2</span>
+          <strong>Northgate — Saltworks</strong>
+          <p>Two stops, including the hospital.</p>
+        </div>
+        <div>
+          <span>Zone 3</span>
+          <strong>Bramble Hill — Calderbank</strong>
+          <p>The park-and-ride and the ring road.</p>
+        </div>
+      </div>
+
+      <div class="fare-table">
+        <table>
+          <caption>Fares from 1 January 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col">Fare</th>
+              <th scope="col">Zone 1</th>
+              <th scope="col">Zone 2</th>
+              <th scope="col">Zone 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Single</th><td>£2.10</td><td>£2.80</td><td>£3.40</td></tr>
+            <tr><th scope="row">Day</th><td>£4.20</td><td>£5.60</td><td>£6.80</td></tr>
+            <tr><th scope="row">Week</th><td>£17.00</td><td>£23.00</td><td>£28.00</td></tr>
+            <tr><th scope="row">Month</th><td>£58.00</td><td>£74.00</td><td>£89.00</td></tr>
+          </tbody>
+        </table>
+        <p class="fares__note">
+          Under 18s pay half. Under 11s travel free with a fare-paying adult, up
+          to two children. Contactless taps cap at the day fare. A weekly season
+          bought before 10:00 on Monday includes the night service.
+        </p>
+      </div>
+    </section>
+
+    <section class="access" id="access" aria-labelledby="access-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">04 / Access</p>
+          <h2 id="access-title">Getting on and off.</h2>
+        </div>
+        <p class="section-note">
+          The line was built in 1998, which means some platforms are easier than
+          others. We would rather tell you which ones than pretend otherwise.
+        </p>
+      </header>
+
+      <div class="access__grid">
+        <div>
+          <h3>Step-free from street to platform</h3>
+          <ul class="access-list">
+            <li><strong>Eastgate</strong><span>Lift to the bus station and the market.</span></li>
+            <li><strong>St Anne's</strong><span>Ramp, 1:12, from St Anne's Street.</span></li>
+            <li><strong>Corn Exchange</strong><span>Level entrance from the square.</span></li>
+            <li><strong>Saltworks</strong><span>Lift to both platforms.</span></li>
+            <li><strong>Bramble Hill</strong><span>Ramp to platform 1 only; platform 2 is 40 m along the footpath.</span></li>
+            <li><strong>Calderbank</strong><span>Level entrance from the car park.</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>On board</h3>
+          <ul class="access-list access-list--plain">
+            <li><strong>Space</strong><span>Two wheelchair spaces per tram, with a 75 mm gap at the door.</span></li>
+            <li><strong>Announcements</strong><span>Audio next-stop announcements and visual displays on every tram.</span></li>
+            <li><strong>Dogs and bikes</strong><span>Assistance dogs travel free. Folded bikes are welcome outside 07:30—09:30 and 16:30—18:30.</span></li>
+            <li><strong>If a lift fails</strong><span>Staff will arrange a taxi to the next step-free stop. Ask at the gate; you will not be charged.</span></li>
+          </ul>
+          <p class="access__help">
+            Travel helpline <a href="tel:+443000000606">0300 000 0606</a>, 07:00—20:00 daily. Text relay 18001.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alerts" id="alerts" aria-labelledby="alerts-title">
+      <div class="alerts__copy">
+        <p class="section-label section-label--yellow">05 / Alerts</p>
+        <h2 id="alerts-title">Service alerts, by stop.</h2>
+        <p>
+          One email when something changes on the part of the line you actually
+          use. No marketing, no weekly digest, no survey about your journey.
+        </p>
+        <p class="alerts__note">
+          Alerts go out within ten minutes of a change. Unsubscribe in one
+          click, at the bottom of every message.
+        </p>
+      </div>
+
+      <form class="alerts__form" id="alerts-form" novalidate>
+        <div class="field field--wide">
+          <label for="alerts-email">Email</label>
+          <input id="alerts-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="alerts-stop">Which stop?</label>
+          <select id="alerts-stop" name="stop">
+            <option>Eastgate</option>
+            <option>St Anne's</option>
+            <option>Corn Exchange</option>
+            <option>Victoria Bridge</option>
+            <option>Northgate</option>
+            <option>Saltworks</option>
+            <option>Bramble Hill</option>
+            <option>Calderbank</option>
+            <option>The whole line</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="alerts-time">When do you travel?</label>
+          <select id="alerts-time" name="time">
+            <option>Weekday mornings</option>
+            <option>Weekday evenings</option>
+            <option>Weekends</option>
+            <option>Every day</option>
+          </select>
+        </div>
+        <button type="submit">Sign up for alerts</button>
+        <p class="form__status" id="alerts-status" role="status">One email when something changes. Nothing else.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Line Six / Calderford Transit</span>
+    <span>Every 8—12 minutes, 05:40—23:30</span>
+    <span>Civic / Transit</span>
+    <a href="../../index.html">HTM / Designs ↗</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
