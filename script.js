@@ -41,6 +41,9 @@ const designs = [
   { folder: "40-lane-four", title: "Lane Four", cat: "sport", tags: "Sport · Swim club", accent: "#0e5a7a" },
   { folder: "41-cadence", title: "Cadence", cat: "sport", tags: "Sport · Cycling club", accent: "#ff5a1f" },
   { folder: "42-southpaw", title: "Southpaw", cat: "sport", tags: "Sport · Boxing gym", accent: "#7a1f1f" },
+  { folder: "43-borrow", title: "Borrow", cat: "civic", tags: "Civic · Library", accent: "#1f5a45" },
+  { folder: "44-line-six", title: "Line Six", cat: "civic", tags: "Civic · Transit", accent: "#174a9c" },
+  { folder: "45-the-register", title: "The Register", cat: "civic", tags: "Civic · Archive", accent: "#123a2c" },
 ];
 
 const catalog = document.querySelector("#catalog");

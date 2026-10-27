@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Register is the municipal archive for Leeds: parish records, maps, photographs, and council minutes, with a searchable index and a reading room on Cinder Lane.">
+  <meta name="theme-color" content="#f1e9d7">
+  <title>The Register — Leeds Municipal Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top">
+      <span class="brand__name">The Register</span>
+      <span class="brand__sub">Leeds Municipal Archive</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#collections">Collections</a>
+      <a href="#visit">Visit</a>
+      <a href="#request">Request</a>
+    </nav>
+    <p class="top__meta">41 Cinder Lane, Leeds<br>LS2 7BQ</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__rule">
+        <span>Leeds Municipal Archive</span>
+        <span>Founded 1897</span>
+        <span>Open Tuesday—Saturday</span>
+      </p>
+
+      <svg class="seal" viewBox="0 0 100 100" role="img" aria-label="The Register seal, founded 1897">
+        <circle cx="50" cy="50" r="47" fill="none" stroke="#b39055" stroke-width="1.5"/>
+        <circle cx="50" cy="50" r="36" fill="none" stroke="#b39055" stroke-width=".8"/>
+        <defs>
+          <path id="seal-top" d="M 14 50 A 36 36 0 0 1 86 50"/>
+          <path id="seal-bottom" d="M 18 50 A 32 32 0 0 0 82 50"/>
+        </defs>
+        <text font-family="'IBM Plex Mono', monospace" font-size="6.5" letter-spacing=".9" fill="#123a2c">
+          <textPath href="#seal-top" startOffset="50%" text-anchor="middle">THE REGISTER · LEEDS</textPath>
+        </text>
+        <text font-family="'IBM Plex Mono', monospace" font-size="5.5" letter-spacing=".8" fill="#a44a29">
+          <textPath href="#seal-bottom" startOffset="50%" text-anchor="middle">MUNICIPAL ARCHIVE</textPath>
+        </text>
+        <g stroke="#123a2c" stroke-width="1.4" fill="none">
+          <path d="M40 42 h20 M40 46 h20 M44 42 v16 M50 42 v16 M56 42 v16 M38 58 h24"/>
+        </g>
+        <text x="50" y="74" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="5" letter-spacing="1" fill="#123a2c">1897</text>
+      </svg>
+
+      <h1 id="hero-title">The <em>Register</em></h1>
+      <p class="lede">
+        The city's paper memory: parish registers, council minutes, maps,
+        photographs, and the small administrative facts that turn out to matter.
+        Open to anyone with a reader's ticket and a reason, however modest.
+      </p>
+      <dl class="hero__facts">
+        <div><dt>Shelving</dt><dd>3.2 miles</dd></div>
+        <div><dt>Catalogued items</dt><dd>41,800</dd></div>
+        <div><dt>Reading rooms</dt><dd>2</dd></div>
+        <div><dt>Readers a year</dt><dd>6,200</dd></div>
+      </dl>
+    </section>
+
+    <section class="collections" id="collections" aria-labelledby="collections-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Collections</p>
+          <h2 id="collections-title">The index.</h2>
+        </div>
+        <p class="section-note">
+          A selection from the catalogue. Reference codes are the ones you write
+          on the request slip. Anything marked "conservation review" needs two
+          working days before it can be produced.
+        </p>
+      </header>
+
+      <div class="controls">
+        <div class="search">
+          <label for="index-search">Search the collection</label>
+          <input id="index-search" name="q" type="search" placeholder="Place, subject, or reference code" autocomplete="off">
+        </div>
+        <div class="filters" role="group" aria-label="Filter by record type">
+          <button class="is-active" type="button" data-cat="all" aria-pressed="true">All</button>
+          <button type="button" data-cat="parish" aria-pressed="false">Parish records</button>
+          <button type="button" data-cat="maps" aria-pressed="false">Maps</button>
+          <button type="button" data-cat="photographs" aria-pressed="false">Photographs</button>
+          <button type="button" data-cat="minutes" aria-pressed="false">Council minutes</button>
+        </div>
+      </div>
+
+      <table class="index-table">
+        <caption class="visually-hidden">Selected records held by The Register</caption>
+        <thead>
+          <tr>
+            <th scope="col">Reference</th>
+            <th scope="col">Description</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Access</th>
+          </tr>
+        </thead>
+        <tbody id="index-body">
+          <tr data-cat="parish">
+            <td class="ref">LC/PR/STP/01</td>
+            <td class="desc">St Peter's parish register: baptisms, marriages, and burials</td>
+            <td class="dates" data-label="Dates">1689—1812</td>
+            <td class="access"><span class="chip chip--open">Open</span></td>
+          </tr>
+          <tr data-cat="maps">
+            <td class="ref">LC/MP/HOL/07</td>
+            <td class="desc">Holbeck tithe map and apportionment</td>
+            <td class="dates" data-label="Dates">1841</td>
+            <td class="access"><span class="chip chip--open">Open</span></td>
+          </tr>
+          <tr data-cat="maps">
+            <td class="ref">LC/MP/KIR/03</td>
+            <td class="desc">Insurance plan of the Kirkgate ward, six linen sheets</td>
+            <td class="dates" data-label="Dates">1893, revised 1904</td>
+            <td class="access"><span class="chip chip--open">Open</span></td>
+          </tr>
+          <tr data-cat="maps">
+            <td class="ref">LC/MP/ARM/12</td>
+            <td class="desc">Armley mills: drainage, roof, and floor plans</td>
+            <td class="dates" data-label="Dates">1911—1934</td>
+            <td class="access"><span class="chip chip--ticket">Reader's ticket</span></td>
+          </tr>
+          <tr data-cat="photographs">
+            <td class="ref">LC/PH/HUN/11</td>
+            <td class="desc">Hunslet streets, glass plate negatives, 212 plates</td>
+            <td class="dates" data-label="Dates">c. 1911—1926</td>
+            <td class="access"><span class="chip chip--open">Open</span></td>
+          </tr>
+          <tr data-cat="photographs">
+            <td class="ref">LC/PH/WEL/04</td>
+            <td class="desc">Wellington Street clearance photographs, 86 prints</td>
+            <td class="dates" data-label="Dates">1967</td>
+            <td class="access"><span class="chip chip--review">Conservation review</span></td>
+          </tr>
+          <tr data-cat="minutes">
+            <td class="ref">LC/CM/1947</td>
+            <td class="desc">Council minutes, full board, nine volumes</td>
+            <td class="dates" data-label="Dates">1947—1951</td>
+            <td class="access"><span class="chip chip--open">Open</span></td>
+          </tr>
+          <tr data-cat="minutes">
+            <td class="ref">LC/CM/TRM/02</td>
+            <td class="desc">Tramway committee letter book, fragile binding</td>
+            <td class="dates" data-label="Dates">1896—1902</td>
+            <td class="access"><span class="chip chip--review">Conservation review</span></td>
+          </tr>
+          <tr data-cat="minutes">
+            <td class="ref">LC/CM/AID/09</td>
+            <td class="desc">St Aidan's Hospital: admissions register, four ledgers</td>
+            <td class="dates" data-label="Dates">1901—1904</td>
+            <td class="access"><span class="chip chip--ticket">Reader's ticket</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="index__foot">
+        <p id="index-count" role="status">Showing 9 of 9 records</p>
+        <p id="index-empty" hidden>No records match that. Try a place name, a reference code, or a shorter word.</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">02 / Visit</p>
+          <h2 id="visit-title">In the reading room.</h2>
+        </div>
+        <p class="section-note section-note--light">
+          Bring a pencil. We will lend you one if you forget, but the rule is
+          older than either of us.
+        </p>
+      </header>
+
+      <div class="visit__grid">
+        <div>
+          <span>Address</span>
+          <p>41 Cinder Lane<br>Leeds LS2 7BQ</p>
+          <p class="small">Five minutes from the bus station, on the canal side.</p>
+        </div>
+        <div>
+          <span>Hours</span>
+          <p>Tue—Fri 10:00—16:30<br>Sat 10:00—13:00<br>Sun—Mon closed</p>
+          <p class="small">Late opening by appointment, Thursdays until 19:00.</p>
+        </div>
+        <div>
+          <span>Reader's ticket</span>
+          <p>Free. Bring photo ID and proof of address. We issue it while you wait, usually under ten minutes.</p>
+          <p class="small">Under 16s need an adult with them in the reading room.</p>
+        </div>
+      </div>
+
+      <div class="visit__rules">
+        <div>
+          <span>Lockers</span>
+          <p>£1 coin, returned. Bags larger than a sheet of A3 stay at the desk.</p>
+        </div>
+        <div>
+          <span>Pencils only</span>
+          <p>No ink in the reading room. Laptops and cameras without flash are fine.</p>
+        </div>
+        <div>
+          <span>Ordering</span>
+          <p>Items from the strongroom need 24 hours. Order by 16:00 for same-day reading.</p>
+        </div>
+        <div>
+          <span>Step-free</span>
+          <p>Entrance on Cinder Lane, lift to the second floor. Assistance dogs welcome.</p>
+        </div>
+      </div>
+
+      <p class="visit__contact">
+        Questions before you visit:
+        <a href="mailto:records@the-register.example">records@the-register.example</a> ·
+        <a href="tel:+441130000189">0113 000 0189</a>
+      </p>
+    </section>
+
+    <section class="request" id="request" aria-labelledby="request-title">
+      <div class="request__copy">
+        <p class="section-label">03 / Request</p>
+        <h2 id="request-title">Ask for a record.</h2>
+        <p>
+          Give us the reference code if you have it. If you do not, describe what
+          you are looking for and we will search the index for you. We answer
+          within three working days.
+        </p>
+        <p class="request__note">
+          Photocopies 15p per sheet. Scans £4 per item. We do not copy anything
+          fragile, and we do not guess at dates.
+        </p>
+      </div>
+
+      <form class="request__form" id="request-form" novalidate>
+        <p class="request__form-head">
+          <span>Record request / Form 4</span>
+          <span>Office use only</span>
+        </p>
+        <div class="field">
+          <label for="request-name">Name</label>
+          <input id="request-name" name="name" type="text" autocomplete="name" placeholder="Josie Hartley" required>
+        </div>
+        <div class="field">
+          <label for="request-email">Email</label>
+          <input id="request-email" name="email" type="email" autocomplete="email" placeholder="josie@example.com" required>
+        </div>
+        <div class="field">
+          <label for="request-ref">Reference code <span class="optional">(if known)</span></label>
+          <input id="request-ref" name="reference" type="text" placeholder="LC/PH/HUN/11">
+        </div>
+        <div class="field">
+          <label for="request-date">When do you plan to visit?</label>
+          <select id="request-date" name="visit">
+            <option>This week</option>
+            <option>Next week</option>
+            <option>This month</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field field--wide">
+          <label for="request-notes">What are you researching?</label>
+          <textarea id="request-notes" name="notes" rows="4" placeholder="A street, a name, a year, or a question you cannot answer anywhere else." required></textarea>
+        </div>
+        <button type="submit">Send request</button>
+        <p class="form__status" id="request-status" role="status">We reply within three working days, usually sooner.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>The Register / Leeds Municipal Archive</span>
+    <span>53.7960° N / 1.5390° W</span>
+    <span>Civic / Archive</span>
+    <a href="../../index.html">HTM / Designs ↗</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

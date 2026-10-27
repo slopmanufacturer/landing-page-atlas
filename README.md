@@ -1,13 +1,13 @@
 # Landing Page Atlas
 
-**42 hand-built landing pages. Seven families. Plain HTML, CSS, and JavaScript.**
+**45 hand-built landing pages. Eight families. Plain HTML, CSS, and JavaScript.**
 
 [![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://slopmanufacturer.github.io/landing-page-atlas/)
 [![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/slopmanufacturer/landing-page-atlas/generate)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7d5b46?style=flat-square)](LICENSE)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-e8ff00?style=flat-square)](#)
 
-[![HTM / Designs — forty-two hand-built landing pages](assets/og.png)](https://slopmanufacturer.github.io/landing-page-atlas/)
+[![HTM / Designs — forty-five hand-built landing pages](assets/og.png)](https://slopmanufacturer.github.io/landing-page-atlas/)
 
 **Live site:** <https://slopmanufacturer.github.io/landing-page-atlas/>
 
@@ -36,7 +36,7 @@ Then open <http://localhost:8000>.
 
 ## The catalogue
 
-Seven families, six pages each. They share a mood, not a stylesheet.
+Eight families, forty-five pages. They share a mood, not a stylesheet.
 
 | Family | Temperament | Pages |
 |--------|-------------|-------|
@@ -47,9 +47,10 @@ Seven families, six pages each. They share a mood, not a stylesheet.
 | **Minimal** | Ceramics, tea, quiet rooms. Few elements, soft palettes, a lot of air. | 6 |
 | **Industrial** | Tools, audio, hardware. Stencil type, hazard yellow, exposed structure. | 6 |
 | **Sport** | Clubs, teams, gyms. Big type, hard schedules, motion. | 6 |
+| **Civic** | Public institutions. Library cards, departure boards, archive indexes. | 3 |
 
 <details>
-<summary><strong>All 42 pages</strong></summary>
+<summary><strong>All 45 pages</strong></summary>
 
 ### Editorial
 
@@ -114,12 +115,18 @@ Seven families, six pages each. They share a mood, not a stylesheet.
 - [Cadence](designs/41-cadence/index.html) — cycling club, Girona
 - [Southpaw](designs/42-southpaw/index.html) — boxing club, Liverpool
 
+### Civic
+
+- [Borrow](designs/43-borrow/index.html) — public library, Ancoats
+- [Line Six](designs/44-line-six/index.html) — light-rail line, Calderford
+- [The Register](designs/45-the-register/index.html) — municipal archive, Leeds
+
 </details>
 
 ## What you get
 
-- 42 complete landing pages, each with its own layout, type, palette, and interaction.
-- Seven distinct directions: newspaper, satellite console, perfume house, riso festival, tea room, synth datasheet, and a climbing gym.
+- 45 complete landing pages, each with its own layout, type, palette, and interaction.
+- Eight distinct directions: newspaper, satellite console, perfume house, riso festival, tea room, synth datasheet, climbing gym, and a public library.
 - No frameworks, bundlers, analytics, cookies, or third-party scripts.
 - Responsive layouts tested at 1440, 768, 390, and 320 px.
 - Keyboard-operable controls, labelled forms, and `prefers-reduced-motion` support.
@@ -161,15 +168,15 @@ python3 -m pip install selenium
 python3 tools/check_designs.py --browser
 ```
 
-It loads the gallery and all 42 pages at 1440, 768, 390, and 320 px, checks
+It loads the gallery and all 45 pages at 1440, 768, 390, and 320 px, checks
 for horizontal overflow and JavaScript errors, and confirms the gallery
 filters.
 
-## Why 42?
+## Why 45?
 
-Seven families with six different problems is a better test of range than six
-pages that all look the same. The brief for each page was different. The only
-shared rule was that nothing should look like a template.
+Seven families of six pages, plus a three-page Civic family. Each page was
+given a different brief. The only shared rule was that nothing should look
+like a template.
 
 ## Structure
 
@@ -181,11 +188,11 @@ shared rule was that nothing should look like a template.
 ├── assets/
 │   ├── favicon.svg
 │   ├── og.png              # Social preview
-│   └── thumbs/             # 42 gallery screenshots
+│   └── thumbs/             # 45 gallery screenshots
 ├── designs/
 │   ├── 01-atelier-nord/
 │   ├── ...
-│   └── 42-southpaw/
+│   └── 45-the-register/
 ├── tools/
 │   └── check_designs.py    # Static and browser checks
 ├── AGENTS.md               # How to use or add a design
