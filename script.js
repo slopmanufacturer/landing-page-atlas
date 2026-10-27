@@ -47,15 +47,18 @@ if (catalog) {
   catalog.innerHTML = designs
     .map((design, index) => {
       const num = String(index + 1).padStart(2, "0");
-      return `<a class="card" href="designs/${design.folder}/index.html" data-category="${design.cat}" style="--accent: ${design.accent}">
-        <div class="card__art"><img src="assets/thumbs/${design.folder}.webp" alt="Screenshot of the ${design.title} landing page" loading="lazy" width="720" height="540"></div>
-        <div class="card__meta">
-          <span class="card__num">${num}</span>
-          <h2>${design.title}</h2>
-          <span class="card__tags">${design.tags}</span>
-          <span class="card__arrow" aria-hidden="true">↗</span>
-        </div>
-      </a>`;
+      return `<article class="card" data-category="${design.cat}" style="--accent: ${design.accent}">
+        <a class="card__link" href="designs/${design.folder}/index.html">
+          <div class="card__art"><img src="assets/thumbs/${design.folder}.webp" alt="Screenshot of the ${design.title} landing page" loading="lazy" width="720" height="540"></div>
+          <div class="card__meta">
+            <span class="card__num">${num}</span>
+            <h2>${design.title}</h2>
+            <span class="card__tags">${design.tags}</span>
+            <span class="card__arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <button class="card__copy" type="button" data-copy-src="designs/${design.folder}/index.html" aria-label="Copy the HTML source of ${design.title}">Copy HTML</button>
+      </article>`;
     })
     .join("");
 
@@ -95,36 +98,66 @@ if (catalog) {
   applyFilter("all", false);
 }
 
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    const area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    let copied = false;
+    try {
+      copied = document.execCommand("copy");
+    } finally {
+      area.remove();
+    }
+    return copied;
+  }
+}
+
+function flash(button, label) {
+  if (!button.dataset.label) button.dataset.label = button.textContent;
+  button.textContent = label;
+  button.classList.toggle("is-copied", label === "Copied");
+
+  clearTimeout(button._flash);
+  button._flash = setTimeout(() => {
+    button.textContent = button.dataset.label;
+    button.classList.remove("is-copied");
+  }, 1600);
+}
+
 const copyButton = document.querySelector("[data-copy]");
 
 if (copyButton) {
   copyButton.addEventListener("click", async () => {
-    const text = copyButton.dataset.copy || "";
-    let copied = false;
+    const copied = await copyText(copyButton.dataset.copy || "");
+    flash(copyButton, copied ? "Copied" : "Copy failed");
+  });
+}
 
+if (catalog) {
+  catalog.addEventListener("click", async (event) => {
+    const button = event.target.closest("[data-copy-src]");
+    if (!button) return;
+
+    event.preventDefault();
+    button.disabled = true;
     try {
-      await navigator.clipboard.writeText(text);
-      copied = true;
+      const response = await fetch(button.dataset.copySrc);
+      if (!response.ok) throw new Error(String(response.status));
+      const copied = await copyText(await response.text());
+      flash(button, copied ? "Copied" : "Copy failed");
     } catch {
-      const area = document.createElement("textarea");
-      area.value = text;
-      area.setAttribute("readonly", "");
-      area.style.position = "fixed";
-      area.style.opacity = "0";
-      document.body.appendChild(area);
-      area.select();
-      copied = document.execCommand("copy");
-      area.remove();
+      flash(button, "Copy failed");
+    } finally {
+      button.disabled = false;
     }
-
-    const original = copyButton.textContent;
-    copyButton.textContent = copied ? "Copied" : "Copy failed";
-    copyButton.classList.toggle("is-copied", copied);
-
-    setTimeout(() => {
-      copyButton.textContent = original;
-      copyButton.classList.remove("is-copied");
-    }, 1800);
   });
 }
 

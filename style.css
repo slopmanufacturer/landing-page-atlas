@@ -293,9 +293,14 @@ a {
 }
 
 .card {
+  position: relative;
   display: block;
   padding-top: 12px;
   border-top: 1px solid var(--ink);
+}
+
+.card__link {
+  display: block;
   text-decoration: none;
 }
 
@@ -363,6 +368,52 @@ a {
 
 .card:hover .card__arrow {
   transform: translate(4px, -4px);
+}
+
+.card__copy {
+  position: absolute;
+  top: 20px;
+  right: 8px;
+  z-index: 2;
+  padding: 6px 8px;
+  border: 1px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.card:hover .card__copy,
+.card__copy:focus-visible {
+  opacity: 1;
+}
+
+.card__copy:hover,
+.card__copy:focus-visible {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.card__copy.is-copied {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+  opacity: 1;
+}
+
+.card__copy:disabled {
+  cursor: default;
+}
+
+@media (hover: none) {
+  .card__copy {
+    opacity: 1;
+  }
 }
 
 /* ---------- shared art bits ---------- */
