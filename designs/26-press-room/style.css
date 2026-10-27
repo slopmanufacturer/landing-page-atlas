@@ -527,7 +527,7 @@ a { color: inherit; }
 @media (max-width: 480px) {
   .poster-stack { height: 380px; transform: scale(0.85); transform-origin: top left; }
   .poster { width: 220px; height: 290px; }
-  .poster--blue { left: 130px; }
+  .poster--blue { left: 100px; }
   .poster--yellow { left: 40px; }
 }
 

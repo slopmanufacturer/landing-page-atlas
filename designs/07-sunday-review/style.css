@@ -654,7 +654,9 @@ a {
   }
 
   .brand {
+    min-width: 0;
     font-size: clamp(1.9rem, 8vw, 2.8rem);
+    white-space: normal;
   }
 
   .issue {
