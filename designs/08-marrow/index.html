@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Marrow — an independent journal of fiction, essays, and poetry. Issue 08, Autumn 2026.">
+  <meta name="theme-color" content="#f1ece2">
+  <title>Marrow — Issue 08</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top">Marrow</a>
+    <p class="topbar__issue">Issue 08 — Autumn 2026</p>
+    <div class="topbar__actions">
+      <button class="light-toggle" type="button" id="light-toggle" aria-pressed="false">
+        <span class="light-toggle__dot" aria-hidden="true"></span>
+        Reading light
+      </button>
+      <a class="topbar__subscribe" href="#subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <span class="hero__vertical" aria-hidden="true">A journal of quiet things</span>
+
+      <div class="hero__copy">
+        <p class="kicker">Fiction / Essay / Poetry</p>
+        <h1 id="hero-title">The body remembers<br><em>what the season forgets.</em></h1>
+        <p class="lede">
+          Issue 08 is about the things we carry without noticing: a mother's
+          accent, a house we left, the smell of a coat in November.
+        </p>
+        <div class="hero__foot">
+          <span>With Ruth Okafor, Ilya Sokolov,<br>June Park, and C. M. Vane</span>
+          <a href="#issue">See the issue <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <aside class="poem-card" aria-label="Poem excerpt">
+        <p class="poem-card__label">From the issue / p. 9</p>
+        <h2>The Orchard,<br>November</h2>
+        <p class="poem-card__body">
+          The orchard keeps its own counsel.<br>
+          The apples fall where they like.<br>
+          My father calls the wind by name<br>
+          and the wind does not answer.
+        </p>
+        <p class="poem-card__byline">Ruth Okafor</p>
+      </aside>
+    </section>
+
+    <section class="issue" id="issue" aria-labelledby="issue-title">
+      <header class="issue__head">
+        <p class="section-label">In this issue</p>
+        <h2 id="issue-title">Four pieces.<br>No filler.</h2>
+        <p class="issue__note">
+          A poem about an orchard, an essay about two kitchens, a story about a
+          borrowed coat, and a long look at the weather inside.
+        </p>
+      </header>
+
+      <ol class="issue-list">
+        <li>
+          <span class="issue-list__num">01</span>
+          <div>
+            <h3>The Orchard, November</h3>
+            <p>Poem · Ruth Okafor</p>
+          </div>
+          <span class="issue-list__page">p. 9</span>
+          <span class="issue-list__arrow" aria-hidden="true">↗</span>
+        </li>
+        <li>
+          <span class="issue-list__num">02</span>
+          <div>
+            <h3>A house with two kitchens</h3>
+            <p>Essay · Ilya Sokolov</p>
+          </div>
+          <span class="issue-list__page">p. 17</span>
+          <span class="issue-list__arrow" aria-hidden="true">↗</span>
+        </li>
+        <li>
+          <span class="issue-list__num">03</span>
+          <div>
+            <h3>Notes on a borrowed coat</h3>
+            <p>Fiction · June Park</p>
+          </div>
+          <span class="issue-list__page">p. 28</span>
+          <span class="issue-list__arrow" aria-hidden="true">↗</span>
+        </li>
+        <li>
+          <span class="issue-list__num">04</span>
+          <div>
+            <h3>The weather inside</h3>
+            <p>Essay · C. M. Vane</p>
+          </div>
+          <span class="issue-list__page">p. 41</span>
+          <span class="issue-list__arrow" aria-hidden="true">↗</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="archive" aria-labelledby="archive-title">
+      <div class="archive__quote">
+        <p class="section-label section-label--light">From the archive</p>
+        <blockquote id="archive-title">
+          “The archive is not a museum. It is a conversation that keeps
+          happening without you.”
+        </blockquote>
+        <p class="archive__source">C. M. Vane, Issue 04</p>
+      </div>
+
+      <div class="archive__list">
+        <a href="#subscribe"><span>Issue 07</span><strong>The long way home</strong><em>Sold out</em></a>
+        <a href="#subscribe"><span>Issue 06</span><strong>Small weather</strong><em>Sold out</em></a>
+        <a href="#subscribe"><span>Issue 05</span><strong>The neighbour's tree</strong><em>Few left</em></a>
+        <a href="#subscribe"><span>Issue 04</span><strong>What we keep</strong><em>Few left</em></a>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe" aria-labelledby="subscribe-title">
+      <div>
+        <p class="section-label">Subscribe</p>
+        <h2 id="subscribe-title">Four issues<br>a year.</h2>
+      </div>
+      <div class="subscribe__copy">
+        <p>
+          No ads. No algorithms. Printed in Glasgow and posted flat. Four
+          issues a year, plus the occasional letter from the editor.
+        </p>
+        <p class="subscribe__price">£32 <span>/ year</span></p>
+      </div>
+      <form class="subscribe__form" id="subscribe-form" novalidate>
+        <label for="email">Email address</label>
+        <div class="subscribe__row">
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="subscribe__note" id="subscribe-note" role="status" aria-live="polite">
+          Cancel anytime. The first issue ships within a week.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Marrow / Issue 08</span>
+    <span>Glasgow, Scotland</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
