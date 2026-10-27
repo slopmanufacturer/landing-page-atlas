@@ -41,6 +41,7 @@ const catalog = document.querySelector("#catalog");
 const count = document.querySelector("#catalog-count");
 const filterButtons = Array.from(document.querySelectorAll(".filters [data-filter]"));
 const paletteLinks = Array.from(document.querySelectorAll(".palettes [data-filter]"));
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let activeFilter = "all";
 
 if (catalog) {
@@ -81,7 +82,11 @@ if (catalog) {
     });
 
     if (count) count.textContent = String(visible);
-    if (scroll) document.querySelector("#designs")?.scrollIntoView({ behavior: "smooth" });
+    if (scroll) {
+      document.querySelector("#designs")?.scrollIntoView({
+        behavior: reduceMotion.matches ? "auto" : "smooth",
+      });
+    }
   }
 
   filterButtons.forEach((button) => {

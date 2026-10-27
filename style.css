@@ -385,12 +385,17 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease,
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .card:hover .card__copy,
 .card__copy:focus-visible {
   opacity: 1;
+}
+
+.card:hover .card__copy {
+  transform: translateY(-4px);
 }
 
 .card__copy:hover,
@@ -400,9 +405,9 @@ a {
 }
 
 .card__copy.is-copied {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--ink);
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
   opacity: 1;
 }
 

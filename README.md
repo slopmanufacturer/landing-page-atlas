@@ -13,10 +13,12 @@
 
 This is a collection of landing pages you can actually open, read, copy, and change. Every page is a separate folder with its own HTML, CSS, and JavaScript. There is no build step, no package manager, and no shared stylesheet holding it all together.
 
+The live gallery is branded **HTM / Designs**. The repository is Landing Page Atlas.
+
 ## Start here
 
-- **Browse the catalogue:** [index.html](index.html) — filter by family, open any page.
-- **Read the FAQ:** [index.html#faq](index.html#faq) — build steps, reuse, licensing.
+- **Browse the catalogue:** [slopmanufacturer.github.io/landing-page-atlas](https://slopmanufacturer.github.io/landing-page-atlas/) — filter by family, open any page, copy the HTML from the card.
+- **Read the FAQ:** [the FAQ on the live site](https://slopmanufacturer.github.io/landing-page-atlas/#faq) — build steps, reuse, licensing.
 - **Use this template:** [github.com/slopmanufacturer/landing-page-atlas/generate](https://github.com/slopmanufacturer/landing-page-atlas/generate)
 - **Clone it:**
 

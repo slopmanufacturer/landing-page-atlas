@@ -6,7 +6,7 @@ keeps the catalogue balanced.
 
 ## What fits
 
-- A new family of six pages, numbered `37-…` through `42-…`.
+- A new family of six pages, numbered `37-…` and up, six folders in a row.
 - A fix to an existing page: a layout that breaks at 320 px, a control that is
   not keyboard-operable, a contrast problem.
 - A new thumbnail when a page changes enough to look different.
