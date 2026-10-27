@@ -35,6 +35,12 @@ const designs = [
   { folder: "34-bolt", title: "Bolt", cat: "industrial", tags: "Industrial · Hardware", accent: "#ff6a00" },
   { folder: "35-tape-deck", title: "Tape Deck", cat: "industrial", tags: "Industrial · Audio", accent: "#ff6b1a" },
   { folder: "36-foundry", title: "Foundry", cat: "industrial", tags: "Industrial · Type", accent: "#e23b2e" },
+  { folder: "37-crux", title: "Crux", cat: "sport", tags: "Sport · Bouldering", accent: "#f2c200" },
+  { folder: "38-negative-split", title: "Negative Split", cat: "sport", tags: "Sport · Running club", accent: "#d7ff3f" },
+  { folder: "39-the-borough", title: "The Borough", cat: "sport", tags: "Sport · Football club", accent: "#1f5c3a" },
+  { folder: "40-lane-four", title: "Lane Four", cat: "sport", tags: "Sport · Swim club", accent: "#0e5a7a" },
+  { folder: "41-cadence", title: "Cadence", cat: "sport", tags: "Sport · Cycling club", accent: "#ff5a1f" },
+  { folder: "42-southpaw", title: "Southpaw", cat: "sport", tags: "Sport · Boxing gym", accent: "#7a1f1f" },
 ];
 
 const catalog = document.querySelector("#catalog");
