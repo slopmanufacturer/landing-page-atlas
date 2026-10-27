@@ -9,7 +9,7 @@ same rules in more operational detail.
 
 ## What fits
 
-- A new family of six pages, numbered `46-…` and up, six folders in a row.
+- A new family of six pages, numbered `58-…` and up, six folders in a row.
 - A fix to an existing page: a layout that breaks at 320 px, a control that is
   not keyboard-operable, a contrast problem.
 - A new thumbnail when a page changes enough to look different.
@@ -31,14 +31,14 @@ same rules in more operational detail.
 
 1. Read an existing family first. `designs/01-atelier-nord` through
    `designs/11-long-table` are the editorial set, and they show the range.
-2. Create six folders: `designs/46-your-name` … `designs/51-your-name`.
+2. Create six folders: `designs/58-your-name` … `designs/63-your-name`.
 3. Give each one its own `index.html`, `style.css`, and `script.js`.
-4. Add a 720×540 WebP screenshot to `assets/thumbs/46-your-name.webp` for each
+4. Add a 720×540 WebP screenshot to `assets/thumbs/58-your-name.webp` for each
    page. The file name must match the folder name.
 5. Add six entries to the `designs` array in `script.js`:
 
    ```js
-   { folder: "46-your-name", title: "Your Name", cat: "your-family", tags: "Your family · What it is", accent: "#c2410c" },
+   { folder: "58-your-name", title: "Your Name", cat: "your-family", tags: "Your family · What it is", accent: "#c2410c" },
    ```
 
 6. Add a filter button in `index.html` next to the existing ones, and a palette

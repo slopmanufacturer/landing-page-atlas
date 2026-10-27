@@ -1,6 +1,6 @@
 # Landing Page Atlas
 
-**45 hand-built landing pages. Eight families. Plain HTML, CSS, and JavaScript.**
+**57 hand-built landing pages. Ten families. Plain HTML, CSS, and JavaScript.**
 
 [![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://vezeqs.github.io/landing-page-atlas/)
 [![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/vezeqs/landing-page-atlas/generate)
@@ -34,7 +34,7 @@ Then open <http://localhost:8000>.
 
 ## The catalogue
 
-Eight families, forty-five pages. They share a mood, not a stylesheet.
+Ten families, fifty-seven pages. They share a mood, not a stylesheet.
 
 | Family | Temperament | Pages |
 |--------|-------------|-------|
@@ -46,9 +46,11 @@ Eight families, forty-five pages. They share a mood, not a stylesheet.
 | **Industrial** | Tools, audio, hardware. Stencil type, hazard yellow, exposed structure. | 6 |
 | **Sport** | Clubs, teams, gyms. Big type, hard schedules, motion. | 6 |
 | **Civic** | Public institutions. Library cards, departure boards, archive indexes. | 3 |
+| **Maritime** | Ferries, harbours, tide tables. Charts, signal red, condensed type. | 6 |
+| **Night** | Bars, clubs, late rooms. Saturated dark, neon, type as light. | 6 |
 
 <details>
-<summary><strong>All 45 pages</strong></summary>
+<summary><strong>All 57 pages</strong></summary>
 
 ### Editorial
 
@@ -119,12 +121,30 @@ Eight families, forty-five pages. They share a mood, not a stylesheet.
 - [Line Six](designs/44-line-six/index.html) — light-rail line, Calderford
 - [The Register](designs/45-the-register/index.html) — municipal archive, Leeds
 
+### Maritime
+
+- [North Pier Ferry](designs/46-north-pier/index.html) — foot ferry, Carrow Sound
+- [Ardnamurchan Harbour](designs/47-harbour-board/index.html) — harbour authority, notices and berths
+- [Salt House](designs/48-salt-house/index.html) — sailing school, Carrow Sound
+- [Warden Light](designs/49-warden-light/index.html) — lighthouse trust, Warden Point
+- [Keel & Rib](designs/50-keel-and-rib/index.html) — wooden boatyard, Carrow Sound
+- [Carrow Fish Market](designs/51-carrow-fish/index.html) — daily landings and auction
+
+### Night
+
+- [Moth](designs/52-moth/index.html) — cocktail bar, Carrow Street
+- [The Blue Room](designs/53-blue-room/index.html) — jazz club, Quay Street
+- [The Astor](designs/54-astor/index.html) — repertory cinema, Market Lane
+- [Iron Bath House](designs/55-iron-bath/index.html) — bathhouse, Lantern Row
+- [The Long Night](designs/56-long-night/index.html) — supper club, Carrow
+- [Corridor](designs/57-corridor/index.html) — members' club, Lantern Row
+
 </details>
 
 ## What you get
 
-- 45 complete landing pages, each with its own layout, type, palette, and interaction.
-- Eight distinct directions: newspaper, satellite console, perfume house, riso festival, tea room, synth datasheet, climbing gym, and a public library.
+- 57 complete landing pages, each with its own layout, type, palette, and interaction.
+- Ten distinct directions: newspaper, satellite console, perfume house, riso festival, tea room, synth datasheet, climbing gym, public library, working harbour, and late-night club.
 - No frameworks, bundlers, analytics, cookies, or third-party scripts.
 - Responsive layouts tested at 1440, 768, 390, and 320 px.
 - Keyboard-operable controls, labelled forms, and `prefers-reduced-motion` support.
@@ -155,8 +175,9 @@ python3 tools/check_designs.py
 ```
 
 The static pass verifies folder structure, gallery entries, thumbnails, HTML
-basics, local links, form labels, button types, and JavaScript syntax. It
-needs only Python 3.9+.
+basics, local links, form labels, button types, JavaScript syntax, the
+sitemap, `robots.txt`, canonical URLs, and the catalogue's structured data.
+It needs only Python 3.9+.
 
 For the browser pass, install Selenium and make sure Firefox and geckodriver
 are on your `PATH`:
@@ -166,13 +187,13 @@ python3 -m pip install selenium
 python3 tools/check_designs.py --browser
 ```
 
-It loads the gallery and all 45 pages at 1440, 768, 390, and 320 px, checks
+It loads the gallery and all 57 pages at 1440, 768, 390, and 320 px, checks
 for horizontal overflow and JavaScript errors, and confirms the gallery
 filters.
 
-## Why 45?
+## Why 57?
 
-Seven families of six pages, plus a three-page Civic family. Each page was
+Ten families of six pages, plus a three-page Civic family. Each page was
 given a different brief. The only shared rule was that nothing should look
 like a template.
 
@@ -183,19 +204,27 @@ like a template.
 ├── index.html              # Showcase, catalogue, and FAQ
 ├── style.css               # Showcase only
 ├── script.js               # Catalogue filters, copy button, FAQ
+├── 404.html                # Not-found page
+├── robots.txt
+├── sitemap.xml             # Gallery and all 57 pages
 ├── assets/
 │   ├── favicon.svg
 │   ├── og.png              # Social preview
-│   └── thumbs/             # 45 gallery screenshots
+│   └── thumbs/             # 57 gallery screenshots
 ├── designs/
 │   ├── 01-atelier-nord/
 │   ├── ...
-│   └── 45-the-register/
+│   └── 57-corridor/
 ├── tools/
 │   └── check_designs.py    # Static and browser checks
+├── .github/
+│   ├── workflows/checks.yml
+│   └── ISSUE_TEMPLATE/
 ├── AGENTS.md               # How to use or add a design
 ├── CHANGELOG.md
+├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md         # How to add a family
+├── SECURITY.md
 ├── LICENSE
 └── README.md
 ```
@@ -212,6 +241,10 @@ each page.
 New families are the point. If you have six pages that belong together, read
 [CONTRIBUTING.md](CONTRIBUTING.md). Fixes to existing pages are just as
 welcome. If you are an AI agent, read [AGENTS.md](AGENTS.md) first.
+
+This project follows a [code of conduct](CODE_OF_CONDUCT.md). Security
+reports go through [SECURITY.md](SECURITY.md), not the public issue
+tracker.
 
 ## Changelog
 

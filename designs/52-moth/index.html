@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Moth is a cocktail bar on Carrow Street. Eight drinks, two seats by the window, and a kitchen that closes at midnight.">
+  <meta name="theme-color" content="#0b0b0e">
+  <title>Moth — Cocktail bar, Carrow Street</title>
+  <link rel="canonical" href="https://vezeqs.github.io/landing-page-atlas/designs/52-moth/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Landing Page Atlas">
+  <meta property="og:title" content="Moth — Cocktail bar, Carrow Street">
+  <meta property="og:description" content="Moth is a cocktail bar on Carrow Street. Eight drinks, two seats by the window, and a kitchen that closes at midnight.">
+  <meta property="og:url" content="https://vezeqs.github.io/landing-page-atlas/designs/52-moth/index.html">
+  <meta property="og:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/52-moth.webp">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="540">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moth — Cocktail bar, Carrow Street">
+  <meta name="twitter:description" content="Moth is a cocktail bar on Carrow Street. Eight drinks, two seats by the window, and a kitchen that closes at midnight.">
+  <meta name="twitter:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/52-moth.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Moth<span class="brand__dot" aria-hidden="true"></span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#room">The room</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="top__meta">Carrow Street<br>Tue–Sun / 17:00–02:00</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__rail" aria-hidden="true"><span>Est. 2019</span><span>Eight drinks</span><span>No bookings after nine</span></div>
+      <div class="hero__copy">
+        <p class="kicker">Cocktails / Small plates / Late</p>
+        <h1 id="hero-title">Bitter, bright,<br><em>and open until two.</em></h1>
+        <p class="lede">
+          Eight drinks on the list, four of them stirred, two of them without
+          alcohol, and one that changes with whatever fruit the market has
+          too much of.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#menu">Read the list <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#visit">Find the door <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="tonight" aria-label="Tonight">
+        <p class="tonight__label">Tonight</p>
+        <p class="tonight__name">Soft Riot</p>
+        <p class="tonight__detail">Rum, pineapple, bird's eye chilli, lime. £11.</p>
+        <p class="tonight__meta">Two seats by the window, first come.</p>
+      </aside>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / The list</p>
+          <h2 id="menu-title">Eight drinks,<br>no novelties.</h2>
+        </div>
+        <p class="section-note">Everything is made to order. If it takes four minutes, it takes four minutes.</p>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filter drinks by method">
+        <button type="button" class="filter is-active" data-method="all" aria-pressed="true">All</button>
+        <button type="button" class="filter" data-method="stirred" aria-pressed="false">Stirred</button>
+        <button type="button" class="filter" data-method="shaken" aria-pressed="false">Shaken</button>
+        <button type="button" class="filter" data-method="zero" aria-pressed="false">Zero</button>
+      </div>
+
+      <ul class="drinks" id="drinks">
+        <li class="drink" data-method="stirred">
+          <div class="drink__head"><h3>Black Moth</h3><span class="drink__price">£12</span></div>
+          <p class="drink__recipe">Rye, Cynar, smoked maple, orange oil</p>
+          <p class="drink__meta">Stirred / 28% / short</p>
+        </li>
+        <li class="drink" data-method="stirred">
+          <div class="drink__head"><h3>Paper Lantern</h3><span class="drink__price">£11</span></div>
+          <p class="drink__recipe">Gin, sake, cucumber, shiso</p>
+          <p class="drink__meta">Stirred / 22% / rocks</p>
+        </li>
+        <li class="drink" data-method="stirred">
+          <div class="drink__head"><h3>Low Tide</h3><span class="drink__price">£10</span></div>
+          <p class="drink__recipe">Fino sherry, blanc vermouth, saline, lemon twist</p>
+          <p class="drink__meta">Stirred / 18% / coupe</p>
+        </li>
+        <li class="drink" data-method="shaken">
+          <div class="drink__head"><h3>Neon Orchard</h3><span class="drink__price">£12</span></div>
+          <p class="drink__recipe">Tequila, apple, lime, pink peppercorn</p>
+          <p class="drink__meta">Shaken / 20% / up</p>
+        </li>
+        <li class="drink" data-method="shaken">
+          <div class="drink__head"><h3>Soft Riot</h3><span class="drink__price">£11</span></div>
+          <p class="drink__recipe">Rum, pineapple, bird's eye chilli, lime</p>
+          <p class="drink__meta">Shaken / 19% / crushed ice</p>
+        </li>
+        <li class="drink" data-method="shaken">
+          <div class="drink__head"><h3>Silver Hour</h3><span class="drink__price">£12</span></div>
+          <p class="drink__recipe">Gin, lemon, egg white, orange blossom</p>
+          <p class="drink__meta">Shaken / 17% / up</p>
+        </li>
+        <li class="drink" data-method="zero">
+          <div class="drink__head"><h3>Moth Water</h3><span class="drink__price">£6</span></div>
+          <p class="drink__recipe">Tonic, grapefruit, rosemary, black pepper</p>
+          <p class="drink__meta">Zero / tall</p>
+        </li>
+        <li class="drink" data-method="zero">
+          <div class="drink__head"><h3>Night Bus</h3><span class="drink__price">£6</span></div>
+          <p class="drink__recipe">Cola, lime, aromatic bitters, soda</p>
+          <p class="drink__meta">Zero / tall</p>
+        </li>
+      </ul>
+      <p class="menu__status" role="status" id="menu-status">Showing all 8 drinks.</p>
+    </section>
+
+    <section class="room" id="room" aria-labelledby="room-title">
+      <div class="room__copy">
+        <p class="section-label section-label--light">02 / The room</p>
+        <h2 id="room-title">Thirty-two seats<br>and one window.</h2>
+        <p>
+          The bar is the old ticket office of the Carrow Picture House. We kept
+          the tiles, the brass, and the draught under the door. The kitchen is
+          four plates: olives, bread, a cold plate, and whatever is fried.
+        </p>
+      </div>
+      <dl class="room__list">
+        <div><dt>Seats</dt><dd>32, plus 2 at the window</dd></div>
+        <div><dt>Kitchen</dt><dd>17:00–00:00, four plates</dd></div>
+        <div><dt>Groups</dt><dd>Bookings of four or more, before 20:00</dd></div>
+        <div><dt>Music</dt><dd>Records, no requests</dd></div>
+      </dl>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">03 / Visit</p>
+          <h2 id="visit-title">Up the side<br>stairs.</h2>
+        </div>
+        <p class="section-note">The door is between the bookshop and the dry cleaner. There is no sign, only the lamp.</p>
+      </header>
+      <div class="visit__grid">
+        <div>
+          <p class="visit__label">Address</p>
+          <p>14a Carrow Street<br>Carrow<br>PA34 4LN</p>
+        </div>
+        <div>
+          <p class="visit__label">Hours</p>
+          <p>Tue–Thu 17:00–00:00<br>Fri–Sat 17:00–02:00<br>Sun 17:00–23:00</p>
+        </div>
+        <div>
+          <p class="visit__label">Contact</p>
+          <p><a href="mailto:hello@mothbar.example">hello@mothbar.example</a><br>01631 555 019</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Moth</span>
+    <span>Carrow Street, Carrow / 53.14° N</span>
+    <span><a href="../../index.html">Landing Page Atlas ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

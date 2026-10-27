@@ -9,7 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- `robots.txt` and `sitemap.xml`, covering the gallery and all 45 designs.
+- The Night family: six new pages — Moth, The Blue Room, The Astor,
+  Iron Bath House, The Long Night, and Corridor. The catalogue now holds 57
+  designs across ten families.
+- The Maritime family: six new pages — North Pier Ferry, Ardnamurchan
+  Harbour, Salt House, Warden Light, Keel & Rib, and Carrow Fish Market. The
+  catalogue now holds 51 designs across nine families.
+- `robots.txt` and `sitemap.xml`, covering the gallery and every design.
 - Canonical URLs on the gallery and every design page.
 - Open Graph and Twitter card metadata on all 45 design pages, so a single
   page can be shared without falling back to a bare link.
@@ -17,11 +23,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `CollectionPage` structured data for the catalogue.
 - A GitHub Actions workflow that runs the static checks on every push and
   pull request.
+- Static checks for `sitemap.xml`, `robots.txt`, canonical URLs, and the
+  catalogue's structured data, so they cannot drift from `script.js`.
 
 ### Changed
 
 - The gallery is branded **Landing Page Atlas** throughout. The separate
   HTM / Designs name is retired.
+- The family palette strip is a five-column grid, so ten families fit
+  without squeezing the labels.
+- Dynamic results are announced to assistive technology on Laugh Track,
+  Press Room, Forge, Bolt, and The Long Night.
 - The repository moved to `vezeqs/landing-page-atlas`; every link and
   canonical URL now points at the new Pages address.
 

@@ -44,6 +44,18 @@ const designs = [
   { folder: "43-borrow", title: "Borrow", cat: "civic", tags: "Civic · Library", accent: "#1f5a45" },
   { folder: "44-line-six", title: "Line Six", cat: "civic", tags: "Civic · Transit", accent: "#174a9c" },
   { folder: "45-the-register", title: "The Register", cat: "civic", tags: "Civic · Archive", accent: "#123a2c" },
+  { folder: "46-north-pier", title: "North Pier Ferry", cat: "maritime", tags: "Maritime · Ferry", accent: "#d9502e" },
+  { folder: "47-harbour-board", title: "Ardnamurchan Harbour", cat: "maritime", tags: "Maritime · Harbour authority", accent: "#f2a900" },
+  { folder: "48-salt-house", title: "Salt House", cat: "maritime", tags: "Maritime · Sailing school", accent: "#d95a3b" },
+  { folder: "49-warden-light", title: "Warden Light", cat: "maritime", tags: "Maritime · Lighthouse", accent: "#ffcf6b" },
+  { folder: "50-keel-and-rib", title: "Keel &amp; Rib", cat: "maritime", tags: "Maritime · Boatyard", accent: "#c9a227" },
+  { folder: "51-carrow-fish", title: "Carrow Fish Market", cat: "maritime", tags: "Maritime · Fish market", accent: "#2a6f8f" },
+  { folder: "52-moth", title: "Moth", cat: "night", tags: "Night · Cocktail bar", accent: "#ff2e88" },
+  { folder: "53-blue-room", title: "The Blue Room", cat: "night", tags: "Night · Jazz club", accent: "#d9a441" },
+  { folder: "54-astor", title: "The Astor", cat: "night", tags: "Night · Cinema", accent: "#f0a03c" },
+  { folder: "55-iron-bath", title: "Iron Bath House", cat: "night", tags: "Night · Bathhouse", accent: "#b4643c" },
+  { folder: "56-long-night", title: "The Long Night", cat: "night", tags: "Night · Supper club", accent: "#c9a227" },
+  { folder: "57-corridor", title: "Corridor", cat: "night", tags: "Night · Members' club", accent: "#d8ff3e" },
 ];
 
 const catalog = document.querySelector("#catalog");

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Warden Light Trust keeps the 1862 lighthouse on Warden Point open, lit, and climbable. Tour times, light character, and how to help.">
+  <meta name="theme-color" content="#0a0f14">
+  <title>Warden Light Trust — The light on Warden Point</title>
+  <link rel="canonical" href="https://vezeqs.github.io/landing-page-atlas/designs/49-warden-light/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Landing Page Atlas">
+  <meta property="og:title" content="Warden Light Trust — The light on Warden Point">
+  <meta property="og:description" content="Warden Light Trust keeps the 1862 lighthouse on Warden Point open, lit, and climbable. Tour times, light character, and how to help.">
+  <meta property="og:url" content="https://vezeqs.github.io/landing-page-atlas/designs/49-warden-light/index.html">
+  <meta property="og:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/49-warden-light.webp">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="540">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Warden Light Trust — The light on Warden Point">
+  <meta name="twitter:description" content="Warden Light Trust keeps the 1862 lighthouse on Warden Point open, lit, and climbable. Tour times, light character, and how to help.">
+  <meta name="twitter:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/49-warden-light.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">
+      <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M9 22h6l-1-13h-4L9 22Z" fill="currentColor"/>
+        <rect x="9.5" y="4" width="5" height="4" fill="currentColor"/>
+        <path d="M8 4h8l-1-2H9L8 4Z" fill="currentColor"/>
+      </svg>
+      Warden Light Trust
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#visit">Visit</a>
+      <a href="#light">The light</a>
+      <a href="#history">History</a>
+    </nav>
+    <p class="top__meta">Warden Point<br>Est. 1862 / 41 m</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">A working lighthouse / Open to the public</p>
+        <h1 id="hero-title">One hundred<br><em>and sixty years</em><br>of not going out.</h1>
+        <p class="lede">
+          The tower is 41 metres of granite, the lamp is a fourth-order
+          Fresnel lens, and the keepers are gone. The light still runs every
+          night, and the door opens on Thursdays.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#visit">Plan a visit <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#light">See the character <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="scene" aria-hidden="true">
+        <div class="scene__beam" id="beam"></div>
+        <svg viewBox="0 0 420 520" role="presentation" focusable="false">
+          <defs>
+            <linearGradient id="tower" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#f4ead6"/>
+              <stop offset="0.55" stop-color="#cfc3ad"/>
+              <stop offset="1" stop-color="#8f8574"/>
+            </linearGradient>
+          </defs>
+          <rect width="420" height="520" fill="#0a0f14"/>
+          <g opacity="0.5" stroke="#1d2a33" stroke-width="1">
+            <path d="M0 440h420M0 470h420M0 500h420"/>
+          </g>
+          <path d="M210 96h-34l-22 330h112l-22-330h-34Z" fill="url(#tower)"/>
+          <path d="M168 150h84M160 220h100M152 290h116M144 360h132" stroke="#0a0f14" stroke-width="3" opacity="0.35"/>
+          <rect x="186" y="70" width="48" height="30" fill="#1d2a33" stroke="#f4ead6" stroke-width="2"/>
+          <circle cx="210" cy="85" r="8" fill="#ffcf6b" class="lamp"/>
+          <path d="M180 66h60l-6-14h-48l-6 14Z" fill="#f4ead6"/>
+          <path d="M60 426c40-10 80-10 120 0s80 10 120 0 60-10 80 0" fill="none" stroke="#2b4652" stroke-width="2"/>
+          <path d="M60 452c40-10 80-10 120 0s80 10 120 0 60-10 80 0" fill="none" stroke="#2b4652" stroke-width="2" opacity="0.7"/>
+          <path d="M60 478c40-10 80-10 120 0s80 10 120 0 60-10 80 0" fill="none" stroke="#2b4652" stroke-width="2" opacity="0.45"/>
+        </svg>
+        <p class="scene__caption">Fl(3) W 15s — three flashes, fifteen seconds, visible 18 nm</p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Visit</p>
+          <h2 id="visit-title">One hundred and<br>thirty-two steps.</h2>
+        </div>
+        <p class="section-note">Tours run Thursday to Sunday, April to October. The tower is not heated and the stairs are original. Wear flat shoes.</p>
+      </header>
+
+      <div class="visit__grid">
+        <table>
+          <caption>Tours and prices, 2026</caption>
+          <thead>
+            <tr><th scope="col">Tour</th><th scope="col">When</th><th scope="col">Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Tower and lamp</td><td>Thu–Sun, 10:00, 11:30, 14:00</td><td>£9</td></tr>
+            <tr><td>Sunset climb</td><td>Fri and Sat, 19:30</td><td>£14</td></tr>
+            <tr><td>Keepers' store</td><td>Thu–Sun, on the hour</td><td>£5</td></tr>
+            <tr><td>School group</td><td>Wednesdays, by arrangement</td><td>£6 per child</td></tr>
+          </tbody>
+        </table>
+
+        <div class="visit__aside">
+          <p class="visit__label">Getting there</p>
+          <p>Warden Point is a twenty-minute walk from the car park at Marsh Lane. The path is gravel and uneven, and the last stretch is steep.</p>
+          <dl class="visit__meta">
+            <div><dt>Postcode</dt><dd>TD14 5PX</dd></div>
+            <div><dt>Height</dt><dd>41 m, 132 steps</dd></div>
+            <div><dt>Access</dt><dd>No lift. Children under 1.1 m not admitted.</dd></div>
+          </dl>
+          <a class="button" href="mailto:tours@wardenlight.example">Book a tour <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="light" aria-labelledby="light-title">
+      <div class="light__copy">
+        <p class="section-label section-label--light">02 / The light</p>
+        <h2 id="light-title">Every light<br>has a signature.</h2>
+        <p class="light__lede">
+          Mariners read a light by its rhythm before they read the chart.
+          Warden Point flashes three times, then rests. Choose a character
+          below to see how the tower would look with it.
+        </p>
+      </div>
+
+      <div class="light__panel">
+        <div class="characters" role="group" aria-label="Choose a light character">
+          <button type="button" class="character is-active" data-character="fl3" aria-pressed="true">
+            <span class="character__name">Fl(3) W 15s</span>
+            <span class="character__desc">Three flashes, then dark</span>
+          </button>
+          <button type="button" class="character" data-character="oc" aria-pressed="false">
+            <span class="character__name">Oc W 10s</span>
+            <span class="character__desc">Occulting: dark for three</span>
+          </button>
+          <button type="button" class="character" data-character="iso" aria-pressed="false">
+            <span class="character__name">Iso W 4s</span>
+            <span class="character__desc">Equal light and dark</span>
+          </button>
+        </div>
+        <div class="lamp-box" aria-hidden="true">
+          <div class="lamp-box__lamp" id="lamp"></div>
+        </div>
+        <p class="light__status" role="status" id="light-status">Fl(3) W 15s — three flashes of one second, then eleven seconds of darkness. Visible for 18 nautical miles.</p>
+      </div>
+    </section>
+
+    <section class="history" id="history" aria-labelledby="history-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">03 / History</p>
+          <h2 id="history-title">Four dates<br>that matter.</h2>
+        </div>
+        <p class="section-note">The trust has the original keeper logs, the 1902 conversion drawings, and a cupboard of spare mantles.</p>
+      </header>
+      <ol class="history__list">
+        <li><span class="history__year">1862</span><p>First lit on 14 March, oil-fired, with a fixed white light and one keeper. The tower was built from local granite at a cost of £4,180.</p></li>
+        <li><span class="history__year">1902</span><p>Converted to paraffin and fitted with the fourth-order Fresnel lens that still turns today. The keepers' cottages were extended.</p></li>
+        <li><span class="history__year">1987</span><p>Automated. The last keeper, Ailsa Kemp, left in November after thirty-one years and a final log entry of two words: "Light lit."</p></li>
+        <li><span class="history__year">2004</span><p>The trust took the lease, reopened the tower, and put the light back on the tourist chart. It has run every night since.</p></li>
+      </ol>
+    </section>
+
+    <section class="support" aria-labelledby="support-title">
+      <div>
+        <p class="section-label section-label--light">04 / Support</p>
+        <h2 id="support-title">A tower is<br>a maintenance bill.</h2>
+        <p class="support__copy">Re-pointing the granite costs £18,000. A new lamp costs £2,400. The trust is eleven volunteers and one part-time engineer.</p>
+      </div>
+      <div class="support__actions">
+        <a class="button button--light" href="mailto:friends@wardenlight.example">Join the friends <span aria-hidden="true">↗</span></a>
+        <p class="support__small">£30 a year. Two open days, one newsletter, and the right to say you keep a light on.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Warden Light Trust</span>
+    <span>Warden Point, Berwickshire / TD14 5PX</span>
+    <span><a href="../../index.html">Landing Page Atlas ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

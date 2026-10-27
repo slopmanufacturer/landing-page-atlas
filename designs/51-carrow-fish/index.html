@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carrow Fish Market lands and auctions six days a week. Daily landings, prices per kilo, boats, and the 06:00 auction on Quay Street.">
+  <meta name="theme-color" content="#102a33">
+  <title>Carrow Fish Market — Daily landings and the 06:00 auction</title>
+  <link rel="canonical" href="https://vezeqs.github.io/landing-page-atlas/designs/51-carrow-fish/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Landing Page Atlas">
+  <meta property="og:title" content="Carrow Fish Market — Daily landings and the 06:00 auction">
+  <meta property="og:description" content="Carrow Fish Market lands and auctions six days a week. Daily landings, prices per kilo, boats, and the 06:00 auction on Quay Street.">
+  <meta property="og:url" content="https://vezeqs.github.io/landing-page-atlas/designs/51-carrow-fish/index.html">
+  <meta property="og:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/51-carrow-fish.webp">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="540">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Carrow Fish Market — Daily landings and the 06:00 auction">
+  <meta name="twitter:description" content="Carrow Fish Market lands and auctions six days a week. Daily landings, prices per kilo, boats, and the 06:00 auction on Quay Street.">
+  <meta name="twitter:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/51-carrow-fish.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Carrow Fish Market<span class="brand__sub">Quay Street / Since 1893</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#landings">Landings</a>
+      <a href="#auction">Auction</a>
+      <a href="#boats">Boats</a>
+    </nav>
+    <p class="top__meta">Auction 06:00<br>Mon–Sat / Closed Sunday</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Landings / Auction / Ice</p>
+        <h1 id="hero-title">Everything landed<br><em>before nine.</em></h1>
+        <p class="lede">
+          Fourteen boats work out of Carrow, and everything they bring in is
+          on the slab by eight. The auction starts at six, the doors open at
+          five, and the best of it is gone by seven.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#landings">See today's landings <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#auction">How the auction works <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <dl class="hero__stats">
+        <div><dt>Boats</dt><dd>14</dd></div>
+        <div><dt>Species</dt><dd>22</dd></div>
+        <div><dt>Landing</dt><dd>3.2 t</dd></div>
+        <div><dt>Buyers</dt><dd>48</dd></div>
+      </dl>
+    </section>
+
+    <section class="landings" id="landings" aria-labelledby="landings-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Landings</p>
+          <h2 id="landings-title">Six days,<br>on the slab.</h2>
+        </div>
+        <p class="section-note">Prices are the auction average per kilo, rounded. They move with the weather and the ferries, not with us.</p>
+      </header>
+
+      <div class="days" role="group" aria-label="Choose a day">
+        <button type="button" class="day is-active" data-day="mon" aria-pressed="true">Mon</button>
+        <button type="button" class="day" data-day="tue" aria-pressed="false">Tue</button>
+        <button type="button" class="day" data-day="wed" aria-pressed="false">Wed</button>
+        <button type="button" class="day" data-day="thu" aria-pressed="false">Thu</button>
+        <button type="button" class="day" data-day="fri" aria-pressed="false">Fri</button>
+        <button type="button" class="day" data-day="sat" aria-pressed="false">Sat</button>
+      </div>
+
+      <p class="landings__summary" role="status" id="landings-summary">Monday · 12 boats · 2.8 tonnes landed</p>
+
+      <div class="board">
+        <table>
+          <caption id="landings-caption">Monday landings, auction average</caption>
+          <thead>
+            <tr>
+              <th scope="col">Species</th>
+              <th scope="col">Weight</th>
+              <th scope="col">£ / kg</th>
+              <th scope="col">Boat</th>
+            </tr>
+          </thead>
+          <tbody id="landing-rows"></tbody>
+        </table>
+      </div>
+      <p class="landings__note">Weights are landed weight, not live weight. Shellfish is sold by the box.</p>
+    </section>
+
+    <section class="auction" id="auction" aria-labelledby="auction-title">
+      <div class="auction__copy">
+        <p class="section-label section-label--light">02 / Auction</p>
+        <h2 id="auction-title">Five o'clock,<br>then six.</h2>
+        <p class="auction__lede">
+          Buyers walk the slab from five. The auctioneer starts at six and
+          works the room in lots of one box or one tub. Cash settles the same
+          morning; account buyers settle on Friday.
+        </p>
+      </div>
+      <ol class="auction__steps">
+        <li><span>05:00</span><p>Doors open. Buyers inspect the boxes, check the ice, and mark what they want.</p></li>
+        <li><span>06:00</span><p>Auction starts. Lots go in the order they were landed, not by species.</p></li>
+        <li><span>06:40</span><p>First vans leave. Local restaurants collect from the side door until eight.</p></li>
+        <li><span>08:00</span><p>Slab cleared. Anything unsold goes to the ice house or the chippy on the corner.</p></li>
+      </ol>
+    </section>
+
+    <section class="boats" id="boats" aria-labelledby="boats-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">03 / Boats</p>
+          <h2 id="boats-title">Four of<br>the fourteen.</h2>
+        </div>
+        <p class="section-note">All under 12 metres, all day boats, all back in before the tide turns.</p>
+      </header>
+      <ul class="boats__list">
+        <li>
+          <span class="boats__name">Silver Spray</span>
+          <span class="boats__meta">Skipper Aldo Vane / 11.2 m trawler</span>
+          <span class="boats__catch">Hake, megrim, and the occasional turbot. Lands Monday to Thursday.</span>
+        </li>
+        <li>
+          <span class="boats__name">Maud</span>
+          <span class="boats__meta">Skipper Rona Pike / 9.8 m netter</span>
+          <span class="boats__catch">Mackerel in season, herring in winter. Friday and Saturday only.</span>
+        </li>
+        <li>
+          <span class="boats__name">Little Edgar</span>
+          <span class="boats__meta">Skipper Tom Nye / 7.4 m potter</span>
+          <span class="boats__catch">Crab and lobster, boxes of twelve. Lands every day but Sunday.</span>
+        </li>
+        <li>
+          <span class="boats__name">Kestrel</span>
+          <span class="boats__meta">Skipper Ada Finch / 10.6 m trawler</span>
+          <span class="boats__catch">Sole and plaice. Lands Tuesday and Friday, weather permitting.</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Carrow Fish Market</span>
+    <span>Quay Street, Carrow / 53.14° N</span>
+    <span><a href="../../index.html">Landing Page Atlas ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Long Night is a supper club in Carrow: one table, twelve people, five courses, and four dates before spring. Menus and bookings.">
+  <meta name="theme-color" content="#4a1218">
+  <title>The Long Night — Supper club, Carrow</title>
+  <link rel="canonical" href="https://vezeqs.github.io/landing-page-atlas/designs/56-long-night/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Landing Page Atlas">
+  <meta property="og:title" content="The Long Night — Supper club, Carrow">
+  <meta property="og:description" content="The Long Night is a supper club in Carrow: one table, twelve people, five courses, and four dates before spring. Menus and bookings.">
+  <meta property="og:url" content="https://vezeqs.github.io/landing-page-atlas/designs/56-long-night/index.html">
+  <meta property="og:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/56-long-night.webp">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="540">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Long Night — Supper club, Carrow">
+  <meta name="twitter:description" content="The Long Night is a supper club in Carrow: one table, twelve people, five courses, and four dates before spring. Menus and bookings.">
+  <meta name="twitter:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/56-long-night.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Libre+Caslon+Display&family=Libre+Franklin:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">The Long Night<span class="brand__sub">Supper club / Carrow</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#menu">Menu</a>
+      <a href="#dates">Dates</a>
+      <a href="#book">Book</a>
+    </nav>
+    <p class="top__meta">One table / Twelve seats<br>Four dinners a season</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Five courses / One sitting</p>
+        <h1 id="hero-title">Twelve people,<br><em>one long table.</em></h1>
+        <p class="lede">
+          We cook once a month in the back room of the Carrow Arms, for
+          twelve people, at one long table. You will sit next to someone you
+          do not know. That is the point.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#dates">See the dates <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#menu">Read the menu <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="hero__card" aria-hidden="true">
+        <p class="hero__card-label">Next dinner</p>
+        <p class="hero__card-date">14<br><span>November</span></p>
+        <p class="hero__card-detail">Five courses, £68<br>Wine pairing £32<br>19:30 for 20:00</p>
+        <p class="hero__card-foot">Carrow Arms, back room</p>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Menu</p>
+          <h2 id="menu-title">Five courses,<br>no choices.</h2>
+        </div>
+        <p class="section-note">The kitchen cooks one menu for the table. Tell us about allergies when you book; the vegetarian menu is cooked alongside.</p>
+      </header>
+
+      <div class="menu__layout">
+        <div class="menu__controls">
+          <div class="toggle" role="group" aria-label="Choose a menu">
+            <button type="button" class="toggle__button is-active" data-menu="omnivore" aria-pressed="true">Omnivore</button>
+            <button type="button" class="toggle__button" data-menu="vegetarian" aria-pressed="false">Vegetarian</button>
+          </div>
+          <p class="menu__note" id="menu-note" role="status">November menu. Subject to what the market has, which is the only honest way to write it.</p>
+          <p class="menu__wine">Wine pairing, five glasses, £32. Or bring a bottle for £12 corkage.</p>
+        </div>
+
+        <ol class="courses" id="courses">
+          <li class="course"><span class="course__num">I</span><div><h3>Oyster, apple, horseradish</h3><p>Raw, cold, and gone in two bites.</p></div></li>
+          <li class="course"><span class="course__num">II</span><div><h3>Celeriac soup, brown butter</h3><p>Thick enough to stand a spoon in. Bread from the bakery on Quay Street.</p></div></li>
+          <li class="course"><span class="course__num">III</span><div><h3>Hake, mussels, cider</h3><p>Landed that morning, cooked in a wide pan, served with the liquor.</p></div></li>
+          <li class="course"><span class="course__num">IV</span><div><h3>Venison, beetroot, juniper</h3><p>Roe deer from the estate above the sound. Pink, rested, sliced thick.</p></div></li>
+          <li class="course"><span class="course__num">V</span><div><h3>Damson tart, cream</h3><p>Damsons from the hedge behind the pub. The last of the season.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="dates" id="dates" aria-labelledby="dates-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">02 / Dates</p>
+          <h2 id="dates-title">Four dinners<br>before spring.</h2>
+        </div>
+        <p class="section-note section-note--light">Booking opens a month before each date. Twelve seats, and the table is never split.</p>
+      </header>
+      <ul class="dates__list">
+        <li>
+          <span class="dates__date">14 Nov</span>
+          <span class="dates__name">November dinner</span>
+          <span class="dates__menu">Oyster, celeriac, hake, venison, damson</span>
+          <span class="dates__seats">4 seats left</span>
+        </li>
+        <li>
+          <span class="dates__date">28 Nov</span>
+          <span class="dates__name">Late autumn</span>
+          <span class="dates__menu">Mussels, squash, brill, hare, quince</span>
+          <span class="dates__seats">Wait list</span>
+        </li>
+        <li>
+          <span class="dates__date">12 Dec</span>
+          <span class="dates__name">December dinner</span>
+          <span class="dates__menu">Cured trout, chestnut, goose, damson, cheese</span>
+          <span class="dates__seats">2 seats left</span>
+        </li>
+        <li>
+          <span class="dates__date">9 Jan</span>
+          <span class="dates__name">New year table</span>
+          <span class="dates__menu">Oyster, leek, cod, venison, quince</span>
+          <span class="dates__seats">Opens 9 Dec</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="book__copy">
+        <p class="section-label">03 / Book</p>
+        <h2 id="book-title">How it works,<br>and what it costs.</h2>
+        <p>
+          Email with the date and how many of you. We reply within two days
+          with a payment link; the seat is held for forty-eight hours. £68 a
+          head, wine extra, and a £20 deposit if you cancel inside a week.
+        </p>
+      </div>
+      <dl class="book__list">
+        <div><dt>Price</dt><dd>£68 per person, five courses</dd></div>
+        <div><dt>Wine</dt><dd>£32 pairing, or £12 corkage</dd></div>
+        <div><dt>Time</dt><dd>19:30 for 20:00, ends around 23:00</dd></div>
+        <div><dt>Diet</dt><dd>Vegetarian menu at the same price</dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:table@thelongnight.example">table@thelongnight.example</a></dd></div>
+      </dl>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>The Long Night</span>
+    <span>Carrow Arms, Carrow / 53.14° N</span>
+    <span><a href="../../index.html">Landing Page Atlas ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
