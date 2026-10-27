@@ -12,12 +12,14 @@ from __future__ import annotations
 
 import argparse
 import http.server
+import json
 import re
 import shutil
 import socketserver
 import subprocess
 import sys
 import threading
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from html.parser import HTMLParser
 from pathlib import Path
@@ -325,6 +327,64 @@ def check_gallery(designs: list[Design]) -> None:
         warn("script.js: design entries are not in folder order")
 
 
+def check_seo(designs: list[Design]) -> None:
+    base = "https://vezeqs.github.io/landing-page-atlas"
+    design_urls = {f"{base}/designs/{design.folder}/index.html" for design in designs}
+    expected = {f"{base}/"} | design_urls
+
+    sitemap = ROOT / "sitemap.xml"
+    if not sitemap.exists():
+        fail("sitemap.xml: missing")
+    else:
+        try:
+            root = ET.fromstring(sitemap.read_text(encoding="utf-8"))
+        except ET.ParseError as exc:
+            fail(f"sitemap.xml: {exc}")
+        else:
+            namespace = "{http://www.sitemaps.org/schemas/sitemap/0.9}"
+            locs = {node.text for node in root.iter(namespace + "loc") if node.text}
+            missing = sorted(expected - locs)
+            extra = sorted(locs - expected)
+            if missing:
+                fail(f"sitemap.xml: {len(missing)} missing url(s), first {missing[0]}")
+            if extra:
+                fail(f"sitemap.xml: {len(extra)} unknown url(s), first {extra[0]}")
+
+    robots = ROOT / "robots.txt"
+    if not robots.exists():
+        fail("robots.txt: missing")
+    elif f"Sitemap: {base}/sitemap.xml" not in robots.read_text(encoding="utf-8"):
+        fail("robots.txt: missing sitemap line")
+
+    text = GALLERY.read_text(encoding="utf-8")
+    collections = []
+    for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S):
+        try:
+            data = json.loads(block)
+        except json.JSONDecodeError as exc:
+            fail(f"index.html: invalid JSON-LD ({exc})")
+            continue
+        if isinstance(data, dict) and data.get("@type") == "CollectionPage":
+            collections.append(data)
+
+    if not collections:
+        fail("index.html: missing CollectionPage structured data")
+    else:
+        item_list = collections[0].get("mainEntity", {})
+        count = item_list.get("numberOfItems")
+        urls = {item.get("url") for item in item_list.get("itemListElement", [])}
+        if count != len(designs):
+            fail(f"index.html: structured data lists {count}, expected {len(designs)}")
+        if urls != design_urls:
+            fail("index.html: structured data URLs do not match the designs")
+
+    for design in designs:
+        page = DESIGNS / design.folder / "index.html"
+        canonical = f'<link rel="canonical" href="{base}/designs/{design.folder}/index.html">'
+        if canonical not in page.read_text(encoding="utf-8"):
+            fail(f"designs/{design.folder}/index.html: canonical is missing or wrong")
+
+
 def check_browser(designs: list[Design]) -> tuple[int, int]:
     try:
         from selenium import webdriver
@@ -494,6 +554,7 @@ def main() -> int:
         fail(f"assets/thumbs/{thumb}.webp: no matching design")
 
     check_gallery(designs)
+    check_seo(designs)
 
     pages_checked = len(folders) + 1
     print("Landing Page Atlas — design checks")
@@ -504,6 +565,7 @@ def main() -> int:
     print(f"  thumbnails           {len(thumbs)}")
     print(f"  pages checked        {pages_checked}")
     print(f"  JavaScript files     {len(folders)}")
+    print(f"  sitemap urls         {len(designs) + 1}")
     print()
 
     browser_pages = 0
