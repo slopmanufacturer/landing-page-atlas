@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hydra Works HYDRA-6 — a six-voice analog polysynth with a 24 dB ladder filter. No screen. No presets. Sheffield, UK.">
+  <meta name="theme-color" content="#e9e7df">
+  <title>Hydra Works — HYDRA-6 Analog Polysynth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Saira+Condensed:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">H</span>
+      <span class="brand__name">Hydra Works</span>
+    </a>
+    <nav class="top__nav" aria-label="Primary">
+      <a href="#instrument">Instrument</a>
+      <a href="#spec">Spec</a>
+      <a href="#order">Order</a>
+    </nav>
+    <p class="top__meta">Sheffield, UK<br>Est. 2019</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker"><span>Instrument 006</span><span>Analog / Polyphonic</span></p>
+        <h1 id="hero-title"><span>Hydra</span><span class="hero__num">6</span></h1>
+        <p class="hero__sub">Six voices. Zero menus.</p>
+        <p class="lede">
+          A six-voice analog polysynth with a 24 dB ladder filter, two VCOs
+          per voice, and no presets. Every sound is a decision you have to
+          make again.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#order">Order — £1,290 <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#spec">Read the spec <span aria-hidden="true">↓</span></a>
+        </div>
+        <dl class="hero__meta">
+          <div><dt>Build</dt><dd>6—8 weeks</dd></div>
+          <div><dt>Power</dt><dd>230V / 18W</dd></div>
+          <div><dt>Weight</dt><dd>4.2 kg</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero__stage">
+        <span class="callout callout--a" aria-hidden="true"><i></i>24 dB ladder filter</span>
+        <span class="callout callout--b" aria-hidden="true"><i></i>6-voice analog core</span>
+
+        <div class="synth" aria-label="Hydra-6 synthesizer control panel">
+          <div class="synth__screw synth__screw--tl" aria-hidden="true"></div>
+          <div class="synth__screw synth__screw--tr" aria-hidden="true"></div>
+          <div class="synth__screw synth__screw--bl" aria-hidden="true"></div>
+          <div class="synth__screw synth__screw--br" aria-hidden="true"></div>
+
+          <div class="synth__top">
+            <span class="synth__brand">HYDRA-6</span>
+            <span class="synth__sub">Analog polysynth / 6 voices</span>
+            <span class="synth__serial">SN 006-042</span>
+          </div>
+
+          <div class="synth__body">
+            <div class="scope">
+              <canvas id="scope" aria-hidden="true"></canvas>
+              <div class="scope__hud">
+                <span>Voice 01</span>
+                <span id="scope-readout">Cutoff 62 / Res 38</span>
+              </div>
+              <span class="scope__label">Output waveform</span>
+            </div>
+
+            <div class="knobs">
+              <div class="knob" data-knob="cutoff" role="slider" tabindex="0" aria-label="Filter cutoff" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
+                <div class="knob__dial" style="--angle: 32deg"><span class="knob__marker"></span></div>
+                <span class="knob__label">Cutoff</span>
+                <span class="knob__value">62</span>
+              </div>
+              <div class="knob" data-knob="resonance" role="slider" tabindex="0" aria-label="Filter resonance" aria-valuemin="0" aria-valuemax="100" aria-valuenow="38">
+                <div class="knob__dial" style="--angle: -33deg"><span class="knob__marker"></span></div>
+                <span class="knob__label">Resonance</span>
+                <span class="knob__value">38</span>
+              </div>
+              <div class="knob" data-knob="drive" role="slider" tabindex="0" aria-label="Drive" aria-valuemin="0" aria-valuemax="100" aria-valuenow="24">
+                <div class="knob__dial" style="--angle: -70deg"><span class="knob__marker"></span></div>
+                <span class="knob__label">Drive</span>
+                <span class="knob__value">24</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="synth__bottom">
+            <div class="patch">
+              <span class="jack" aria-hidden="true"></span><span>CV in</span>
+              <span class="jack" aria-hidden="true"></span><span>Gate</span>
+              <span class="jack" aria-hidden="true"></span><span>Out</span>
+            </div>
+            <button class="power" type="button" id="power" aria-pressed="true">
+              <span class="power__led" aria-hidden="true"></span>
+              <span class="power__label">Power</span>
+            </button>
+            <span class="synth__warn">230V / 50Hz · Do not open</span>
+          </div>
+        </div>
+
+        <div class="hazard-tape" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="spec-strip" aria-label="Key specifications">
+      <span><strong>06</strong> voices</span>
+      <span><strong>24</strong> dB ladder</span>
+      <span><strong>02</strong> VCO / voice</span>
+      <span><strong>100%</strong> analog</span>
+      <span><strong>4.2</strong> kg</span>
+    </div>
+
+    <section class="instrument" id="instrument" aria-labelledby="instrument-title">
+      <div class="instrument__copy">
+        <p class="section-tag">01 / The instrument</p>
+        <h2 id="instrument-title">No screen.<br>No presets.<br><em>No undo.</em></h2>
+        <p class="instrument__lede">
+          The HYDRA-6 is built in a small workshop in Sheffield from
+          through-hole parts, anodised aluminium, and a stubborn belief that
+          an instrument should be learnable in an afternoon and interesting
+          for a decade.
+        </p>
+        <p class="instrument__text">
+          Each voice has two oscillators, a 24 dB/octave ladder filter that
+          self-oscillates, two ADSR envelopes, and an LFO. There is no menu.
+          If you want a different sound, move a knob. If you want the same
+          sound again, remember it.
+        </p>
+        <ul class="instrument__list">
+          <li><span>01</span> Hand-assembled in batches of forty.</li>
+          <li><span>02</span> Calibrated at 23°C, then again at 30°C.</li>
+          <li><span>03</span> Every unit ships with a printed schematic.</li>
+        </ul>
+      </div>
+
+      <figure class="schematic">
+        <svg viewBox="0 0 620 360" role="img" aria-label="Signal flow diagram: two oscillators into a mixer, ladder filter, VCA, and output, with LFO and envelope modulation">
+          <rect width="620" height="360" fill="#f4f2ea"/>
+          <g stroke="#0b0b0b" stroke-width="0.5" opacity="0.16">
+            <line x1="0" y1="60" x2="620" y2="60"/><line x1="0" y1="120" x2="620" y2="120"/>
+            <line x1="0" y1="180" x2="620" y2="180"/><line x1="0" y1="240" x2="620" y2="240"/>
+            <line x1="0" y1="300" x2="620" y2="300"/>
+            <line x1="100" y1="0" x2="100" y2="360"/><line x1="200" y1="0" x2="200" y2="360"/>
+            <line x1="300" y1="0" x2="300" y2="360"/><line x1="400" y1="0" x2="400" y2="360"/>
+            <line x1="500" y1="0" x2="500" y2="360"/>
+          </g>
+
+          <text x="28" y="40" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="2" fill="#0b0b0b">SIGNAL PATH / HYDRA-6</text>
+          <text x="592" y="40" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="8" fill="#6d6a60">REV. 06</text>
+
+          <g class="flow-block">
+            <rect x="28" y="88" width="118" height="58" fill="#e8ff00" stroke="#0b0b0b" stroke-width="1.5"/>
+            <text x="87" y="112" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#0b0b0b">OSC 1</text>
+            <text x="87" y="130" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#0b0b0b">SAW / SQUARE</text>
+          </g>
+          <g class="flow-block">
+            <rect x="28" y="176" width="118" height="58" fill="#e8ff00" stroke="#0b0b0b" stroke-width="1.5"/>
+            <text x="87" y="200" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10" font-weight="600" fill="#0b0b0b">OSC 2</text>
+            <text x="87" y="218" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#0b0b0b">TRI / NOISE</text>
+          </g>
+
+          <path d="M146 117 H196 V164" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <path d="M146 205 H196 V164" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <path d="M196 164 L191 157 M196 164 L201 157" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+
+          <g class="flow-block">
+            <rect x="196" y="136" width="88" height="56" fill="#f4f2ea" stroke="#0b0b0b" stroke-width="1.5"/>
+            <text x="240" y="160" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#0b0b0b">MIX</text>
+            <text x="240" y="176" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#6d6a60">2 → 1</text>
+          </g>
+
+          <path d="M284 164 H334" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <path d="M334 164 L327 158 M334 164 L327 170" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+
+          <g class="flow-block">
+            <rect x="334" y="124" width="112" height="80" fill="#0b0b0b" stroke="#0b0b0b" stroke-width="1.5"/>
+            <text x="390" y="150" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#e8ff00">FILTER</text>
+            <text x="390" y="166" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#b8b8b2">24 dB LADDER</text>
+            <text x="390" y="182" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#b8b8b2">SELF-OSC</text>
+          </g>
+
+          <path d="M446 164 H496" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <path d="M496 164 L489 158 M496 164 L489 170" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+
+          <g class="flow-block">
+            <rect x="496" y="136" width="96" height="56" fill="#f4f2ea" stroke="#0b0b0b" stroke-width="1.5"/>
+            <text x="544" y="160" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="9" font-weight="600" fill="#0b0b0b">VCA</text>
+            <text x="544" y="176" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#6d6a60">LEVEL</text>
+          </g>
+
+          <path d="M544 136 V96 H592" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <path d="M592 96 L585 90 M592 96 L585 102" fill="none" stroke="#0b0b0b" stroke-width="1.4"/>
+          <text x="592" y="82" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="8" font-weight="600" fill="#0b0b0b">OUT</text>
+
+          <g class="flow-block">
+            <rect x="196" y="264" width="132" height="50" fill="#f4f2ea" stroke="#0b0b0b" stroke-width="1.3" stroke-dasharray="4 3"/>
+            <text x="262" y="286" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" font-weight="600" fill="#0b0b0b">LFO / ENV</text>
+            <text x="262" y="301" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#6d6a60">MODULATION</text>
+          </g>
+          <path d="M328 289 H356 V204" fill="none" stroke="#c2401c" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <path d="M356 204 L351 210 M356 204 L361 210" fill="none" stroke="#c2401c" stroke-width="1.2"/>
+          <text x="366" y="252" font-family="'IBM Plex Mono', monospace" font-size="7" fill="#c2401c">CV</text>
+
+          <text x="28" y="338" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1" fill="#6d6a60">SHEFFIELD / UK · THROUGH-HOLE · NO MENUS</text>
+        </svg>
+        <figcaption>Fig. 06 — Signal path. One voice shown; five more, identical.</figcaption>
+      </figure>
+    </section>
+
+    <section class="spec" id="spec" aria-labelledby="spec-title">
+      <header class="spec__head">
+        <p class="section-tag section-tag--light">02 / Technical specification</p>
+        <h2 id="spec-title">The numbers.</h2>
+        <p class="spec__intro">
+          Measured at 23°C, 45% humidity, with a 1 kHz sine input and a
+          calibrated multimeter older than the company.
+        </p>
+      </header>
+
+      <dl class="spec__grid">
+        <div><dt>Polyphony</dt><dd>6 voices, fully analog</dd></div>
+        <div><dt>Oscillators</dt><dd>2 per voice · saw, square, triangle, noise</dd></div>
+        <div><dt>Filter</dt><dd>24 dB/octave ladder · self-oscillating</dd></div>
+        <div><dt>Envelopes</dt><dd>2 × ADSR per voice</dd></div>
+        <div><dt>LFO</dt><dd>1 per voice · triangle, square, random</dd></div>
+        <div><dt>Connectivity</dt><dd>MIDI In / Thru · CV / Gate · USB-C</dd></div>
+        <div><dt>Dimensions</dt><dd>420 × 240 × 90 mm</dd></div>
+        <div><dt>Weight</dt><dd>4.2 kg</dd></div>
+        <div><dt>Power</dt><dd>230V / 50Hz · 18W</dd></div>
+        <div><dt>Finish</dt><dd>Black anodised or raw aluminium</dd></div>
+      </dl>
+
+      <div class="spec__foot">
+        <a class="text-link text-link--light" href="#order">Download full spec (PDF) <span aria-hidden="true">↗</span></a>
+        <span>Hydra Works Ltd · Unit 4, Penistone Road · Sheffield S6 3AE</span>
+      </div>
+    </section>
+
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div class="order__copy">
+        <p class="section-tag">03 / Order</p>
+        <h2 id="order-title">Take one<br><em>home.</em></h2>
+        <p class="order__lede">
+          Built in batches of forty. We take a 20% deposit when the batch
+          starts, and the balance when the instrument is ready to leave
+          Sheffield.
+        </p>
+        <p class="order__price">£1,290 <span>incl. VAT</span></p>
+        <ul class="order__facts">
+          <li><span>Lead time</span><strong>6—8 weeks</strong></li>
+          <li><span>Warranty</span><strong>3 years</strong></li>
+          <li><span>Returns</span><strong>14 days</strong></li>
+        </ul>
+      </div>
+
+      <form class="order-form" id="order-form" novalidate>
+        <div class="order-form__head">
+          <span>Proforma / HYDRA-6</span>
+          <span>HW-2026</span>
+        </div>
+
+        <div class="order-form__row">
+          <label for="order-name">Name</label>
+          <input id="order-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="order-form__row">
+          <label for="order-email">Email</label>
+          <input id="order-email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+        </div>
+
+        <fieldset class="finish">
+          <legend>Finish</legend>
+          <label class="finish__option">
+            <input type="radio" name="finish" value="Black anodised" checked>
+            <span class="finish__swatch finish__swatch--black" aria-hidden="true"></span>
+            <span>Black anodised</span>
+          </label>
+          <label class="finish__option">
+            <input type="radio" name="finish" value="Raw aluminium">
+            <span class="finish__swatch finish__swatch--alu" aria-hidden="true"></span>
+            <span>Raw aluminium</span>
+          </label>
+        </fieldset>
+
+        <div class="order-form__row">
+          <label for="order-qty">Quantity</label>
+          <select id="order-qty" name="qty">
+            <option value="1">1 unit</option>
+            <option value="2">2 units</option>
+            <option value="3">3 units</option>
+          </select>
+        </div>
+
+        <div class="order-form__total">
+          <span>Total</span>
+          <strong id="order-total">£1,290</strong>
+        </div>
+
+        <button class="order-form__submit" type="submit">Log order <span aria-hidden="true">↗</span></button>
+        <p class="order-form__note" id="order-confirm" role="status" aria-live="polite">No payment taken. We will email a proforma.</p>
+        <span class="order-form__stamp" id="order-stamp" aria-hidden="true">Logged</span>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="brand__mark" aria-hidden="true">H</span>
+      <span>Hydra Works<br>Sheffield, UK</span>
+    </div>
+    <p>Unit 4, Penistone Road<br>Sheffield S6 3AE</p>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#instrument">Instrument</a>
+      <a href="#spec">Spec</a>
+      <a href="#order">Order</a>
+      <a href="mailto:works@hydra.example">Email</a>
+      <a href="../../index.html">Index</a>
+    </nav>
+    <p class="footer__small">53.3811° N / 1.4701° W<br>© <span id="year">2026</span> Hydra Works Ltd</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

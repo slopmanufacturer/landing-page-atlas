@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kōan is a four-seat tea room in Kyoto. Tea by the season, sweets by the weather, silence by default.">
+  <meta name="theme-color" content="#efe9dd">
+  <title>Kōan — Tea, silence, and the weather</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500&family=Zen+Old+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">
+      <span class="brand__name">Kōan</span>
+      <span class="brand__kanji" aria-hidden="true">庵</span>
+    </a>
+    <nav class="top__nav" aria-label="Primary">
+      <a href="#room">Room</a>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="top__meta">Kyoto · 35.0116° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <span class="hero__vertical" aria-hidden="true">静寂 · 茶 · 庭</span>
+
+      <div class="hero__copy">
+        <p class="kicker"><span aria-hidden="true"></span> Tea room — Kyoto, est. 2018</p>
+        <h1 id="hero-title">A room for<br><em>the weather.</em></h1>
+        <p class="lede">
+          Four seats, one garden, and a kettle that takes its time. We serve
+          tea according to the season and the sky — nothing more, nothing
+          hurried.
+        </p>
+        <div class="seal" aria-hidden="true">庵</div>
+        <div class="hero__foot">
+          <span>Wednesday—Sunday<br>10:00—17:00</span>
+          <a href="#menu">See the seasonal menu <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <figure class="hero__enso">
+        <svg viewBox="0 0 420 420" role="img" aria-label="A hand-drawn enso circle in sumi ink, left open at the top">
+          <defs>
+            <filter id="rough" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.018 0.045" numOctaves="2" seed="7" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+          <path class="enso-bleed" d="M318 74 C 366 112, 384 184, 356 252 C 326 326, 244 372, 168 350 C 92 328, 48 252, 66 174 C 82 106, 140 62, 208 58" fill="none" stroke="#1d1b17" stroke-width="24" stroke-linecap="round" opacity="0.09" filter="url(#rough)"/>
+          <path class="enso-line" pathLength="1" d="M318 74 C 366 112, 384 184, 356 252 C 326 326, 244 372, 168 350 C 92 328, 48 252, 66 174 C 82 106, 140 62, 208 58" fill="none" stroke="#1d1b17" stroke-width="15" stroke-linecap="round" opacity="0.86" filter="url(#rough)"/>
+        </svg>
+        <figcaption>Enso — drawn each morning, never twice alike.</figcaption>
+      </figure>
+    </section>
+
+    <section class="intro" id="room" aria-labelledby="room-title">
+      <p class="intro__label" id="room-title">The room</p>
+      <p class="intro__big" data-reveal>Four seats. One garden.<br>No menu after dark.</p>
+      <div class="intro__text" data-reveal>
+        <p>
+          Kōan sits at the end of a narrow lane in Higashiyama, behind a gate
+          that most people walk past. Inside there is a counter of old cedar,
+          a window onto a garden the size of a tablecloth, and a kettle that
+          has been in use since before we opened.
+        </p>
+        <p>
+          We do not take groups. We do not play music. The room is small on
+          purpose, so that the weather can get in.
+        </p>
+      </div>
+    </section>
+
+    <section class="menu" id="menu" aria-labelledby="menu-title" data-season="spring">
+      <header class="section-head">
+        <h2 id="menu-title">Seasonal menu</h2>
+        <p id="season-line">The garden is waking.</p>
+      </header>
+
+      <div class="seasons" role="group" aria-label="Season">
+        <button class="season is-active" type="button" aria-pressed="true" data-season="spring">
+          <span class="season__kanji">春</span><span class="season__en">Spring</span>
+        </button>
+        <button class="season" type="button" aria-pressed="false" data-season="summer">
+          <span class="season__kanji">夏</span><span class="season__en">Summer</span>
+        </button>
+        <button class="season" type="button" aria-pressed="false" data-season="autumn">
+          <span class="season__kanji">秋</span><span class="season__en">Autumn</span>
+        </button>
+        <button class="season" type="button" aria-pressed="false" data-season="winter">
+          <span class="season__kanji">冬</span><span class="season__en">Winter</span>
+        </button>
+      </div>
+
+      <div class="menu__grid" id="menu-grid">
+        <div class="menu__col">
+          <h3>Tea <span>お茶</span></h3>
+          <ul class="menu-list" id="tea-list">
+            <li>
+              <span class="item__name">Hatsukaze <em>first wind</em></span>
+              <span class="item__price">¥900</span>
+              <span class="item__desc">Shincha, brewed soft. Grass, cream, a little rain.</span>
+            </li>
+            <li>
+              <span class="item__name">Sakura-bancha <em>cherry stem</em></span>
+              <span class="item__price">¥1,000</span>
+              <span class="item__desc">Roasted stems and salted cherry leaf. Pink in the cup.</span>
+            </li>
+            <li>
+              <span class="item__name">Yuzu-kōcha <em>citrus black</em></span>
+              <span class="item__price">¥1,100</span>
+              <span class="item__desc">Black tea, winter yuzu peel, a thread of honey.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu__col">
+          <h3>Sweets <span>菓子</span></h3>
+          <ul class="menu-list" id="sweet-list">
+            <li>
+              <span class="item__name">Shiro-an wagashi</span>
+              <span class="item__price">¥600</span>
+              <span class="item__desc">White bean paste, salted cherry leaf, one blossom.</span>
+            </li>
+            <li>
+              <span class="item__name">Warabi mochi</span>
+              <span class="item__price">¥650</span>
+              <span class="item__desc">Bracken starch, kinako, cold in the middle.</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="menu__note">
+          <span class="vertical" aria-hidden="true">本日の茶</span>
+          <p id="season-note">
+            Spring is a lesson in restraint: the first pick, the first warmth,
+            the first day you can leave the door open.
+          </p>
+          <span class="menu__note-meta">Tea is brewed to order.<br>No milk. No sugar.<br>No exceptions.</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="principles" aria-label="The principles of the room">
+      <article data-reveal>
+        <span class="principles__jp">間</span>
+        <span class="principles__en">Ma — the space between</span>
+        <h3>Leave room.</h3>
+        <p>
+          The pause between two sounds is part of the music. We keep the room
+          half empty so the tea has somewhere to go.
+        </p>
+      </article>
+      <article data-reveal>
+        <span class="principles__jp">侘寂</span>
+        <span class="principles__en">Wabi-sabi — the beauty of wear</span>
+        <h3>Let it age.</h3>
+        <p>
+          The counter is scratched. The garden is uneven. The cups do not
+          match. None of this is an accident.
+        </p>
+      </article>
+      <article data-reveal>
+        <span class="principles__jp">一期一会</span>
+        <span class="principles__en">Ichigo ichie — one meeting, once</span>
+        <h3>Be here once.</h3>
+        <p>
+          Every bowl is different, even when it is the same tea. We will not
+          be able to make this one again.
+        </p>
+      </article>
+    </section>
+
+    <section class="pause" id="pause" aria-labelledby="pause-title">
+      <div class="pause__visual" aria-hidden="true">
+        <div class="pause__ring">
+          <div class="pause__orb">
+            <span>一</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pause__copy">
+        <p class="kicker"><span aria-hidden="true"></span> A moment</p>
+        <h2 id="pause-title">Nothing to buy.<br>Just sit.</h2>
+        <p class="pause__text">
+          One minute, one breath, no phone. The kettle will wait. Press the
+          button and let the circle do the counting.
+        </p>
+        <button class="pause__button" type="button" id="breathe" aria-pressed="false">
+          <span id="breathe-label">Sit for a minute</span>
+          <span class="pause__time" id="breathe-time">01:00</span>
+        </button>
+        <p class="pause__status" id="breathe-status" role="status" aria-live="polite">
+          The room is quiet. Begin when you like.
+        </p>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="visit__top">
+        <p class="kicker kicker--light"><span aria-hidden="true"></span> Visit</p>
+        <h2 id="visit-title">Come for<br><em>one pot.</em></h2>
+      </div>
+
+      <div class="visit__grid">
+        <div class="visit__block">
+          <span class="visit__label">Address</span>
+          <p>
+            Kōan Tea Room<br>
+            3-14-7 Higashiyama<br>
+            Kyoto 605-0862, Japan
+          </p>
+          <p class="visit__small">Look for the gate with no sign.</p>
+        </div>
+
+        <div class="visit__block">
+          <span class="visit__label">Hours</span>
+          <p>
+            Wednesday—Sunday<br>
+            10:00—17:00<br>
+            Last pot at 16:30
+          </p>
+          <p class="visit__small">Closed in typhoon weather.</p>
+        </div>
+
+        <div class="visit__block">
+          <span class="visit__label">Reserve</span>
+          <p>
+            The room seats four.<br>
+            Write ahead if you can.
+          </p>
+          <a class="visit__mail" href="mailto:room@koan.example">room@koan.example</a>
+        </div>
+      </div>
+
+      <div class="visit__foot">
+        <span>Kyoto <time id="kyoto-time">--:--</time> JST</span>
+        <span>No shoes. No laptops. No rush.</span>
+        <span>© <span id="year">2026</span> Kōan</span>
+        <a href="../../index.html">HTM / Designs ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

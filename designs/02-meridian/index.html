@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Meridian Observatory — a public instrument for the long night. Survey fields, observation logs, and open observing time.">
+  <meta name="theme-color" content="#050807">
+  <title>Meridian — Deep Sky Survey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="brand" href="#top" aria-label="Meridian, back to top">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Meridian</span>
+    </a>
+    <nav class="bar__nav" aria-label="Primary">
+      <a href="#fields">Fields</a>
+      <a href="#log">Log</a>
+      <a href="#time">Observe</a>
+    </nav>
+    <div class="bar__status">
+      <span class="pulse" aria-hidden="true"></span>
+      <span>Instrument online</span>
+      <time id="utc" datetime="">--:--:--</time>
+      <span class="bar__zone">UTC</span>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__copy">
+        <p class="kicker"><span class="kicker__num">04</span> Deep sky survey / 2026</p>
+        <h1>Look up.<br>The archive<br><span class="lit">is open.</span></h1>
+        <p class="lede">
+          A public instrument for the long night. Meridian keeps the sky in
+          trust: three survey fields, one dark room, and a chair by the
+          window. No appointment. No admission. Bring a coat.
+        </p>
+        <p class="boot" aria-hidden="true">
+          <span class="boot__prompt">&gt;</span>
+          <span id="boot-text"></span><span class="caret"></span>
+        </p>
+      </div>
+
+      <figure class="chart">
+        <div class="chart__stage">
+          <canvas id="sky" aria-hidden="true"></canvas>
+          <div class="chart__grid" aria-hidden="true"></div>
+          <div class="chart__hud chart__hud--tl">RA 17h 45m 40s<br>DEC +29° 00′ 28″</div>
+          <div class="chart__hud chart__hud--tr">Field 04 / Draco</div>
+          <div class="chart__hud chart__hud--bl">Exposure 12m 00s<br>Filter L</div>
+          <div class="chart__hud chart__hud--br">Mag 16.4</div>
+          <span class="corner corner--tl" aria-hidden="true"></span>
+          <span class="corner corner--tr" aria-hidden="true"></span>
+          <span class="corner corner--bl" aria-hidden="true"></span>
+          <span class="corner corner--br" aria-hidden="true"></span>
+          <p class="chart__readout" id="field-readout">Pointer / 00.0° 00.0°</p>
+        </div>
+        <figcaption>
+          Live field simulation. Move the cursor to resolve a constellation.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="telemetry" aria-label="Tonight's observing conditions">
+      <div class="telemetry__head">
+        <span>Tonight</span>
+        <span>21:40 UTC</span>
+      </div>
+      <div class="telemetry__cell">
+        <span class="telemetry__label">Transparency</span>
+        <strong>0.92</strong>
+        <span class="telemetry__note">photometric</span>
+      </div>
+      <div class="telemetry__cell">
+        <span class="telemetry__label">Seeing</span>
+        <strong>1.1″</strong>
+        <span class="telemetry__note">stable</span>
+      </div>
+      <div class="telemetry__cell">
+        <span class="telemetry__label">Moon</span>
+        <strong>04%</strong>
+        <span class="telemetry__note">waning crescent</span>
+      </div>
+      <div class="telemetry__cell">
+        <span class="telemetry__label">Wind</span>
+        <strong>06</strong>
+        <span class="telemetry__note">km/h NW</span>
+      </div>
+    </section>
+
+    <section class="fields" id="fields" aria-labelledby="fields-title">
+      <header class="section-head">
+        <h2 id="fields-title"><span>01</span> Survey fields</h2>
+        <p>Click a field to point the instrument</p>
+      </header>
+
+      <ol class="field-list">
+        <li>
+          <button class="field" data-x="0.62" data-y="0.3" data-name="Draco Deep" data-ra="17h 45m 40s" data-dec="+57° 00′ 14″">
+            <span class="field__index">A</span>
+            <span class="field__name">Draco Deep</span>
+            <span class="field__coord">17h 45m 40s<br>+57° 00′ 14″</span>
+            <span class="field__mag">mag 16.4</span>
+            <span class="field__note">A quiet field between two faint spirals.</span>
+            <span class="field__arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="field" data-x="0.38" data-y="0.55" data-name="Lyra Shelf" data-ra="18h 52m 06s" data-dec="+36° 42′ 51″">
+            <span class="field__index">B</span>
+            <span class="field__name">Lyra Shelf</span>
+            <span class="field__coord">18h 52m 06s<br>+36° 42′ 51″</span>
+            <span class="field__mag">mag 15.8</span>
+            <span class="field__note">The ring, and everything circling it.</span>
+            <span class="field__arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+        <li>
+          <button class="field" data-x="0.7" data-y="0.68" data-name="Cygnus Rift" data-ra="20h 12m 33s" data-dec="+41° 08′ 02″">
+            <span class="field__index">C</span>
+            <span class="field__name">Cygnus Rift</span>
+            <span class="field__coord">20h 12m 33s<br>+41° 08′ 02″</span>
+            <span class="field__mag">mag 17.1</span>
+            <span class="field__note">Dust, and the light that survives it.</span>
+            <span class="field__arrow" aria-hidden="true">→</span>
+          </button>
+        </li>
+      </ol>
+      <p class="sr-status" id="field-status" aria-live="polite"></p>
+    </section>
+
+    <section class="log" id="log" aria-labelledby="log-title">
+      <header class="section-head">
+        <h2 id="log-title"><span>02</span> Observation log</h2>
+        <p>Selected nights, 2026</p>
+      </header>
+
+      <ol class="log-list">
+        <li class="entry" data-reveal>
+          <div class="entry__date">
+            <span>2026.10.19</span>
+            <span class="entry__tag">First light</span>
+          </div>
+          <div class="entry__body">
+            <h3>The mirror held collimation through a six-hour run.</h3>
+            <p>
+              We watched the Ring Nebula until the dew won. At 03:12 the
+              secondary mirror fogged, so we made tea and let the dome track
+              nothing in particular.
+            </p>
+          </div>
+          <span class="entry__seeing">Seeing 0.9″</span>
+        </li>
+        <li class="entry" data-reveal>
+          <div class="entry__date">
+            <span>2026.09.30</span>
+            <span class="entry__tag entry__tag--amber">Cloud</span>
+          </div>
+          <div class="entry__body">
+            <h3>A night of bad seeing, kept anyway.</h3>
+            <p>
+              Clouds at 2,400 metres. We opened the dome for the sound of it:
+              rain on aluminium, the shutter ticking, the kettle cooling
+              slowly on the desk.
+            </p>
+          </div>
+          <span class="entry__seeing">Seeing 3.4″</span>
+        </li>
+        <li class="entry" data-reveal>
+          <div class="entry__date">
+            <span>2026.08.14</span>
+            <span class="entry__tag">Unaided</span>
+          </div>
+          <div class="entry__body">
+            <h3>Forty-one meteors between 01:10 and 03:00.</h3>
+            <p>
+              Perseids. We counted out loud from the roof, wrapped in the
+              observatory's one good blanket. Nobody wrote anything down until
+              morning.
+            </p>
+          </div>
+          <span class="entry__seeing">Naked eye</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="time" id="time" aria-labelledby="time-title">
+      <div class="time__copy">
+        <p class="kicker"><span class="kicker__num">03</span> Open dome</p>
+        <h2 id="time-title">Request<br>observing time.</h2>
+        <p class="time__lede">
+          The dome is open to anyone. Tell us when you would like to sit with
+          the sky, and we will write back when the forecast agrees.
+        </p>
+        <dl class="time__facts">
+          <div><dt>Fee</dt><dd>None</dd></div>
+          <div><dt>Experience</dt><dd>Not required</dd></div>
+          <div><dt>Bring</dt><dd>Warm socks</dd></div>
+        </dl>
+      </div>
+
+      <form class="request" id="request-form" novalidate>
+        <div class="request__field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="request__field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+        </div>
+        <div class="request__field">
+          <label for="night">Preferred night</label>
+          <input id="night" name="night" type="date" required>
+        </div>
+        <div class="request__field">
+          <label for="party">Party size</label>
+          <select id="party" name="party">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <button class="request__submit" type="submit">
+          <span>Send request</span>
+          <span aria-hidden="true">↗</span>
+        </button>
+        <p class="request__note">No fee. No experience required. Replies within three clear nights.</p>
+        <p class="request__confirm" id="request-confirm" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <span class="brand__mark" aria-hidden="true"></span>
+      <span>Meridian Observatory</span>
+    </div>
+    <p>69.6492° N / 18.9553° E<br>Open every clear night, 30 minutes after sunset.</p>
+    <p class="footer__note">A fictional institution.<br>Built with HTML, CSS, and one canvas.<br><a href="../../index.html">HTM / Designs ↗</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
