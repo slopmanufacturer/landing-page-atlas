@@ -91,9 +91,12 @@ with no build step, no package manager, and no shared stylesheet.
 
 5. If it is a new family, add a filter button and a palette card in
    `index.html`, and a row in the README table.
-6. Update the counts in `index.html`, `README.md`, and `CONTRIBUTING.md` if
+6. Add a `<url>` entry to `sitemap.xml` with the absolute address and today's
+   `lastmod`. Copy the canonical, Open Graph, and Twitter tags from an
+   existing page and change the folder name in each address.
+7. Update the counts in `index.html`, `README.md`, and `CONTRIBUTING.md` if
    the total changes.
-7. Run both checks:
+8. Run both checks:
 
    ```sh
    python3 tools/check_designs.py
@@ -150,6 +153,8 @@ Manual checks before a pull request:
 - [ ] A 720×540 WebP thumbnail under 120 KB.
 - [ ] An entry in `script.js`, plus a filter and palette card if it is a new
       family.
+- [ ] The page is in `sitemap.xml` and carries its own canonical, Open Graph,
+      and Twitter tags.
 - [ ] The README table and counts are up to date.
 - [ ] Both checks pass.
 - [ ] No real brands, trackers, dependencies, or build steps.

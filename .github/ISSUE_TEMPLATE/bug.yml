@@ -1,0 +1,47 @@
+name: Bug report
+description: A page breaks, overflows, or fails a check.
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please include the page and the width where it
+        breaks, so it can be reproduced without guessing.
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: The folder or title, e.g. `designs/37-crux` or "Crux".
+      placeholder: designs/37-crux
+    validations:
+      required: true
+  - type: input
+    id: width
+    attributes:
+      label: Viewport width
+      description: One of 1440, 768, 390, or 320 px, or the width where it breaks.
+      placeholder: "320"
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Firefox 131, Safari 18, Chrome 129
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happens
+      description: What you expected, and what the page does instead. Screenshots help.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I ran `python3 tools/check_designs.py` and included the output if it failed.
+          required: false

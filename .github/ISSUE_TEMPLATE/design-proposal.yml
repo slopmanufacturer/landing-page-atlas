@@ -1,0 +1,51 @@
+name: Design proposal
+description: Suggest a family, a brief, or a page for the atlas.
+title: "[design] "
+labels: ["design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The atlas is built around one specific idea per page. A brief that
+        could belong to any product is a brief that will produce a generic
+        page, so be concrete: who is it for, where are they, what do they sell,
+        and what should the page refuse to do?
+  - type: input
+    id: family
+    attributes:
+      label: Family
+      description: An existing family, or a new one with a name.
+      placeholder: Sport, or "Civic" for a new family
+    validations:
+      required: true
+  - type: input
+    id: subject
+    attributes:
+      label: The subject
+      description: A fictional brand, place, and trade.
+      placeholder: A velodrome in Ghent that teaches track cycling on Tuesday nights
+    validations:
+      required: true
+  - type: textarea
+    id: brief
+    attributes:
+      label: The brief
+      description: What makes this page different from the 45 already here? Name the type, the palette, and the one interaction it needs.
+    validations:
+      required: true
+  - type: textarea
+    id: copy
+    attributes:
+      label: Sample copy
+      description: Two or three lines of real copy — a headline, a price, an opening time. No lorem ipsum.
+    validations:
+      required: false
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: House rules
+      options:
+        - label: This uses a fictional brand, not a real company.
+          required: true
+        - label: This needs no framework, build step, or external image.
+          required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Ask a question
+    url: https://github.com/vezeqs/landing-page-atlas/discussions
+    about: For questions about reusing a page, adapting a design, or the checks.
