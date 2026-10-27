@@ -2,32 +2,30 @@
 
 **45 hand-built landing pages. Eight families. Plain HTML, CSS, and JavaScript.**
 
-[![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://slopmanufacturer.github.io/landing-page-atlas/)
-[![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/slopmanufacturer/landing-page-atlas/generate)
+[![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://vezeqs.github.io/landing-page-atlas/)
+[![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/vezeqs/landing-page-atlas/generate)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7d5b46?style=flat-square)](LICENSE)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-e8ff00?style=flat-square)](#)
+[![Checks](https://github.com/vezeqs/landing-page-atlas/actions/workflows/checks.yml/badge.svg)](https://github.com/vezeqs/landing-page-atlas/actions/workflows/checks.yml)
 
-[![HTM / Designs — forty-five hand-built landing pages](assets/og.png)](https://slopmanufacturer.github.io/landing-page-atlas/)
+[![Landing Page Atlas — forty-five hand-built landing pages](assets/og.png)](https://vezeqs.github.io/landing-page-atlas/)
 
-**Live site:** <https://slopmanufacturer.github.io/landing-page-atlas/>
+**Live site:** <https://vezeqs.github.io/landing-page-atlas/>
 
 Landing Page Atlas is a collection of landing pages you can open, read, copy,
 and change. Every page is a folder with its own HTML, CSS, and JavaScript.
 There is no build step, no package manager, and no shared stylesheet.
 
-The live gallery is branded **HTM / Designs**. The repository is Landing Page
-Atlas.
-
 ## Start here
 
-- **Browse the catalogue:** [slopmanufacturer.github.io/landing-page-atlas](https://slopmanufacturer.github.io/landing-page-atlas/) — filter by family, open any page, copy the HTML from the card.
-- **Read the FAQ:** [the FAQ on the live site](https://slopmanufacturer.github.io/landing-page-atlas/#faq) — build steps, reuse, licensing.
-- **Use this template:** [github.com/slopmanufacturer/landing-page-atlas/generate](https://github.com/slopmanufacturer/landing-page-atlas/generate)
+- **Browse the catalogue:** [vezeqs.github.io/landing-page-atlas](https://vezeqs.github.io/landing-page-atlas/) — filter by family, open any page, copy the HTML from the card.
+- **Read the FAQ:** [the FAQ on the live site](https://vezeqs.github.io/landing-page-atlas/#faq) — build steps, reuse, licensing.
+- **Use this template:** [github.com/vezeqs/landing-page-atlas/generate](https://github.com/vezeqs/landing-page-atlas/generate)
 - **Using an AI agent?** Point it at [AGENTS.md](AGENTS.md) before it touches the repository.
 - **Clone it:**
 
 ```sh
-git clone https://github.com/slopmanufacturer/landing-page-atlas.git
+git clone https://github.com/vezeqs/landing-page-atlas.git
 cd landing-page-atlas
 python3 -m http.server 8000
 ```

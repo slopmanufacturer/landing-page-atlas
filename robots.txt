@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://vezeqs.github.io/landing-page-atlas/sitemap.xml

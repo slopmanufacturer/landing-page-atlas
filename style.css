@@ -1770,6 +1770,29 @@ a {
   color: var(--muted);
 }
 
+.noscript-list {
+  margin: 14px 0 0;
+  padding-left: 1.2em;
+  columns: 2;
+  column-gap: 40px;
+  font-family: var(--mono);
+  font-size: 9px;
+  line-height: 2;
+  color: var(--muted);
+}
+
+.noscript-list a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 720px) {
+  .noscript-list {
+    columns: 1;
+  }
+}
+
 @media (max-width: 1100px) {
   .index {
     grid-template-columns: repeat(3, minmax(0, 1fr));

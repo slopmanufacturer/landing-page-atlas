@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- `robots.txt` and `sitemap.xml`, covering the gallery and all 45 designs.
+- Canonical URLs on the gallery and every design page.
+- Open Graph and Twitter card metadata on all 45 design pages, so a single
+  page can be shared without falling back to a bare link.
+- A static list of all 45 pages inside the gallery's `<noscript>` fallback.
+- `CollectionPage` structured data for the catalogue.
+- A GitHub Actions workflow that runs the static checks on every push and
+  pull request.
+
+### Changed
+
+- The gallery is branded **Landing Page Atlas** throughout. The separate
+  HTM / Designs name is retired.
+- The repository moved to `vezeqs/landing-page-atlas`; every link and
+  canonical URL now points at the new Pages address.
+
 ## [1.2.0] - 2026-10-27
 
 ### Added
@@ -70,8 +88,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 720×540 WebP thumbnails for every design.
 - MIT licence.
 
-[Unreleased]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.2.0...HEAD
-[1.2.0]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.0.1...v1.1.0
-[1.0.1]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.0...v1.0.1
-[1.0.0]: https://github.com/slopmanufacturer/landing-page-atlas/releases/tag/v1.0
+[Unreleased]: https://github.com/vezeqs/landing-page-atlas/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/vezeqs/landing-page-atlas/compare/v1.1.0...v1.2.0
+[1.1.0]: https://github.com/vezeqs/landing-page-atlas/compare/v1.0.1...v1.1.0
+[1.0.1]: https://github.com/vezeqs/landing-page-atlas/compare/v1.0...v1.0.1
+[1.0.0]: https://github.com/vezeqs/landing-page-atlas/releases/tag/v1.0
