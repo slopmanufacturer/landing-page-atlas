@@ -1,14 +1,17 @@
 # HTM / Designs
 
+[![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://slopmanufacturer.github.io/htm-designs/)
 [![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/slopmanufacturer/htm-designs/generate)
 [![License: MIT](https://img.shields.io/badge/license-MIT-7d5b46?style=flat-square)](LICENSE)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-e8ff00?style=flat-square)](#)
 
 Six hand-built landing pages. Plain HTML, CSS, and JavaScript — no frameworks, no templates, no shared stylesheet.
 
-[![HTM / Designs — six hand-built landing pages](assets/og.png)](index.html)
+[![HTM / Designs — six hand-built landing pages](assets/og.png)](https://slopmanufacturer.github.io/htm-designs/)
 
-**Open [`index.html`](index.html) to browse the collection, read the FAQ, and grab the quick start.**
+**Live site:** <https://slopmanufacturer.github.io/htm-designs/>
+
+Open the live site, or [`index.html`](index.html) locally, to browse the collection, read the FAQ, and grab the quick start.
 
 ## The designs
 
