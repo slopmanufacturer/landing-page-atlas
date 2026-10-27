@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Southpaw is a boxing gym in Liverpool. No mirrors, no contracts, and a coach who teaches the jab before the hook.">
+  <meta name="theme-color" content="#efe7d8">
+  <title>Southpaw — Boxing Club, Liverpool</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28"><path d="M6 12c0-4 3-7 8-7s8 3 8 7v6c0 4-3 7-8 7s-8-3-8-7z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M9 13h10M9 17h10" stroke="currentColor" stroke-width="2"/></svg>
+      </span>
+      <span>Southpaw</span>
+      <span class="brand__sub">Boxing Club</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#classes">Classes</a>
+      <a href="#coaches">Coaches</a>
+      <a href="#first">First session</a>
+      <a href="#fight">Fight night</a>
+    </nav>
+    <p class="top__meta">Liverpool / 53.4084° N<br>Est. 2012</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker"><span aria-hidden="true"></span> Boxing club / Liverpool</p>
+        <h1 id="hero-title">Everybody has<br>a <em>first round.</em></h1>
+        <p class="lede">
+          A boxing gym in Liverpool with no mirrors, no contracts, and a coach
+          who will teach you to jab before he teaches you to hit. Gloves
+          provided. Nerves optional.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#classes">See the classes <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#first">Book a first session <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Members</dt><dd>240</dd></div>
+          <div><dt>Coaches</dt><dd>04</dd></div>
+          <div><dt>Ring</dt><dd>01</dd></div>
+        </dl>
+      </div>
+
+      <figure class="poster">
+        <div class="poster__top">
+          <span>Southpaw / Liverpool</span>
+          <span>Est. 2012</span>
+        </div>
+        <div class="poster__round">01</div>
+        <div class="poster__title">First<br>round.</div>
+        <div class="poster__rule" aria-hidden="true"></div>
+        <div class="poster__rows">
+          <div><span>Session</span><strong>60 min</strong></div>
+          <div><span>Gloves</span><strong>Provided</strong></div>
+          <div><span>Sparring</span><strong>Not today</strong></div>
+        </div>
+        <div class="poster__foot">
+          <span>No mirrors</span>
+          <span>No contracts</span>
+        </div>
+      </figure>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span>No mirrors</span><span>✳</span><span>No contracts</span><span>✳</span><span>Jab first</span><span>✳</span><span>Gloves provided</span><span>✳</span><span>Liverpool</span><span>✳</span>
+        </div>
+        <div class="ticker__group">
+          <span>No mirrors</span><span>✳</span><span>No contracts</span><span>✳</span><span>Jab first</span><span>✳</span><span>Gloves provided</span><span>✳</span><span>Liverpool</span><span>✳</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="classes" id="classes" aria-labelledby="classes-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Classes</p>
+          <h2 id="classes-title">Pick a<br>session.</h2>
+        </div>
+        <p class="section-note">
+          Eight sessions a week. Beginners are welcome in every class marked
+          all levels. If you are not sure, start with Saturday morning.
+        </p>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filter by class type">
+        <button class="is-active" type="button" data-type="all" aria-pressed="true">All <span>08</span></button>
+        <button type="button" data-type="boxing" aria-pressed="false">Boxing</button>
+        <button type="button" data-type="conditioning" aria-pressed="false">Conditioning</button>
+        <button type="button" data-type="women" aria-pressed="false">Women</button>
+        <button type="button" data-type="youth" aria-pressed="false">Youth</button>
+      </div>
+
+      <div class="class-list" id="class-list" aria-live="polite">
+        <article class="class" data-type="boxing">
+          <span class="class__day">Mon</span>
+          <div class="class__body">
+            <h3>Boxing / All levels</h3>
+            <p>Stance, guard, jab. The first hour of the week is always the same hour.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>18:00</dd></div>
+            <div><dt>Coach</dt><dd>Frank</dd></div>
+            <div><dt>Level</dt><dd>All</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="conditioning">
+          <span class="class__day">Tue</span>
+          <div class="class__body">
+            <h3>Conditioning</h3>
+            <p>Rope, bag, floor. No boxing technique, no excuses. Bring a towel.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>07:00</dd></div>
+            <div><dt>Coach</dt><dd>Nadia</dd></div>
+            <div><dt>Level</dt><dd>All</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="women">
+          <span class="class__day">Tue</span>
+          <div class="class__body">
+            <h3>Women's boxing</h3>
+            <p>Beginner-friendly. Wraps, gloves, and a coach who has seen every nervous first jab.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>19:00</dd></div>
+            <div><dt>Coach</dt><dd>Frank</dd></div>
+            <div><dt>Level</dt><dd>Beginner</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="youth">
+          <span class="class__day">Wed</span>
+          <div class="class__body">
+            <h3>Youth boxing</h3>
+            <p>For 12 to 17. Footwork, bag work, and homework. No sparring until the coach says so.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>18:00</dd></div>
+            <div><dt>Coach</dt><dd>Nadia</dd></div>
+            <div><dt>Level</dt><dd>12—17</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="boxing">
+          <span class="class__day">Thu</span>
+          <div class="class__body">
+            <h3>Boxing / Intermediate</h3>
+            <p>Combinations, counter-punching, and the first honest round of sparring.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>18:00</dd></div>
+            <div><dt>Coach</dt><dd>Frank</dd></div>
+            <div><dt>Level</dt><dd>Intermediate</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="conditioning">
+          <span class="class__day">Fri</span>
+          <div class="class__body">
+            <h3>Conditioning</h3>
+            <p>The same rope, the same bag, the same floor. It does not get easier.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>07:00</dd></div>
+            <div><dt>Coach</dt><dd>Nadia</dd></div>
+            <div><dt>Level</dt><dd>All</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="boxing">
+          <span class="class__day">Sat</span>
+          <div class="class__body">
+            <h3>Boxing / Beginner</h3>
+            <p>The class to start with. Wraps on at ten, gloves on at ten past, jab at twenty past.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>10:00</dd></div>
+            <div><dt>Coach</dt><dd>Frank</dd></div>
+            <div><dt>Level</dt><dd>Beginner</dd></div>
+          </dl>
+        </article>
+        <article class="class" data-type="boxing">
+          <span class="class__day">Sun</span>
+          <div class="class__body">
+            <h3>Open ring</h3>
+            <p>For members who have done the course. Rounds, pads, and no audience.</p>
+          </div>
+          <dl class="class__meta">
+            <div><dt>Time</dt><dd>11:00</dd></div>
+            <div><dt>Coach</dt><dd>Nadia</dd></div>
+            <div><dt>Level</dt><dd>Members</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="classes__empty" id="classes-empty" hidden>No sessions of that type this week. Try another filter.</p>
+    </section>
+
+    <section class="coaches" id="coaches" aria-labelledby="coaches-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">02 / Coaches</p>
+          <h2 id="coaches-title">Three people<br>who count.</h2>
+        </div>
+        <p class="section-note section-note--light">
+          Every coach has fought, every coach still trains, and every coach
+          will tell you the same thing: the jab pays the rent.
+        </p>
+      </header>
+
+      <div class="coach-grid">
+        <article class="coach">
+          <span class="coach__num">01</span>
+          <h3>Frank Doyle</h3>
+          <p class="coach__role">Head coach / Boxing</p>
+          <p class="coach__record">34 fights / 29 wins / 3 draws</p>
+          <p class="coach__quote">"Jab first. Everything else is decoration."</p>
+        </article>
+        <article class="coach">
+          <span class="coach__num">02</span>
+          <h3>Nadia Okoye</h3>
+          <p class="coach__role">Conditioning / Youth</p>
+          <p class="coach__record">12 years coaching / 4 national champions</p>
+          <p class="coach__quote">"Legs, lungs, then hands. In that order."</p>
+        </article>
+        <article class="coach">
+          <span class="coach__num">03</span>
+          <h3>Tommy Reid</h3>
+          <p class="coach__role">Footwork / Pads</p>
+          <p class="coach__record">18 fights / 14 wins / 2 draws</p>
+          <p class="coach__quote">"Footwork is free. Use it."</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="first" id="first" aria-labelledby="first-title">
+      <div class="first__copy">
+        <p class="section-label">03 / First session</p>
+        <h2 id="first-title">What happens<br><em>first.</em></h2>
+        <p>
+          Turn up ten minutes early. Wrap your hands, borrow a pair of gloves,
+          and stand in the back row. Nobody will ask you to spar. Nobody will
+          ask you to buy anything.
+        </p>
+        <dl class="first__facts">
+          <div><dt>Price</dt><dd>£10</dd></div>
+          <div><dt>Length</dt><dd>60 min</dd></div>
+          <div><dt>Bring</dt><dd>Water</dd></div>
+          <div><dt>Provided</dt><dd>Gloves</dd></div>
+        </dl>
+      </div>
+      <div class="first__panel">
+        <div class="first__panel-head"><span>The hour</span><span>60:00</span></div>
+        <ol class="hour">
+          <li><span>00—10</span><strong>Wraps and warm-up</strong></li>
+          <li><span>10—25</span><strong>Stance, guard, jab</strong></li>
+          <li><span>25—40</span><strong>Bag rounds</strong></li>
+          <li><span>40—50</span><strong>Pads with a coach</strong></li>
+          <li><span>50—60</span><strong>Stretch, water, questions</strong></li>
+        </ol>
+        <div class="first__panel-foot"><span>Mon—Fri 07:00—21:00</span><span>Sat 09:00—14:00</span></div>
+      </div>
+    </section>
+
+    <section class="fight" id="fight" aria-labelledby="fight-title">
+      <div>
+        <p class="section-label section-label--light">04 / Fight night</p>
+        <h2 id="fight-title">Fight night<br><em>07.</em></h2>
+        <p class="fight__lede">Eight bouts, one ring, and the cheapest ticket in Liverpool. Members get first refusal on the front two rows.</p>
+      </div>
+      <div class="fight__card">
+        <div class="fight__card-top"><span>Southpaw Fight Night 07</span><span>Sat 21 Nov</span></div>
+        <div class="fight__card-main">
+          <div><span>Doors</span><strong>18:00</strong></div>
+          <div><span>First bell</span><strong>19:00</strong></div>
+          <div><span>Tickets</span><strong>£15</strong></div>
+        </div>
+        <div class="fight__card-venue">The Boxing Room / Dale Street / Liverpool</div>
+        <a class="button button--light" href="#join">Ask for a ticket <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="join" id="join" aria-labelledby="join-title">
+      <div>
+        <p class="section-label">05 / Join</p>
+        <h2 id="join-title">Come for<br>one hour.</h2>
+        <p class="join__lede">No contract, no joining fee, no direct debit. Pay per session or £45 a month. Cancel by not coming back.</p>
+      </div>
+      <form class="join__form" id="join-form" novalidate>
+        <div class="field">
+          <label for="join-name">Name</label>
+          <input id="join-name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="join-email">Email</label>
+          <input id="join-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="join-class">First class</label>
+          <select id="join-class" name="class">
+            <option>Saturday beginner / 10:00</option>
+            <option>Monday all levels / 18:00</option>
+            <option>Tuesday women / 19:00</option>
+            <option>Wednesday youth / 18:00</option>
+          </select>
+        </div>
+        <button type="submit">Book a first session</button>
+        <p class="join__note" id="join-note" role="status">We reply within a day. Bring water; we will bring the gloves.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Southpaw / Liverpool</span>
+    <span>53.4084° N / 2.9916° W</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

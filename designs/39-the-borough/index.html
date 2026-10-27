@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Borough FC is a non-league football club in Bermondsey. Fixtures, results, the table, and matchday tickets.">
+  <meta name="theme-color" content="#f3f0e4">
+  <title>The Borough FC — Non-League Football, Bermondsey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top">
+      <span class="badge" aria-hidden="true">
+        <svg viewBox="0 0 40 44">
+          <path d="M20 2 L37 9 V23 C37 33 29 39 20 42 C11 39 3 33 3 23 V9 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 15 H28 V19 H24 V30 H28 V34 H12 V30 H16 V19 H12 Z" fill="currentColor"/>
+        </svg>
+      </span>
+      <span>The Borough</span>
+      <span class="brand__sub">FC / Est. 1898</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#fixtures">Fixtures</a>
+      <a href="#table">Table</a>
+      <a href="#club">Club</a>
+      <a href="#matchday">Matchday</a>
+    </nav>
+    <p class="top__meta">Bermondsey / 51.4975° N<br>Sat 15:00</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker"><span aria-hidden="true"></span> Non-league football / South-east London</p>
+        <h1 id="hero-title">Saturday,<br><em>3pm.</em></h1>
+        <p class="lede">
+          A non-league football club in Bermondsey. One stand, two hundred
+          seasons of mud, and a team that has never been anyone's feeder club.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#fixtures">See the fixtures <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#matchday">Get a ticket <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Founded</dt><dd>1898</dd></div>
+          <div><dt>League</dt><dd>Premier</dd></div>
+          <div><dt>Position</dt><dd>4th</dd></div>
+        </dl>
+      </div>
+
+      <aside class="fixture-card" aria-label="Next fixture">
+        <div class="fixture-card__top">
+          <span>Next fixture / Matchday 13</span>
+          <span>League</span>
+        </div>
+        <div class="fixture-card__teams">
+          <div>
+            <span class="fixture-card__role">Home</span>
+            <strong>The Borough</strong>
+          </div>
+          <span class="fixture-card__vs">v</span>
+          <div>
+            <span class="fixture-card__role">Away</span>
+            <strong>Coldharbour</strong>
+          </div>
+        </div>
+        <div class="fixture-card__when">
+          <div><span>Date</span><strong>Sat 31 Oct</strong></div>
+          <div><span>Kick-off</span><strong>15:00</strong></div>
+          <div><span>Venue</span><strong>The Marsh</strong></div>
+        </div>
+        <div class="fixture-card__form">
+          <span>Form</span>
+          <div class="form-dots" aria-label="Form: win, win, draw, loss, win">
+            <i class="is-win">W</i><i class="is-win">W</i><i class="is-draw">D</i><i class="is-loss">L</i><i class="is-win">W</i>
+          </div>
+        </div>
+        <div class="fixture-card__foot">
+          <span>Turnstiles open 13:30</span>
+          <span>£10 / £4</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span>Est. 1898</span><span>✳</span><span>One stand</span><span>✳</span><span>No feeder club</span><span>✳</span><span>Sat 15:00</span><span>✳</span><span>Up the Borough</span><span>✳</span>
+        </div>
+        <div class="ticker__group">
+          <span>Est. 1898</span><span>✳</span><span>One stand</span><span>✳</span><span>No feeder club</span><span>✳</span><span>Sat 15:00</span><span>✳</span><span>Up the Borough</span><span>✳</span>
+        </div>
+      </div>
+    </div>
+
+    <section class="fixtures" id="fixtures" aria-labelledby="fixtures-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Fixtures</p>
+          <h2 id="fixtures-title">The next<br>five.</h2>
+        </div>
+        <p class="section-note">
+          Home games at The Marsh. Away travel leaves from the clubhouse
+          ninety minutes before kick-off, or whenever the minibus starts.
+        </p>
+      </header>
+
+      <div class="tabs" role="tablist" aria-label="Fixtures and results">
+        <button class="is-active" type="button" id="tab-fixtures" role="tab" aria-selected="true" aria-controls="panel-fixtures">Fixtures</button>
+        <button type="button" id="tab-results" role="tab" aria-selected="false" aria-controls="panel-results">Results</button>
+      </div>
+
+      <div class="panel" id="panel-fixtures" role="tabpanel" aria-labelledby="tab-fixtures">
+        <ol class="match-list">
+          <li>
+            <span class="match__date">31 Oct</span>
+            <span class="match__opponent"><strong>Coldharbour</strong><em>Home</em></span>
+            <span class="match__venue">The Marsh</span>
+            <span class="match__time">15:00</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">07 Nov</span>
+            <span class="match__opponent"><strong>Peckham Athletic</strong><em>Away</em></span>
+            <span class="match__venue">Peckham Rye</span>
+            <span class="match__time">15:00</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">14 Nov</span>
+            <span class="match__opponent"><strong>Rye Lane Rangers</strong><em>Home</em></span>
+            <span class="match__venue">The Marsh</span>
+            <span class="match__time">15:00</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">21 Nov</span>
+            <span class="match__opponent"><strong>Deptford Works</strong><em>Away</em></span>
+            <span class="match__venue">Deptford Park</span>
+            <span class="match__time">15:00</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">28 Nov</span>
+            <span class="match__opponent"><strong>Nunhead Nomads</strong><em>Home</em></span>
+            <span class="match__venue">The Marsh</span>
+            <span class="match__time">15:00</span>
+            <span class="match__tag">League</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="panel" id="panel-results" role="tabpanel" aria-labelledby="tab-results" hidden>
+        <ol class="match-list">
+          <li>
+            <span class="match__date">24 Oct</span>
+            <span class="match__opponent"><strong>Camberwell Casuals</strong><em>Away</em></span>
+            <span class="match__venue">Camberwell Green</span>
+            <span class="match__score is-win">2—1</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">17 Oct</span>
+            <span class="match__opponent"><strong>Herne Hill</strong><em>Home</em></span>
+            <span class="match__venue">The Marsh</span>
+            <span class="match__score is-draw">0—0</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">10 Oct</span>
+            <span class="match__opponent"><strong>Brockley Town</strong><em>Away</em></span>
+            <span class="match__venue">Brockley Road</span>
+            <span class="match__score is-loss">1—3</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">03 Oct</span>
+            <span class="match__opponent"><strong>Walworth Wanderers</strong><em>Home</em></span>
+            <span class="match__venue">The Marsh</span>
+            <span class="match__score is-win">4—0</span>
+            <span class="match__tag">League</span>
+          </li>
+          <li>
+            <span class="match__date">26 Sep</span>
+            <span class="match__opponent"><strong>Bermondsey Athletic</strong><em>Away</em></span>
+            <span class="match__venue">Southwark Park</span>
+            <span class="match__score is-win">1—0</span>
+            <span class="match__tag">League</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="table" id="table" aria-labelledby="table-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">02 / Table</p>
+          <h2 id="table-title">The league,<br>as it stands.</h2>
+        </div>
+        <p class="section-note section-note--light">
+          Twelve games played. Twenty-three points. A goal difference of nine
+          and a long way to go.
+        </p>
+      </header>
+      <div class="table__wrap">
+        <table class="standings">
+          <caption>Premier Division / after matchday 12</caption>
+          <thead>
+            <tr><th scope="col">Pos</th><th scope="col">Club</th><th scope="col">P</th><th scope="col">W</th><th scope="col">D</th><th scope="col">L</th><th scope="col">GF</th><th scope="col">GA</th><th scope="col">Pts</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>Rye Lane Rangers</td><td>12</td><td>9</td><td>2</td><td>1</td><td>28</td><td>11</td><td>29</td></tr>
+            <tr><td>2</td><td>Peckham Athletic</td><td>12</td><td>8</td><td>2</td><td>2</td><td>25</td><td>13</td><td>26</td></tr>
+            <tr><td>3</td><td>Coldharbour</td><td>12</td><td>7</td><td>3</td><td>2</td><td>22</td><td>12</td><td>24</td></tr>
+            <tr class="is-borough"><td>4</td><td>The Borough</td><td>12</td><td>7</td><td>2</td><td>3</td><td>24</td><td>15</td><td>23</td></tr>
+            <tr><td>5</td><td>Deptford Works</td><td>12</td><td>5</td><td>4</td><td>3</td><td>19</td><td>16</td><td>19</td></tr>
+            <tr><td>6</td><td>Nunhead Nomads</td><td>12</td><td>4</td><td>3</td><td>5</td><td>17</td><td>20</td><td>15</td></tr>
+            <tr><td>7</td><td>Camberwell Casuals</td><td>12</td><td>3</td><td>2</td><td>7</td><td>14</td><td>24</td><td>11</td></tr>
+            <tr><td>8</td><td>Brockley Town</td><td>12</td><td>1</td><td>1</td><td>10</td><td>8</td><td>36</td><td>4</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="club" id="club" aria-labelledby="club-title">
+      <div class="club__copy">
+        <p class="section-label">03 / Club</p>
+        <h2 id="club-title">A club,<br><em>not a brand.</em></h2>
+        <p>
+          The Borough has played on the same patch of south-east London since
+          1898. The stand was rebuilt in 1954, the tea hut in 2009, and the
+          pitch every June. Nobody has ever tried to sell the naming rights.
+        </p>
+        <p>
+          We run two senior sides, a Sunday veterans team, and a youth section
+          that has produced three of the first team. The bar opens after the
+          final whistle and closes when the last person leaves.
+        </p>
+      </div>
+      <dl class="club__facts">
+        <div><dt>Founded</dt><dd>1898</dd></div>
+        <div><dt>League titles</dt><dd>04</dd></div>
+        <div><dt>Capacity</dt><dd>2,400</dd></div>
+        <div><dt>Record gate</dt><dd>2,214</dd></div>
+      </dl>
+    </section>
+
+    <section class="matchday" id="matchday" aria-labelledby="matchday-title">
+      <div>
+        <p class="section-label">04 / Matchday</p>
+        <h2 id="matchday-title">The Marsh,<br>SE16.</h2>
+      </div>
+      <div class="matchday__grid">
+        <div>
+          <span class="matchday__label">Tickets</span>
+          <p>Adult £10<br>Concession £4<br>Under 12 free</p>
+        </div>
+        <div>
+          <span class="matchday__label">Getting there</span>
+          <p>Jamaica Road<br>Bermondsey<br>London SE16</p>
+        </div>
+        <div>
+          <span class="matchday__label">Nearest</span>
+          <p>Bermondsey<br>London Bridge<br>Bus 47 / 188</p>
+        </div>
+        <div>
+          <span class="matchday__label">Before</span>
+          <p>The Shipwright Arms<br>Open from 12:00<br>Two minutes away</p>
+        </div>
+      </div>
+      <form class="programme" id="programme-form" novalidate>
+        <label for="programme-email">The programme, by email</label>
+        <div class="programme__row">
+          <input id="programme-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="programme__note" id="programme-note" role="status">Team news on Friday, results on Saturday. Nothing on Sunday.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>The Borough FC / Bermondsey</span>
+    <span>51.4975° N / 0.0700° W</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

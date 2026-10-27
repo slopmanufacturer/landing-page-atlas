@@ -1552,6 +1552,11 @@ a {
     border-top: 0;
   }
 
+  .palette:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-right: 0;
+  }
+
   .palette:hover {
     flex: none;
   }
