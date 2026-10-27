@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tidewatch — a public network of coastal buoys. Live wave height, water temperature, wind, and tide data.">
+  <meta name="theme-color" content="#062a2c">
+  <title>Tidewatch — Coastal Data Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <a class="brand" href="#top"><span class="brand__dot" aria-hidden="true"></span> Tidewatch</a>
+    <nav class="bar__nav" aria-label="Primary">
+      <a href="#network">Network</a>
+      <a href="#tides">Tides</a>
+      <a href="#api">API</a>
+    </nav>
+    <p class="bar__status"><span class="pulse" aria-hidden="true"></span> Live / 14 buoys</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Coastal data / Public network</p>
+        <h1 id="hero-title">The sea,<br><em>in numbers.</em></h1>
+        <p class="lede">
+          Fourteen buoys along the North Sea and the Channel, reporting every
+          ten minutes. No account. No paywall. Just the water, measured.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#network">See the network <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#api">Use the API <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <figure class="chart-panel">
+        <div class="chart-panel__head">
+          <span>Tide height</span>
+          <div class="modes" role="group" aria-label="Chart range">
+            <button class="is-active" type="button" data-mode="now" aria-pressed="true">Now</button>
+            <button type="button" data-mode="24h" aria-pressed="false">24h</button>
+            <button type="button" data-mode="7d" aria-pressed="false">7d</button>
+          </div>
+        </div>
+        <canvas id="chart" aria-hidden="true"></canvas>
+        <div class="chart-panel__value"><strong id="height">1.84</strong><span>m</span></div>
+        <div class="chart-panel__hud">
+          <span id="buoy-label">North Sea 04</span>
+          <span id="chart-range">Last 60 min</span>
+        </div>
+        <figcaption>Simulated readings from the selected buoy.</figcaption>
+      </figure>
+    </section>
+
+    <section class="telemetry" aria-label="Current conditions">
+      <div><span>Swell</span><strong id="swell">1.84 m</strong><em>period 8 s</em></div>
+      <div><span>Water</span><strong id="water">11.2°C</strong><em>+0.3 this week</em></div>
+      <div><span>Wind</span><strong id="wind">14 kn</strong><em>WSW 248°</em></div>
+      <div><span>Visibility</span><strong>9.4 km</strong><em>moderate</em></div>
+    </section>
+
+    <section class="network" id="network" aria-labelledby="network-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Network</p>
+          <h2 id="network-title">Four buoys,<br>one coast.</h2>
+        </div>
+        <p class="section-note">
+          Click a buoy to point the chart at it. The readings update every ten
+          minutes; the chart redraws every second.
+        </p>
+      </header>
+
+      <div class="buoy-list">
+        <button class="buoy is-active" type="button" data-buoy="0" aria-pressed="true">
+          <span class="buoy__id">B-04</span>
+          <span class="buoy__name">North Sea 04</span>
+          <span class="buoy__coords">56.12° N / 3.04° E</span>
+          <span class="buoy__value">1.84 m</span>
+          <span class="buoy__state">Live</span>
+        </button>
+        <button class="buoy" type="button" data-buoy="1" aria-pressed="false">
+          <span class="buoy__id">B-07</span>
+          <span class="buoy__name">Dogger Bank</span>
+          <span class="buoy__coords">55.20° N / 2.10° E</span>
+          <span class="buoy__value">1.42 m</span>
+          <span class="buoy__state">Live</span>
+        </button>
+        <button class="buoy" type="button" data-buoy="2" aria-pressed="false">
+          <span class="buoy__id">B-11</span>
+          <span class="buoy__name">Firth of Forth</span>
+          <span class="buoy__coords">56.02° N / 2.72° W</span>
+          <span class="buoy__value">0.96 m</span>
+          <span class="buoy__state">Live</span>
+        </button>
+        <button class="buoy" type="button" data-buoy="3" aria-pressed="false">
+          <span class="buoy__id">B-14</span>
+          <span class="buoy__name">English Channel</span>
+          <span class="buoy__coords">50.10° N / 1.40° W</span>
+          <span class="buoy__value">2.31 m</span>
+          <span class="buoy__state buoy__state--warn">Delayed</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="tides" id="tides" aria-labelledby="tides-title">
+      <div class="tides__copy">
+        <p class="section-label">02 / Tides</p>
+        <h2 id="tides-title">Today,<br>on the water.</h2>
+        <p>
+          High and low water for North Sea 04. Times are local, heights are
+          above chart datum. Add 12 minutes for the harbour wall.
+        </p>
+      </div>
+      <table class="tide-table">
+        <caption>North Sea 04 / 26 October 2026</caption>
+        <thead><tr><th scope="col">Type</th><th scope="col">Time</th><th scope="col">Height</th></tr></thead>
+        <tbody>
+          <tr><td>High</td><td>04:12</td><td>2.14 m</td></tr>
+          <tr><td>Low</td><td>10:38</td><td>0.62 m</td></tr>
+          <tr><td>High</td><td>16:47</td><td>2.28 m</td></tr>
+          <tr><td>Low</td><td>23:05</td><td>0.71 m</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="api" id="api" aria-labelledby="api-title">
+      <div>
+        <p class="section-label section-label--light">03 / API</p>
+        <h2 id="api-title">Open data.<br>No key.</h2>
+        <p class="api__lede">
+          Every reading is available as JSON. Use it for a dashboard, a
+          sailing club, a school project, or a poem. Attribution is nice.
+        </p>
+        <a class="button button--light" href="#top">Read the docs <span aria-hidden="true">↗</span></a>
+      </div>
+      <pre class="code"><code><span class="code__prompt">GET</span> https://api.tidewatch.example/v1/buoys/b-04
+
+{
+  "id": "b-04",
+  "name": "North Sea 04",
+  "height_m": 1.84,
+  "water_c": 11.2,
+  "wind_kn": 14,
+  "updated": "2026-10-26T00:40:00Z"
+}</code></pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Tidewatch</span>
+    <span>54.0° N / 2.5° E</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

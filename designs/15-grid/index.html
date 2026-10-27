@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GRID — a live view of a regional power network. Demand, generation, frequency, and the five substations that keep it honest.">
+  <meta name="theme-color" content="#eef0e8">
+  <title>GRID — Regional Power Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="bar">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true"></span> Grid <span class="brand__sub">Regional Power</span></a>
+    <nav class="bar__nav" aria-label="Primary">
+      <a href="#network">Network</a>
+      <a href="#load">Load</a>
+      <a href="#about">About</a>
+    </nav>
+    <p class="bar__status"><span class="pulse" aria-hidden="true"></span> <span id="freq">50.02</span> Hz <span class="bar__nominal">nominal</span></p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Regional power / Live network</p>
+        <h1 id="hero-title">The grid is<br><em>a conversation.</em></h1>
+        <p class="lede">
+          Five substations, one frequency, and a few thousand decisions a
+          second. This is what it looks like when the lights stay on.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#network">Open the network <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#load">Read the load report <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="map-panel">
+        <div class="map-panel__head">
+          <span>Network map / 5 nodes</span>
+          <span>Live</span>
+        </div>
+        <div class="map">
+          <svg viewBox="0 0 520 420" role="img" aria-label="A schematic map of five substations connected by transmission lines">
+            <rect width="520" height="420" fill="#eef0e8"/>
+            <g stroke="#121212" stroke-width="0.5" opacity="0.12">
+              <line x1="0" y1="84" x2="520" y2="84"/><line x1="0" y1="168" x2="520" y2="168"/>
+              <line x1="0" y1="252" x2="520" y2="252"/><line x1="0" y1="336" x2="520" y2="336"/>
+              <line x1="104" y1="0" x2="104" y2="420"/><line x1="208" y1="0" x2="208" y2="420"/>
+              <line x1="312" y1="0" x2="312" y2="420"/><line x1="416" y1="0" x2="416" y2="420"/>
+            </g>
+            <path d="M30 80 C 100 40, 180 60, 230 100 C 290 150, 360 110, 470 150 C 500 162, 510 220, 480 260 C 440 320, 340 300, 300 330 C 240 380, 120 390, 70 330 C 30 280, 20 140, 30 80 Z" fill="none" stroke="#121212" stroke-width="1.4" stroke-dasharray="6 4"/>
+            <g stroke="#121212" stroke-width="1.5">
+              <line x1="120" y1="150" x2="250" y2="105"/>
+              <line x1="250" y1="105" x2="380" y2="180"/>
+              <line x1="380" y1="180" x2="300" y2="300"/>
+              <line x1="300" y1="300" x2="150" y2="320"/>
+              <line x1="150" y1="320" x2="120" y2="150"/>
+              <line x1="250" y1="105" x2="300" y2="300"/>
+            </g>
+            <g fill="#f5d90a" stroke="#121212" stroke-width="1.5">
+              <circle cx="120" cy="150" r="12"/>
+              <circle cx="250" cy="105" r="12"/>
+              <circle cx="380" cy="180" r="12"/>
+              <circle cx="300" cy="300" r="12"/>
+              <circle cx="150" cy="320" r="12"/>
+            </g>
+            <text x="24" y="32" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="2" fill="#121212">REGION 04 / TRANSMISSION</text>
+            <text x="24" y="48" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1.5" fill="#6f7168">SCHEMATIC / NOT TO SCALE</text>
+          </svg>
+
+          <button class="node node--north is-active" type="button" data-node="0" aria-label="North Ridge substation" aria-pressed="true">01</button>
+          <button class="node node--harbour" type="button" data-node="1" aria-label="Harbour substation" aria-pressed="false">02</button>
+          <button class="node node--east" type="button" data-node="2" aria-label="Eastfield substation" aria-pressed="false">03</button>
+          <button class="node node--south" type="button" data-node="3" aria-label="South Bank substation" aria-pressed="false">04</button>
+          <button class="node node--west" type="button" data-node="4" aria-label="Westmoor substation" aria-pressed="false">05</button>
+        </div>
+
+        <div class="map-detail" id="map-detail" aria-live="polite">
+          <div class="map-detail__head"><span id="node-id">N-01</span><span id="node-state">Exporting</span></div>
+          <h2 id="node-name">North Ridge</h2>
+          <dl>
+            <div><dt>Demand</dt><dd id="node-demand">1.21 GW</dd></div>
+            <div><dt>Generation</dt><dd id="node-gen">1.42 GW</dd></div>
+            <div><dt>Renewables</dt><dd id="node-renew">64%</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="telemetry" aria-label="Network totals">
+      <div><span>Demand</span><strong>4.82 GW</strong><em>now</em></div>
+      <div><span>Generation</span><strong>4.91 GW</strong><em>+0.09 headroom</em></div>
+      <div><span>Frequency</span><strong id="freq-big">50.02 Hz</strong><em>nominal 50.00</em></div>
+      <div><span>Renewables</span><strong>38%</strong><em>of mix</em></div>
+    </section>
+
+    <section class="network" id="network" aria-labelledby="network-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Network</p>
+          <h2 id="network-title">Five places,<br>one balance.</h2>
+        </div>
+        <p class="section-note">
+          The map above is a schematic, not a wiring diagram. The numbers are
+          real enough to be useful and fake enough to be safe.
+        </p>
+      </header>
+
+      <table class="node-table">
+        <caption>Substation snapshot / 26 October 2026</caption>
+        <thead>
+          <tr><th scope="col">Node</th><th scope="col">Demand</th><th scope="col">Generation</th><th scope="col">Status</th><th scope="col">Renewables</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>North Ridge</td><td>1.21 GW</td><td>1.42 GW</td><td>Exporting</td><td>64%</td></tr>
+          <tr><td>Harbour</td><td>0.98 GW</td><td>0.72 GW</td><td>Importing</td><td>12%</td></tr>
+          <tr><td>Eastfield</td><td>1.42 GW</td><td>1.18 GW</td><td>Importing</td><td>28%</td></tr>
+          <tr><td>South Bank</td><td>0.76 GW</td><td>0.88 GW</td><td>Exporting</td><td>51%</td></tr>
+          <tr><td>Westmoor</td><td>0.45 GW</td><td>0.71 GW</td><td>Exporting</td><td>82%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="load" id="load" aria-labelledby="load-title">
+      <div>
+        <p class="section-label">02 / Load</p>
+        <h2 id="load-title">The shape<br>of the day.</h2>
+        <p class="load__lede">
+          Demand climbs at breakfast, flattens at noon, and peaks when the
+          kettle goes on. The battery does the rest.
+        </p>
+      </div>
+      <div class="load__bars">
+        <div class="load-row"><span>00:00</span><div><i style="--w: 42%"></i></div><strong>2.9 GW</strong></div>
+        <div class="load-row"><span>06:00</span><div><i style="--w: 61%"></i></div><strong>3.8 GW</strong></div>
+        <div class="load-row"><span>12:00</span><div><i style="--w: 68%"></i></div><strong>4.1 GW</strong></div>
+        <div class="load-row"><span>18:00</span><div><i style="--w: 96%"></i></div><strong>4.8 GW</strong></div>
+        <div class="load-row"><span>22:00</span><div><i style="--w: 55%"></i></div><strong>3.4 GW</strong></div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="section-label section-label--light">03 / About</p>
+        <h2 id="about-title">No blackouts<br>since 2019.</h2>
+      </div>
+      <div class="about__copy">
+        <p>
+          Grid is a regional transmission operator. We run five substations,
+          one battery, and a control room that still has a landline. The
+          frequency is the only number that matters.
+        </p>
+        <p>
+          This page is a public dashboard. If you need the operational API,
+          write to the control room. A person will answer, eventually.
+        </p>
+        <dl>
+          <div><dt>Region</dt><dd>04 / North Coast</dd></div>
+          <div><dt>Peak demand</dt><dd>5.12 GW</dd></div>
+          <div><dt>Control room</dt><dd>+44 20 7946 0404</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Grid / Regional Power</span>
+    <span>Control room / 51.5072° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
