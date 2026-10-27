@@ -7,6 +7,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-27
+
+### Added
+
+- The Civic family: three new pages — Borrow (public library, Ancoats), Line
+  Six (light rail, Calderford), and The Register (municipal archive, Leeds).
+  The catalogue now holds 45 designs across eight families. Civic is a
+  three-page family; the other seven have six pages each.
+- Thumbnails, gallery entries, a Civic filter, and a palette card.
+
+### Changed
+
+- `assets/og.png` regenerated for forty-five studies. The volume remains
+  Vol. 02.
+- README, AGENTS.md, and CONTRIBUTING.md updated for 45 designs, eight
+  families, and the next family block (`46`–`51`).
+
 ## [1.1.0] - 2026-10-27
 
 ### Added
@@ -53,7 +70,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 720×540 WebP thumbnails for every design.
 - MIT licence.
 
-[Unreleased]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.0.1...v1.1.0
 [1.0.1]: https://github.com/slopmanufacturer/landing-page-atlas/compare/v1.0...v1.0.1
 [1.0.0]: https://github.com/slopmanufacturer/landing-page-atlas/releases/tag/v1.0
