@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Northbound — furniture made in Copenhagen from solid oak, walnut, and patience.">
+  <meta name="theme-color" content="#e8dfd0">
+  <title>Northbound — Furniture Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Northbound</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#collection">Collection</a>
+      <a href="#materials">Materials</a>
+      <a href="#studio">Studio</a>
+    </nav>
+    <p class="top__meta">Copenhagen<br>55.6761° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Furniture / Made in Copenhagen</p>
+        <h1 id="hero-title">Furniture for<br><em>the long haul.</em></h1>
+        <p class="lede">
+          Solid wood, replaceable parts, and a finish you can repair with a
+          cloth. Built to be sat on for thirty years, not photographed once.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#collection">See the collection <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#materials">Read about materials <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="chair-wrap">
+        <svg class="chair" viewBox="0 0 420 480" role="img" aria-label="A wooden side chair seen from the side">
+          <ellipse cx="210" cy="452" rx="130" ry="9" fill="#232323" opacity=".12"/>
+          <path d="M108 70 C 108 50, 126 40, 146 40 H 274 C 294 40, 312 50, 312 70 V 230 H 108 Z" fill="var(--wood, #c89a5b)" stroke="#232323" stroke-width="2"/>
+          <path d="M132 66 V 204 M 164 66 V 204 M 196 66 V 204 M 228 66 V 204 M 260 66 V 204 M 292 66 V 204" stroke="#232323" stroke-width="1" opacity=".25"/>
+          <rect x="88" y="224" width="244" height="26" fill="var(--wood, #c89a5b)" stroke="#232323" stroke-width="2"/>
+          <rect x="112" y="250" width="16" height="180" fill="var(--wood, #c89a5b)" stroke="#232323" stroke-width="2"/>
+          <rect x="292" y="250" width="16" height="180" fill="var(--wood, #c89a5b)" stroke="#232323" stroke-width="2"/>
+          <rect x="128" y="330" width="164" height="10" fill="var(--wood, #c89a5b)" stroke="#232323" stroke-width="1.5"/>
+          <text x="30" y="40" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="2" fill="#232323">NB-01 / SIDE CHAIR</text>
+          <text x="30" y="456" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1.5" fill="#6f6557">OAK / 44 × 48 × 78 CM</text>
+        </svg>
+        <div class="finishes" role="group" aria-label="Finish">
+          <button class="is-active" type="button" data-finish="oak" data-name="Oak" aria-pressed="true" style="--s1:#c89a5b"></button>
+          <button type="button" data-finish="walnut" data-name="Walnut" aria-pressed="false" style="--s1:#6b4423"></button>
+          <button type="button" data-finish="black" data-name="Black stain" aria-pressed="false" style="--s1:#232323"></button>
+          <span id="finish-name">Oak</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Collection</p>
+          <h2 id="collection-title">Three pieces.<br>No trends.</h2>
+        </div>
+        <p class="section-note">
+          The collection is small on purpose. A chair, a table, a shelf. We
+          add a piece when we have something worth adding.
+        </p>
+      </header>
+
+      <div class="product-grid">
+        <article>
+          <div class="product product--chair" aria-hidden="true"></div>
+          <p>Side chair / from €480</p>
+          <h3>NB-01</h3>
+        </article>
+        <article>
+          <div class="product product--table" aria-hidden="true"></div>
+          <p>Dining table / from €1,250</p>
+          <h3>NB-02</h3>
+        </article>
+        <article>
+          <div class="product product--shelf" aria-hidden="true"></div>
+          <p>Wall shelf / from €320</p>
+          <h3>NB-03</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="materials" id="materials" aria-labelledby="materials-title">
+      <div>
+        <p class="section-label section-label--light">02 / Materials</p>
+        <h2 id="materials-title">Wood, oil,<br>and time.</h2>
+      </div>
+      <div class="materials__grid">
+        <article><span>01</span><h3>European oak</h3><p>Hard, pale, and forgiving. It will darken slowly and evenly.</p></article>
+        <article><span>02</span><h3>Walnut</h3><p>Darker, softer, more expensive. Worth it for a table.</p></article>
+        <article><span>03</span><h3>Hardwax oil</h3><p>Not a plastic coat. Repair a scratch with a cloth and a little oil.</p></article>
+      </div>
+    </section>
+
+    <section class="studio" id="studio" aria-labelledby="studio-title">
+      <div>
+        <p class="section-label">03 / Studio</p>
+        <h2 id="studio-title">Come and<br>sit down.</h2>
+        <p class="studio__lede">
+          The workshop is open on Fridays. There is a chair by the window and
+          usually a pot of coffee. Write first; we are not always there.
+        </p>
+        <p class="studio__address">Refshalevej 163A<br>1432 Copenhagen K</p>
+        <a class="button" href="mailto:studio@northbound.example">Arrange a visit <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="studio__hours">
+        <span>Workshop hours</span>
+        <dl>
+          <div><dt>Monday—Thursday</dt><dd>08:00—16:00</dd></div>
+          <div><dt>Friday</dt><dd>08:00—14:00</dd></div>
+          <div><dt>Weekend</dt><dd>Closed</dd></div>
+        </dl>
+        <p>Repairs and re-oiling are free for the first five years.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Northbound</span>
+    <span>Copenhagen / 55.6761° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

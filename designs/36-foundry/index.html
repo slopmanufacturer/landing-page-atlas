@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Foundry — a variable grotesque with two axes and one licence. Set it, test it, licence it.">
+  <meta name="theme-color" content="#0d0d0d">
+  <title>Foundry — Variable Typeface</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">F</span> Foundry</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#specimen">Specimen</a>
+      <a href="#glyphs">Glyphs</a>
+      <a href="#license">License</a>
+    </nav>
+    <p class="top__meta">London / 51.5072° N<br>Typeface 01 / 2026</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Variable typeface / Two axes</p>
+        <h1 id="hero-title">A typeface<br><em>is a room.</em></h1>
+        <p class="lede">
+          Foundry is a grotesque with a wide range of weights and widths. Set
+          it tight for a headline, loose for a paragraph. One file, two axes.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#specimen">Try the axes <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#license">Read the licence <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="specimen-panel" id="specimen">
+        <div class="specimen-panel__head"><span>Foundry / Variable</span><span>Live</span></div>
+        <div class="specimen" id="specimen-text" aria-live="polite">Foundry</div>
+        <div class="axes">
+          <div class="axis">
+            <div class="axis__head"><label for="weight">Weight</label><span id="weight-value">620</span></div>
+            <input id="weight" type="range" min="100" max="1000" step="10" value="620">
+          </div>
+          <div class="axis">
+            <div class="axis__head"><label for="width">Width</label><span id="width-value">100</span></div>
+            <input id="width" type="range" min="25" max="151" step="1" value="100">
+          </div>
+        </div>
+        <div class="specimen-panel__foot"><span>wght 100—1000</span><span>wdth 25—151</span><span>opsz 8—144</span></div>
+      </div>
+    </section>
+
+    <section class="glyphs" id="glyphs" aria-labelledby="glyphs-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Glyphs</p>
+          <h2 id="glyphs-title">The alphabet,<br>at one weight.</h2>
+        </div>
+        <p class="section-note">
+          Every glyph is drawn on the same skeleton. The width axis changes
+          the counters, not the drawing. There is no italic yet.
+        </p>
+      </header>
+      <div class="glyph-grid" aria-hidden="true">
+        <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span>
+        <span>G</span><span>H</span><span>I</span><span>J</span><span>K</span><span>L</span>
+        <span>M</span><span>N</span><span>O</span><span>P</span><span>Q</span><span>R</span>
+        <span>S</span><span>T</span><span>U</span><span>V</span><span>W</span><span>X</span>
+        <span>Y</span><span>Z</span><span>0</span><span>1</span><span>2</span><span>3</span>
+        <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+      </div>
+    </section>
+
+    <section class="license" id="license" aria-labelledby="license-title">
+      <div>
+        <p class="section-label section-label--light">02 / License</p>
+        <h2 id="license-title">One licence.<br>No subscriptions.</h2>
+      </div>
+      <div class="license__copy">
+        <p>
+          A perpetual desktop licence covers up to five machines. Web,
+          app, and broadcast are separate, and priced by the size of the
+          audience. Students pay nothing.
+        </p>
+        <ul>
+          <li><span>Desktop</span><strong>£120</strong></li>
+          <li><span>Web</span><strong>From £240</strong></li>
+          <li><span>Student</span><strong>Free</strong></li>
+        </ul>
+        <a class="button button--light" href="mailto:type@foundry.example">Request a trial <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Foundry</span>
+    <span>London / 51.5072° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

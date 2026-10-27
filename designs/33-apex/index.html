@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Apex — a British motorcycle built for the long way round. Throttle, torque, and a test ride.">
+  <meta name="theme-color" content="#0e0e0e">
+  <title>Apex — Motorcycles, Coventry</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">A</span> Apex</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#machine">Machine</a>
+      <a href="#spec">Spec</a>
+      <a href="#ride">Test ride</a>
+    </nav>
+    <p class="top__meta">Coventry / Since 2014<br>52.4068° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Motorcycles / Made in Coventry</p>
+        <h1 id="hero-title">The long way<br><em>is the point.</em></h1>
+        <p class="lede">
+          A 900 cc parallel twin with a steel frame, a 19-litre tank, and a
+          seat you can sit on for six hours. No riding modes. One good one.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#machine">See the machine <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#ride">Book a test ride <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="bike-panel" id="machine">
+        <div class="bike-panel__head"><span>Apex 900 / prototype</span><span>Running</span></div>
+        <svg class="bike" viewBox="0 0 640 360" role="img" aria-label="A side view of the Apex 900 motorcycle">
+          <rect width="640" height="360" fill="#151515"/>
+          <circle cx="170" cy="265" r="58" fill="none" stroke="#e8e1d2" stroke-width="8"/>
+          <circle cx="170" cy="265" r="30" fill="none" stroke="#e8e1d2" stroke-width="2"/>
+          <circle cx="490" cy="265" r="58" fill="none" stroke="#e8e1d2" stroke-width="8"/>
+          <circle cx="490" cy="265" r="30" fill="none" stroke="#e8e1d2" stroke-width="2"/>
+          <path d="M170 265 L 300 180 L 390 180 L 490 265" fill="none" stroke="#e8e1d2" stroke-width="5"/>
+          <path d="M300 180 L 250 130 L 220 130" fill="none" stroke="#e8e1d2" stroke-width="4"/>
+          <path d="M250 130 L 300 110 L 370 120 L 410 160 L 390 180 Z" fill="#e63322" stroke="#e8e1d2" stroke-width="2"/>
+          <path d="M300 110 L 280 85 L 330 80 L 350 110" fill="none" stroke="#e8e1d2" stroke-width="4"/>
+          <path d="M410 160 L 470 150 L 510 190 L 490 210 L 420 195 Z" fill="#e8e1d2" stroke="#e8e1d2" stroke-width="2"/>
+          <path d="M220 130 L 180 120" stroke="#e8e1d2" stroke-width="5"/>
+          <path d="M420 195 L 470 250" stroke="#e8e1d2" stroke-width="4"/>
+          <path d="M510 190 L 560 170" stroke="#e8e1d2" stroke-width="3"/>
+          <text x="26" y="34" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="2" fill="#e8e1d2">APEX 900 / MK II</text>
+          <text x="26" y="334" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1.5" fill="#8a8a82">STEEL / 900 CC / 19 L</text>
+        </svg>
+        <div class="throttle">
+          <div class="throttle__head"><span>Throttle</span><span id="rpm">2,400 rpm</span></div>
+          <input id="throttle" type="range" min="0" max="100" value="24" aria-label="Throttle">
+          <div class="throttle__labels"><span>Closed</span><span>Wide open</span></div>
+        </div>
+        <canvas id="torque" aria-hidden="true"></canvas>
+        <div class="bike-panel__foot"><span>Torque curve / simulated</span><span id="power">96 Nm</span></div>
+      </div>
+    </section>
+
+    <section class="spec" id="spec" aria-labelledby="spec-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Spec</p>
+          <h2 id="spec-title">One page.<br>No modes.</h2>
+        </div>
+        <p class="section-note">
+          The Apex 900 is built to be serviced in a shed, not a laboratory.
+          The numbers are honest; the seat is the important one.
+        </p>
+      </header>
+      <dl class="spec-grid">
+        <div><dt>Engine</dt><dd>900 cc parallel twin</dd></div>
+        <div><dt>Power</dt><dd>76 hp @ 7,200 rpm</dd></div>
+        <div><dt>Torque</dt><dd>96 Nm @ 4,400 rpm</dd></div>
+        <div><dt>Weight</dt><dd>198 kg wet</dd></div>
+        <div><dt>Tank</dt><dd>19 litres</dd></div>
+        <div><dt>Seat</dt><dd>820 mm / comfort</dd></div>
+      </dl>
+    </section>
+
+    <section class="ride" id="ride" aria-labelledby="ride-title">
+      <div>
+        <p class="section-label section-label--light">02 / Test ride</p>
+        <h2 id="ride-title">Come and<br>ride it.</h2>
+      </div>
+      <div class="ride__copy">
+        <p>
+          Test rides run on Thursdays and Saturdays, from the workshop in
+          Coventry. Bring a licence, a helmet, and two hours. The route is
+          mostly B-roads on purpose.
+        </p>
+        <p class="ride__price">From £9,400</p>
+        <a class="button button--light" href="mailto:ride@apex.example">Book a test ride <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Apex Motorcycles</span>
+    <span>Coventry / 52.4068° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

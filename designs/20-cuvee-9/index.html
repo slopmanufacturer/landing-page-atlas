@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cuvée 9 — a very small champagne house in Reims. Nine hectares, one cellar, no shortcuts.">
+  <meta name="theme-color" content="#f3e8d0">
+  <title>Cuvée 9 — Champagne, Reims</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Cuvée 9</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#wine">The wine</a>
+      <a href="#house">The house</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="top__meta">Reims / 49.2583° N<br>Since 1929</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Champagne / Reims</p>
+        <h1 id="hero-title">A very<br><em>small house.</em></h1>
+        <p class="lede">
+          Nine hectares, one cellar, and a cellar master who has been here
+          longer than most of the vines. No shortcuts. No celebrity cuvées.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#wine">Taste the wine <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#visit">Find a bottle <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero__meta">Cuvée 9 / 2019 / 12% vol.</p>
+      </div>
+
+      <figure class="bottle-card">
+        <canvas id="bubbles" aria-hidden="true"></canvas>
+        <svg class="bottle" viewBox="0 0 300 520" role="img" aria-label="A bottle of Cuvée 9 champagne with gold foil and an ivory label">
+          <defs>
+            <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2f4a35"/><stop offset=".55" stop-color="#16271b"/><stop offset="1" stop-color="#0b140d"/>
+            </linearGradient>
+            <linearGradient id="foil" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0d79b"/><stop offset=".5" stop-color="#b88a3e"/><stop offset="1" stop-color="#8a6a31"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="150" cy="500" rx="76" ry="8" fill="#1b1a17" opacity=".18"/>
+          <path d="M112 150 C 112 118, 126 104, 126 78 H 174 C 174 104, 188 118, 188 150 V 468 Q 188 492 164 492 H 136 Q 112 492 112 468 Z" fill="url(#glass)" stroke="#0b140d" stroke-width="2"/>
+          <path d="M126 78 H 174 V 112 H 126 Z" fill="url(#foil)"/>
+          <rect x="122" y="104" width="56" height="10" fill="url(#foil)"/>
+          <rect x="124" y="190" width="52" height="120" fill="#f3e8d0" stroke="#b88a3e" stroke-width="1"/>
+          <rect x="130" y="196" width="40" height="108" fill="none" stroke="#b88a3e" stroke-width=".7"/>
+          <text x="150" y="222" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6" letter-spacing="1.5" fill="#1b1a17">CUVÉE</text>
+          <text x="150" y="254" text-anchor="middle" font-family="'Playfair Display', serif" font-size="30" fill="#1b1a17">9</text>
+          <line x1="136" y1="266" x2="164" y2="266" stroke="#b88a3e" stroke-width=".8"/>
+          <text x="150" y="282" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="5" letter-spacing="1" fill="#1b1a17">REIMS / 2019</text>
+          <text x="150" y="294" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="4.5" letter-spacing="1" fill="#8a6a31">BRUT NATURE</text>
+          <g fill="#ffffff" opacity=".12">
+            <rect x="118" y="160" width="4" height="300" rx="2"/>
+            <rect x="128" y="146" width="2" height="90"/>
+          </g>
+        </svg>
+        <svg class="coupe" viewBox="0 0 160 240" aria-hidden="true">
+          <path d="M22 30 H 138 C 138 88, 110 120, 80 122 C 50 120, 22 88, 22 30 Z" fill="none" stroke="#b88a3e" stroke-width="1.5"/>
+          <path d="M28 58 H 132 C 126 94, 106 112, 80 114 C 54 112, 34 94, 28 58 Z" fill="#e8c987" opacity=".55"/>
+          <path d="M80 122 V 210 M 50 214 H 110" fill="none" stroke="#b88a3e" stroke-width="1.5"/>
+          <g fill="#f3e8d0" opacity=".85">
+            <circle cx="55" cy="78" r="2"/><circle cx="72" cy="68" r="1.5"/>
+            <circle cx="94" cy="82" r="1.8"/><circle cx="110" cy="66" r="1.4"/>
+          </g>
+        </svg>
+        <figcaption>Cuvée 9 / Brut Nature / 2019</figcaption>
+      </figure>
+    </section>
+
+    <section class="notes" id="wine" aria-labelledby="notes-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / The wine</p>
+          <h2 id="notes-title">Three notes,<br>in order.</h2>
+        </div>
+        <p class="section-note">
+          60% Chardonnay, 40% Pinot Noir. Nine months in stainless, then
+          three years on the lees. Dosage: none.
+        </p>
+      </header>
+
+      <div class="note-grid">
+        <article>
+          <span>01</span>
+          <h3>Brioche</h3>
+          <p>Warm bread, almond, a little salt. The lees doing their slow work.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Citrus</h3>
+          <p>Lemon peel and grapefruit pith. The Chardonnay keeping the room bright.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Chalk</h3>
+          <p>Wet stone, white pepper, a finish that stays longer than the glass.</p>
+        </article>
+      </div>
+
+      <div class="vintage">
+        <span>Vintage 2019</span>
+        <span>9 ha / 14,200 bottles</span>
+        <span>Disgorged March 2025</span>
+        <span>Serve at 9—11°C</span>
+      </div>
+    </section>
+
+    <section class="house" id="house" aria-labelledby="house-title">
+      <div>
+        <p class="section-label section-label--light">02 / The house</p>
+        <h2 id="house-title">Nine hectares.<br>One cellar.</h2>
+      </div>
+      <div class="house__copy">
+        <blockquote>
+          “We are not trying to make the most champagne. We are trying to make
+          the same champagne, again and again, until it is right.”
+        </blockquote>
+        <p class="house__cite">— Élise Vaugirard, cellar master</p>
+        <ol class="house__list">
+          <li><span>01</span>Grapes from nine hectares, all within 4 km.</li>
+          <li><span>02</span>Pressed slowly, fermented in steel.</li>
+          <li><span>03</span>Three years on the lees, no dosage.</li>
+        </ol>
+        <a class="button button--light" href="#visit">Find a bottle <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div>
+        <p class="section-label">03 / Visit</p>
+        <h2 id="visit-title">Come to<br>the cellar.</h2>
+        <p class="visit__lede">
+          Tastings are by appointment, Thursday to Saturday. Four people at a
+          time, twelve metres underground, one very cold room.
+        </p>
+        <p class="visit__address">9 Rue des Crayères<br>51100 Reims</p>
+        <a class="button" href="mailto:cellar@cuvee9.example">Book a tasting <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <div class="locator">
+        <label for="city">Find a bottle</label>
+        <select id="city">
+          <option value="reims">Reims</option>
+          <option value="paris">Paris</option>
+          <option value="london">London</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+        <div class="locator__result" id="locator-result" aria-live="polite">
+          <span class="locator__shop">La Cave du Nord</span>
+          <span class="locator__address">18 Rue de Mars, 51100 Reims</span>
+          <span class="locator__stock">12 bottles / 2 cases</span>
+        </div>
+        <p class="locator__price">€68 / bottle · €390 / case of six</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Cuvée 9</span>
+    <span>Reims / 49.2583° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

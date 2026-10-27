@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Clay & Co. — a ceramics studio in Stoke-on-Trent. Vessels made by hand, meant for use.">
+  <meta name="theme-color" content="#efe9df">
+  <title>Clay & Co. — Ceramics Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Clay &amp; Co.</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#vessels">Vessels</a>
+      <a href="#process">Process</a>
+      <a href="#shop">Shop</a>
+    </nav>
+    <p class="top__meta">Stoke-on-Trent<br>53.0027° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Ceramics / Made by hand</p>
+        <h1 id="hero-title">Made by hand,<br><em>meant for use.</em></h1>
+        <p class="lede">
+          Bowls, jugs, and cups thrown in a small studio in Stoke. No two are
+          the same. All of them are dishwasher-safe.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#shop">See the shop <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#process">How it is made <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="vessel-wrap">
+        <svg class="vessel" viewBox="0 0 360 480" role="img" aria-label="A hand-thrown stoneware jug">
+          <ellipse cx="180" cy="450" rx="90" ry="8" fill="#1d1b17" opacity=".12"/>
+          <path d="M112 142 C 96 200, 86 290, 112 372 C 128 424, 232 424, 248 372 C 274 290, 264 200, 248 142 Z" fill="var(--glaze-a, #b45f3f)" stroke="#1d1b17" stroke-width="1.5"/>
+          <path d="M112 142 C 130 122, 230 122, 248 142 L 244 168 C 220 154, 140 154, 116 168 Z" fill="var(--glaze-b, #8a3f2a)" stroke="#1d1b17" stroke-width="1.2"/>
+          <path d="M248 190 C 300 190, 308 260, 262 274" fill="none" stroke="var(--glaze-b, #8a3f2a)" stroke-width="12" stroke-linecap="round"/>
+          <path d="M248 190 C 300 190, 308 260, 262 274" fill="none" stroke="#1d1b17" stroke-width="1" opacity=".35"/>
+          <g fill="none" stroke="var(--glaze-c, #e8dcc8)" stroke-width="2" opacity=".7">
+            <path d="M124 220 C 150 250, 210 250, 236 220"/>
+            <path d="M120 250 C 148 280, 212 280, 240 250"/>
+            <path d="M118 280 C 146 310, 214 310, 242 280"/>
+          </g>
+          <path d="M132 156 C 140 170, 160 176, 180 176" fill="none" stroke="#1d1b17" stroke-width="1" opacity=".25"/>
+        </svg>
+        <div class="glazes" role="group" aria-label="Glaze">
+          <button class="is-active" type="button" data-glaze="rust" data-name="Rust" aria-pressed="true" style="--s1:#b45f3f;--s2:#8a3f2a;--s3:#e8dcc8"></button>
+          <button type="button" data-glaze="ash" data-name="Ash" aria-pressed="false" style="--s1:#8a8a7a;--s2:#5f6054;--s3:#efe9df"></button>
+          <button type="button" data-glaze="moss" data-name="Moss" aria-pressed="false" style="--s1:#5c6b52;--s2:#3f4a38;--s3:#d8d0bd"></button>
+          <span id="glaze-name">Rust</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Process</p>
+          <h2 id="process-title">Three firings.<br>One object.</h2>
+        </div>
+        <p class="section-note">
+          Everything is thrown, dried, trimmed, and fired in the same room.
+          The kiln runs on Wednesdays. The studio smells of clay and coffee.
+        </p>
+      </header>
+      <ol class="process-list">
+        <li><span>01</span><h3>Throw</h3><p>Clay on the wheel, water on the hands. The shape is decided in the first ten minutes.</p></li>
+        <li><span>02</span><h3>Trim</h3><p>The next day, the foot is cut and the handle is pulled. This is where it becomes useful.</p></li>
+        <li><span>03</span><h3>Fire</h3><p>Bisque, glaze, stoneware. Three days of cooling before anything is allowed to be sold.</p></li>
+      </ol>
+    </section>
+
+    <section class="shop" id="shop" aria-labelledby="shop-title">
+      <div>
+        <p class="section-label section-label--light">02 / Shop</p>
+        <h2 id="shop-title">Three things<br>for the table.</h2>
+      </div>
+      <div class="shop__grid">
+        <article><div class="vessel-mini vessel-mini--jug" aria-hidden="true"></div><p>Jug / £48</p><h3>The Pourer</h3></article>
+        <article><div class="vessel-mini vessel-mini--bowl" aria-hidden="true"></div><p>Bowl / £36</p><h3>The Everyday</h3></article>
+        <article><div class="vessel-mini vessel-mini--cup" aria-hidden="true"></div><p>Cup / £24</p><h3>The Small One</h3></article>
+      </div>
+      <a class="button button--light" href="mailto:studio@clayandco.example">Ask about a commission <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Clay &amp; Co.</span>
+    <span>Stoke-on-Trent / 53.0027° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

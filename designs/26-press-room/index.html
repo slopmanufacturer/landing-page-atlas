@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Press Room — an independent print fair in London. 48 exhibitors, 12 talks, and a lot of paper.">
+  <meta name="theme-color" content="#f4efe3">
+  <title>Press Room — Independent Print Fair</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Press Room</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#exhibitors">Exhibitors</a>
+      <a href="#talks">Talks</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <p class="top__meta">London / 7—9 Nov 2026<br>51.5072° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Independent print fair / Third edition</p>
+        <h1 id="hero-title">Print,<br><em>in person.</em></h1>
+        <p class="lede">
+          Forty-eight exhibitors, twelve talks, and a room full of paper you
+          can pick up with your hands. No screens required, though we have
+          those too.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#visit">Plan your visit <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#exhibitors">See the exhibitors <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <div class="poster-stack" aria-hidden="true">
+        <div class="poster poster--pink"><span>PRESS<br>ROOM</span><em>07—09.11.26</em></div>
+        <div class="poster poster--blue"><span>48<br>STALLS</span><em>LONDON</em></div>
+        <div class="poster poster--yellow"><span>PAPER<br>FIRST</span><em>£8 / DAY</em></div>
+      </div>
+    </section>
+
+    <div class="tape" aria-hidden="true"><span>48 exhibitors</span><span>✳</span><span>12 talks</span><span>✳</span><span>3 days</span><span>✳</span><span>one room</span><span>✳</span></div>
+
+    <section class="exhibitors" id="exhibitors" aria-labelledby="exhibitors-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Exhibitors</p>
+          <h2 id="exhibitors-title">Find a table.</h2>
+        </div>
+        <p class="section-note">
+          Search by name or discipline. The full list runs to forty-eight;
+          these are the eight we keep talking about.
+        </p>
+      </header>
+
+      <div class="search">
+        <label for="search">Search exhibitors</label>
+        <input id="search" type="search" placeholder="Name or discipline" autocomplete="off">
+        <span class="search__count" id="count">8 exhibitors</span>
+      </div>
+
+      <div class="exhibitor-grid" id="exhibitor-grid">
+        <article data-search="riso club risograph prints"><span>T-01</span><h3>Riso Club</h3><p>Risograph / London</p></article>
+        <article data-search="night paper zines publishing"><span>T-04</span><h3>Night Paper</h3><p>Zines / Glasgow</p></article>
+        <article data-search="form and function letterpress stationery"><span>T-08</span><h3>Form &amp; Function</h3><p>Letterpress / Bristol</p></article>
+        <article data-search="salt press books poetry"><span>T-11</span><h3>Salt Press</h3><p>Books / Margate</p></article>
+        <article data-search="common ground posters screenprint"><span>T-16</span><h3>Common Ground</h3><p>Screenprint / Leeds</p></article>
+        <article data-search="paper moon stationery cards"><span>T-19</span><h3>Paper Moon</h3><p>Stationery / Dublin</p></article>
+        <article data-search="type wrong foundry type specimens"><span>T-24</span><h3>Type Wrong</h3><p>Type / Rotterdam</p></article>
+        <article data-search="the slow press essays journals"><span>T-31</span><h3>The Slow Press</h3><p>Journals / Lisbon</p></article>
+      </div>
+      <p class="empty" id="empty" hidden>No exhibitors match that search. Try a discipline like “riso” or “books”.</p>
+    </section>
+
+    <section class="talks" id="talks" aria-labelledby="talks-title">
+      <div>
+        <p class="section-label section-label--light">02 / Talks</p>
+        <h2 id="talks-title">Three things<br>to sit down for.</h2>
+      </div>
+      <ol class="talk-list">
+        <li><span>Sat 11:00</span><div><h3>Printing without a press</h3><p>Riso Club / 45 min</p></div><span aria-hidden="true">↗</span></li>
+        <li><span>Sat 14:00</span><div><h3>How a zine gets made</h3><p>Night Paper / 60 min</p></div><span aria-hidden="true">↗</span></li>
+        <li><span>Sun 12:30</span><div><h3>The cost of paper</h3><p>Common Ground / 45 min</p></div><span aria-hidden="true">↗</span></li>
+      </ol>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div>
+        <p class="section-label">03 / Visit</p>
+        <h2 id="visit-title">One room.<br>Three days.</h2>
+        <p class="visit__lede">
+          The Truman Brewery, Brick Lane, London E1 6QL. Friday preview
+          18:00—21:00; Saturday and Sunday 11:00—18:00.
+        </p>
+        <p class="visit__price">£8 / day · £18 / weekend</p>
+        <a class="button" href="mailto:hello@pressroom.example">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="visit__map" aria-hidden="true">
+        <div class="visit__map-head"><span>Floor plan / 48 tables</span><span>E1</span></div>
+        <div class="visit__grid">
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+          <i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <p>Entrance · Talks room · Bar · Exits<br>Step-free access from Brick Lane</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Press Room</span>
+    <span>London / 51.5072° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

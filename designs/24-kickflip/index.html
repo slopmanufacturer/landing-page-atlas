@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kickflip — a skate shop in Bristol. Decks, team, and a colour switcher that actually works.">
+  <meta name="theme-color" content="#d7d4cc">
+  <title>Kickflip — Skate Shop, Bristol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Kickflip</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#decks">Decks</a>
+      <a href="#team">Team</a>
+      <a href="#drop">Drop</a>
+    </nav>
+    <p class="top__meta">Bristol / Since 2004<br>51.4545° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Skate shop / Bristol</p>
+        <h1 id="hero-title">Concrete is<br><em>a state of mind.</em></h1>
+        <p class="lede">
+          Decks, trucks, bearings, and advice you did not ask for. We have
+          been on the same street since 2004. The ramp is out back.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#decks">Shop decks <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#team">Meet the team <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="deck-wrap">
+        <svg class="deck" viewBox="0 0 240 620" role="img" aria-label="A skateboard deck with a custom colourway">
+          <path d="M120 8 C 58 8, 26 38, 26 92 V 528 C 26 582, 58 612, 120 612 C 182 612, 214 582, 214 528 V 92 C 214 38, 182 8, 120 8 Z" fill="var(--deck-a, #ffd400)" stroke="#111" stroke-width="3"/>
+          <path d="M120 28 C 70 28, 46 52, 46 96 V 524 C 46 568, 70 592, 120 592 C 170 592, 194 568, 194 524 V 96 C 194 52, 170 28, 120 28 Z" fill="none" stroke="var(--deck-b, #e63322)" stroke-width="10"/>
+          <g stroke="var(--deck-c, #111)" stroke-width="4" opacity=".9">
+            <path d="M62 190 L 178 190"/>
+            <path d="M62 210 L 178 210"/>
+            <path d="M62 410 L 178 410"/>
+            <path d="M62 430 L 178 430"/>
+          </g>
+          <text x="120" y="300" text-anchor="middle" font-family="'Archivo Black', sans-serif" font-size="26" fill="var(--deck-c, #111)" transform="rotate(-90 120 300)">KICKFLIP</text>
+          <text x="120" y="520" text-anchor="middle" font-family="'Courier Prime', monospace" font-size="9" letter-spacing="2" fill="var(--deck-c, #111)" transform="rotate(-90 120 520)">BRISTOL / 04</text>
+          <g fill="#111">
+            <circle cx="120" cy="76" r="3"/><circle cx="120" cy="544" r="3"/>
+          </g>
+        </svg>
+        <div class="deck-info">
+          <span class="deck-name" id="deck-name">Acid / 8.25"</span>
+          <div class="swatches" role="group" aria-label="Deck colourway">
+            <button class="is-active" type="button" data-deck="acid" data-name='Acid / 8.25"' aria-label="Acid colourway" aria-pressed="true" style="--s1:#ffd400;--s2:#e63322;--s3:#111"></button>
+            <button type="button" data-deck="blood" data-name='Blood / 8.25"' aria-label="Blood colourway" aria-pressed="false" style="--s1:#e63322;--s2:#111;--s3:#f2e9d8"></button>
+            <button type="button" data-deck="concrete" data-name='Concrete / 8.25"' aria-label="Concrete colourway" aria-pressed="false" style="--s1:#d7d4cc;--s2:#1f3bff;--s3:#111"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="tape" aria-hidden="true"><span>KICKFLIP</span><span>SKATE SHOP</span><span>BRISTOL</span><span>EST. 2004</span><span>KICKFLIP</span><span>SKATE SHOP</span></div>
+
+    <section class="decks" id="decks" aria-labelledby="decks-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Decks</p>
+          <h2 id="decks-title">Three shapes.<br>One street.</h2>
+        </div>
+        <p class="section-note">
+          Pressed in the UK, tested on the same curb. Ask us which one suits
+          your height, your shoes, and your ambition.
+        </p>
+      </header>
+
+      <div class="deck-grid">
+        <article>
+          <div class="mini-deck mini-deck--acid" aria-hidden="true"><span>8.0"</span></div>
+          <p class="deck-meta">8.0" / £58</p>
+          <h3>The Curb</h3>
+          <p>Street / mellow concave</p>
+        </article>
+        <article>
+          <div class="mini-deck mini-deck--blood" aria-hidden="true"><span>8.25"</span></div>
+          <p class="deck-meta">8.25" / £62</p>
+          <h3>The Long One</h3>
+          <p>Park / steep nose</p>
+        </article>
+        <article>
+          <div class="mini-deck mini-deck--concrete" aria-hidden="true"><span>8.5"</span></div>
+          <p class="deck-meta">8.5" / £66</p>
+          <h3>The Door</h3>
+          <p>Cruiser / wide and stubborn</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="team" id="team" aria-labelledby="team-title">
+      <div>
+        <p class="section-label section-label--light">02 / Team</p>
+        <h2 id="team-title">People who<br>fall over.</h2>
+      </div>
+      <ul class="team-list">
+        <li><span>01</span><div><h3>Maya Okafor</h3><p>Backside tailslide / 12 years</p></div></li>
+        <li><span>02</span><div><h3>Finn Rees</h3><p>Kickflip / 8 years</p></div></li>
+        <li><span>03</span><div><h3>Jules Kim</h3><p>Ollie north / 15 years</p></div></li>
+        <li><span>04</span><div><h3>Ada Vane</h3><p>Boneless / 6 years</p></div></li>
+      </ul>
+    </section>
+
+    <section class="drop" id="drop" aria-labelledby="drop-title">
+      <div>
+        <p class="section-label">03 / Drop list</p>
+        <h2 id="drop-title">One email.<br>No spam.</h2>
+      </div>
+      <div class="drop__copy">
+        <p>Limited decks, shop sessions, and the occasional ramp day. We send it when there is something to say.</p>
+        <form class="drop__form" id="drop-form" novalidate>
+          <label for="email">Email address</label>
+          <div class="drop__row">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+            <button type="submit">Join the list</button>
+          </div>
+          <p class="drop__note" id="drop-note" role="status" aria-live="polite">No more than one email a month. Probably fewer.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Kickflip</span>
+    <span>Bristol / 51.4545° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

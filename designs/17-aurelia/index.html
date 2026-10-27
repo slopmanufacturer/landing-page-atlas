@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aurelia — high jewellery in white gold, set by hand in Paris. The Light Between, a collection of twelve pieces.">
+  <meta name="theme-color" content="#0a0a09">
+  <title>Aurelia — The Light Between</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Aurelia</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#collection">Collection</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#appointment">Appointment</a>
+    </nav>
+    <p class="top__meta">Paris / 2026<br>48.8566° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">The Light Between / Collection 04</p>
+        <h1 id="hero-title">Light,<br><em>held still.</em></h1>
+        <p class="lede">
+          Twelve pieces in white gold, set by hand in Paris. The stone is not
+          the point. The point is the moment before it catches.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#collection">View the collection <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#appointment">Book a private view <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <div class="gem-wrap">
+        <div class="gem" id="gem">
+          <svg viewBox="0 0 420 420" role="img" aria-label="A faceted white-gold diamond with gold reflections">
+            <defs>
+              <linearGradient id="facet-a" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f8f1e4"/><stop offset=".55" stop-color="#cfd3d6"/><stop offset="1" stop-color="#8d9196"/>
+              </linearGradient>
+              <linearGradient id="facet-b" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff"/><stop offset=".5" stop-color="#e9e1d2"/><stop offset="1" stop-color="#b0b3b6"/>
+              </linearGradient>
+              <linearGradient id="gold-line" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f0d79b"/><stop offset=".5" stop-color="#c9a227"/><stop offset="1" stop-color="#8a6a31"/>
+              </linearGradient>
+            </defs>
+            <circle cx="210" cy="210" r="166" fill="none" stroke="url(#gold-line)" stroke-width="1" opacity=".55"/>
+            <circle cx="210" cy="210" r="146" fill="none" stroke="#c9a227" stroke-width=".6" opacity=".25" stroke-dasharray="2 5"/>
+            <g stroke="url(#gold-line)" stroke-width="1.2">
+              <polygon points="210,64 320,140 286,300 210,356 134,300 100,140" fill="url(#facet-a)"/>
+              <polygon points="210,64 320,140 210,196 100,140" fill="url(#facet-b)"/>
+              <polygon points="100,140 210,196 134,300" fill="#d9d6ce" opacity=".85"/>
+              <polygon points="320,140 210,196 286,300" fill="#b9bcc0" opacity=".9"/>
+              <polygon points="134,300 210,196 286,300 210,356" fill="#e8e2d6" opacity=".75"/>
+              <line x1="210" y1="64" x2="210" y2="196"/>
+              <line x1="100" y1="140" x2="210" y2="196"/>
+              <line x1="320" y1="140" x2="210" y2="196"/>
+              <line x1="210" y1="196" x2="210" y2="356"/>
+            </g>
+            <g fill="#ffffff" opacity=".85">
+              <circle cx="210" cy="64" r="2.4"/>
+              <circle cx="320" cy="140" r="1.8"/>
+              <circle cx="100" cy="140" r="1.8"/>
+              <circle cx="210" cy="356" r="2"/>
+            </g>
+          </svg>
+        </div>
+        <p class="gem__caption">Éclat solitaire / 1.04 ct / white gold</p>
+      </div>
+    </section>
+
+    <div class="rule" aria-hidden="true"></div>
+
+    <section class="collection" id="collection" aria-labelledby="collection-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Collection</p>
+          <h2 id="collection-title">Three ways<br>to hold light.</h2>
+        </div>
+        <p class="section-note">
+          Each piece is made to order in the atelier. Allow six weeks. The
+          stone is chosen with you, not for you.
+        </p>
+      </header>
+
+      <div class="pieces">
+        <article class="piece">
+          <div class="piece__art" aria-hidden="true">
+            <svg viewBox="0 0 220 220">
+              <circle cx="110" cy="132" r="56" fill="none" stroke="#c9a227" stroke-width="5"/>
+              <path d="M110 54 L132 82 L110 104 L88 82 Z" fill="#f4ecdc" stroke="#c9a227" stroke-width="1.5"/>
+              <path d="M88 82 L110 104 L110 54" fill="#cfd3d6" opacity=".6"/>
+            </svg>
+          </div>
+          <div class="piece__meta"><span>01</span><span>Ring</span></div>
+          <h3>Éclat solitaire</h3>
+          <p>White gold / 1.04 ct / hand-set</p>
+          <span class="piece__price">€4,800</span>
+        </article>
+
+        <article class="piece">
+          <div class="piece__art" aria-hidden="true">
+            <svg viewBox="0 0 220 220">
+              <path d="M42 58 C 80 110, 140 110, 178 58" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+              <path d="M110 102 L124 124 L110 140 L96 124 Z" fill="#f4ecdc" stroke="#c9a227" stroke-width="1.5"/>
+              <circle cx="110" cy="98" r="4" fill="#c9a227"/>
+            </svg>
+          </div>
+          <div class="piece__meta"><span>02</span><span>Necklace</span></div>
+          <h3>Ligne pendant</h3>
+          <p>White gold / 0.42 ct / 42 cm</p>
+          <span class="piece__price">€2,400</span>
+        </article>
+
+        <article class="piece">
+          <div class="piece__art" aria-hidden="true">
+            <svg viewBox="0 0 220 220">
+              <circle cx="82" cy="112" r="30" fill="none" stroke="#c9a227" stroke-width="4"/>
+              <circle cx="138" cy="112" r="30" fill="none" stroke="#c9a227" stroke-width="4"/>
+              <path d="M82 82 L92 96 L82 106 L72 96 Z" fill="#f4ecdc" stroke="#c9a227" stroke-width="1.2"/>
+              <path d="M138 82 L148 96 L138 106 L128 96 Z" fill="#f4ecdc" stroke="#c9a227" stroke-width="1.2"/>
+            </svg>
+          </div>
+          <div class="piece__meta"><span>03</span><span>Earrings</span></div>
+          <h3>Orbite drops</h3>
+          <p>White gold / 0.68 ct / pair</p>
+          <span class="piece__price">€3,200</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="atelier" id="atelier" aria-labelledby="atelier-title">
+      <div class="atelier__copy">
+        <p class="section-label">02 / Atelier</p>
+        <h2 id="atelier-title">Made slowly,<br>on purpose.</h2>
+        <p>
+          The atelier is one room above a courtyard in the 3rd. Two benches,
+          one window, and a light that is best in the afternoon. Every piece
+          begins as a pencil line and ends as a thing you can wear.
+        </p>
+        <ol class="atelier__steps">
+          <li><span>01</span>Choose the stone together.</li>
+          <li><span>02</span>Draw the setting by hand.</li>
+          <li><span>03</span>Set, polish, and wait a week.</li>
+        </ol>
+      </div>
+      <div class="atelier__image" aria-hidden="true">
+        <svg viewBox="0 0 420 500">
+          <rect width="420" height="500" fill="#e9dfcd"/>
+          <rect x="36" y="60" width="348" height="380" fill="none" stroke="#0a0a09" stroke-width="1"/>
+          <circle cx="210" cy="250" r="104" fill="none" stroke="#c9a227" stroke-width="1.5"/>
+          <circle cx="210" cy="250" r="78" fill="none" stroke="#c9a227" stroke-width=".8" stroke-dasharray="3 5"/>
+          <path d="M210 146 L258 210 L210 300 L162 210 Z" fill="#f4ecdc" stroke="#0a0a09" stroke-width="1"/>
+          <path d="M162 210 L210 300 L210 146" fill="#cfd3d6" opacity=".55"/>
+          <text x="36" y="44" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="2" fill="#0a0a09">AURELIA / ATELIER 04</text>
+          <text x="36" y="468" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1.5" fill="#6b6459">PENCIL / WHITE GOLD / PATIENCE</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="appointment" id="appointment" aria-labelledby="appointment-title">
+      <div>
+        <p class="section-label section-label--light">03 / Appointment</p>
+        <h2 id="appointment-title">A private view.<br>No hurry.</h2>
+        <p class="appointment__lede">
+          The salon holds four people. Bring a friend, or come alone. We will
+          put the kettle on and take the pieces out one by one.
+        </p>
+        <p class="appointment__address">14 Rue de la Perle<br>75003 Paris</p>
+      </div>
+
+      <form class="appointment__form" id="appointment-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+        <label for="date">Preferred date</label>
+        <input id="date" name="date" type="date" required>
+        <label for="city">City</label>
+        <select id="city" name="city">
+          <option>Paris</option>
+          <option>London</option>
+          <option>New York</option>
+        </select>
+        <button type="submit">Request an appointment</button>
+        <p class="appointment__note" id="appointment-note" role="status" aria-live="polite">We reply within two working days.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Aurelia</span>
+    <span>14 Rue de la Perle / Paris</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

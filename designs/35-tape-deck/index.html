@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tape Deck — a two-head cassette deck with real VU meters and no menu. Warmth, with a warranty.">
+  <meta name="theme-color" content="#1b1b18">
+  <title>Tape Deck — Audio Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Saira+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">T</span> Tape Deck</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#deck">Deck</a>
+      <a href="#spec">Spec</a>
+      <a href="#order">Order</a>
+    </nav>
+    <p class="top__meta">Sheffield / 53.3811° N<br>Audio hardware</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Cassette deck / Two heads</p>
+        <h1 id="hero-title">Warmth,<br><em>with a warranty.</em></h1>
+        <p class="lede">
+          A two-head cassette deck with real VU meters, a mechanical transport,
+          and no menu. Put a tape in. Press play. That is the interface.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#deck">See the deck <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#spec">Read the spec <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="deck" id="deck">
+        <div class="deck__head"><span>TD-02 / Cassette deck</span><span id="deck-state">Standby</span></div>
+        <div class="deck__face">
+          <div class="vu">
+            <span>L</span>
+            <div class="vu__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="cassette" aria-hidden="true">
+            <span class="cassette__window"></span>
+            <span class="cassette__reel cassette__reel--left"></span>
+            <span class="cassette__reel cassette__reel--right"></span>
+            <span class="cassette__label">SIDE A / 60</span>
+          </div>
+          <div class="vu">
+            <span>R</span>
+            <div class="vu__bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+        </div>
+        <div class="deck__controls">
+          <button class="transport" type="button" id="play" aria-pressed="false"><span id="play-label">Play</span> <span aria-hidden="true">▶</span></button>
+          <span class="counter" id="counter">0000</span>
+          <button class="transport" type="button" id="stop">Stop <span aria-hidden="true">■</span></button>
+        </div>
+        <div class="deck__foot"><span>Dolby B / off</span><span>Type II / chrome</span><span>230V / 12W</span></div>
+      </div>
+    </section>
+
+    <section class="spec" id="spec" aria-labelledby="spec-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Spec</p>
+          <h2 id="spec-title">The numbers.</h2>
+        </div>
+        <p class="section-note">
+          Measured with a real tape, not a test file. The wow and flutter is
+          low enough to forget about, which is the point.
+        </p>
+      </header>
+      <dl class="spec-grid">
+        <div><dt>Transport</dt><dd>Two-head / mechanical</dd></div>
+        <div><dt>Speed</dt><dd>4.76 cm/s</dd></div>
+        <div><dt>Wow &amp; flutter</dt><dd>0.05% WRMS</dd></div>
+        <div><dt>Frequency</dt><dd>30 Hz—16 kHz</dd></div>
+        <div><dt>Noise</dt><dd>58 dB / Dolby B</dd></div>
+        <div><dt>Weight</dt><dd>3.8 kg</dd></div>
+      </dl>
+    </section>
+
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div>
+        <p class="section-label">02 / Order</p>
+        <h2 id="order-title">Put a tape<br>in it.</h2>
+      </div>
+      <div class="order__copy">
+        <p>
+          Each deck is assembled and aligned by hand in Sheffield. It ships
+          with a tape, a cleaning kit, and a printed schematic.
+        </p>
+        <p class="order__price">£680</p>
+        <a class="button" href="mailto:works@tapedeck.example">Order a deck <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Tape Deck</span>
+    <span>Sheffield / 53.3811° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

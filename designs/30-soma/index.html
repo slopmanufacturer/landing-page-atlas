@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sōma — a small coffee roaster in Osaka. Three beans, one brew calculator, and a subscription that fits through the letterbox.">
+  <meta name="theme-color" content="#f3eadb">
+  <title>Sōma — Coffee Roaster, Osaka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Sōma</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#coffee">Coffee</a>
+      <a href="#brew">Brew</a>
+      <a href="#subscribe">Subscribe</a>
+    </nav>
+    <p class="top__meta">Osaka / Roasted weekly<br>34.6937° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Coffee roaster / Osaka</p>
+        <h1 id="hero-title">Slow coffee,<br><em>fast post.</em></h1>
+        <p class="lede">
+          Three beans, roasted on Tuesdays, posted in a bag that fits through
+          the letterbox. No pods. No subscriptions you forget to cancel.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#coffee">Meet the beans <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#brew">Use the brew calculator <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="bag-wrap">
+        <svg class="bag" viewBox="0 0 360 460" role="img" aria-label="A bag of Sōma coffee with a cream label">
+          <path d="M70 66 H 290 L 306 420 Q 306 440 286 440 H 74 Q 54 440 54 420 Z" fill="#4a2c1d" stroke="#2b1a10" stroke-width="2"/>
+          <path d="M70 66 H 290 L 286 96 H 74 Z" fill="#2b1a10"/>
+          <rect x="92" y="140" width="176" height="190" fill="#f3eadb" stroke="#b5532f" stroke-width="1.5"/>
+          <rect x="100" y="148" width="160" height="174" fill="none" stroke="#b5532f" stroke-width=".7"/>
+          <text x="180" y="180" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="8" letter-spacing="3" fill="#4a2c1d">SŌMA / OSAKA</text>
+          <text x="180" y="230" text-anchor="middle" font-family="'DM Serif Display', serif" font-size="40" fill="#4a2c1d">Sōma</text>
+          <line x1="126" y1="246" x2="234" y2="246" stroke="#b5532f" stroke-width="1"/>
+          <text x="180" y="268" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="2" fill="#4a2c1d">ETHIOPIA / WASHED</text>
+          <text x="180" y="286" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6" letter-spacing="1.5" fill="#b5532f">JASMINE / PEACH / TEA</text>
+          <text x="180" y="308" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6" letter-spacing="1.5" fill="#4a2c1d">250 G / ROASTED 21.10.26</text>
+          <path d="M70 66 L 74 96 M 290 66 L 286 96" stroke="#b5532f" stroke-width="2"/>
+          <text x="180" y="404" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="6" letter-spacing="2" fill="#d8b18a">SMALL BATCH / NO. 09</text>
+        </svg>
+        <p class="bag__caption">Ethiopia Guji / washed / 250 g</p>
+      </div>
+    </section>
+
+    <section class="coffee" id="coffee" aria-labelledby="coffee-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Coffee</p>
+          <h2 id="coffee-title">Three beans.<br>No blends.</h2>
+        </div>
+        <p class="section-note">
+          We roast single origins, light enough to taste the place. The list
+          changes when the harvest does.
+        </p>
+      </header>
+
+      <div class="bean-grid">
+        <article>
+          <span>01 / Ethiopia</span>
+          <h3>Guji</h3>
+          <p>Jasmine, peach, black tea. Washed. The one we keep coming back to.</p>
+          <em>£14 / 250 g</em>
+        </article>
+        <article>
+          <span>02 / Colombia</span>
+          <h3>Huila</h3>
+          <p>Red apple, caramel, a little citrus. Washed. Good with milk.</p>
+          <em>£13 / 250 g</em>
+        </article>
+        <article>
+          <span>03 / Brazil</span>
+          <h3>Cerrado</h3>
+          <p>Hazelnut, cocoa, low acid. Natural. The one for the morning pot.</p>
+          <em>£12 / 250 g</em>
+        </article>
+      </div>
+    </section>
+
+    <section class="brew" id="brew" aria-labelledby="brew-title">
+      <div>
+        <p class="section-label section-label--light">02 / Brew</p>
+        <h2 id="brew-title">A ratio,<br>not a rule.</h2>
+        <p class="brew__lede">
+          Start with 15 grams of coffee and 240 grams of water. Adjust until
+          it tastes like something you want to drink again.
+        </p>
+      </div>
+      <div class="calculator">
+        <div class="calc-field">
+          <label for="dose">Coffee (g)</label>
+          <input id="dose" type="number" min="8" max="60" step="1" value="15">
+        </div>
+        <div class="calc-field">
+          <label for="ratio">Ratio</label>
+          <select id="ratio">
+            <option value="15">1 : 15</option>
+            <option value="16" selected>1 : 16</option>
+            <option value="17">1 : 17</option>
+          </select>
+        </div>
+        <div class="calc-output">
+          <span>Water</span>
+          <strong id="water">240 g</strong>
+          <span>Time</span>
+          <strong id="time">2:45</strong>
+        </div>
+        <p class="calc-note" id="calc-note" role="status" aria-live="polite">Medium grind. Bloom with twice the coffee weight for 30 seconds.</p>
+      </div>
+    </section>
+
+    <section class="subscribe" id="subscribe" aria-labelledby="subscribe-title">
+      <div>
+        <p class="section-label">03 / Subscribe</p>
+        <h2 id="subscribe-title">One bag.<br>Every month.</h2>
+      </div>
+      <div class="subscribe__copy">
+        <p>
+          A different single origin each month, roasted the day before it is
+          posted. Cancel whenever. The bag fits through the letterbox.
+        </p>
+        <p class="subscribe__price">£14 <span>/ month</span></p>
+        <form class="subscribe__form" id="subscribe-form" novalidate>
+          <label for="email">Email address</label>
+          <div class="subscribe__row">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+            <button type="submit">Start a subscription</button>
+          </div>
+          <p class="subscribe__note" id="subscribe-note" role="status" aria-live="polite">First bag posted on the next roast day. No roast, no charge.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Sōma Coffee</span>
+    <span>Osaka / 34.6937° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

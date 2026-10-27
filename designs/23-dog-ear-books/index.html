@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dog Ear Books — an independent bookshop in Bristol. Fiction, essays, poetry, and a book club that actually reads the book.">
+  <meta name="theme-color" content="#f2e9d8">
+  <title>Dog Ear Books — Bristol</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Dog Ear Books</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#shelf">Shelf</a>
+      <a href="#events">Events</a>
+      <a href="#club">Book club</a>
+    </nav>
+    <p class="top__meta">Bristol / Open 7 days<br>51.4545° N</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Independent bookshop / Since 2011</p>
+        <h1 id="hero-title">Books for people<br><em>who fold the corners.</em></h1>
+        <p class="lede">
+          A small shop on a street with two cafés and a bicycle repair place.
+          We read what we sell. We will tell you what we think.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#shelf">Browse the shelf <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#club">Join the book club <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="book-stack" aria-hidden="true">
+        <div class="book book--red"><span>The Off-Season</span><em>M. Ellison</em></div>
+        <div class="book book--blue"><span>A Small Weather</span><em>C. M. Vane</em></div>
+        <div class="book book--green"><span>The Repair Shop</span><em>A. Okafor</em></div>
+        <div class="book book--cream"><span>Night Bus</span><em>T. Reed</em></div>
+        <p class="book-stack__note">Staff picks / October</p>
+      </div>
+    </section>
+
+    <section class="shelf" id="shelf" aria-labelledby="shelf-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / The shelf</p>
+          <h2 id="shelf-title">Six books<br>we love.</h2>
+        </div>
+        <p class="section-note">
+          Filter by shelf. Everything here is in stock unless someone has
+          beaten you to it. We can order almost anything else.
+        </p>
+      </header>
+
+      <div class="filters" role="group" aria-label="Filter books">
+        <button class="is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="fiction" aria-pressed="false">Fiction</button>
+        <button type="button" data-filter="essays" aria-pressed="false">Essays</button>
+        <button type="button" data-filter="poetry" aria-pressed="false">Poetry</button>
+        <button type="button" data-filter="kids" aria-pressed="false">Kids</button>
+      </div>
+
+      <div class="book-grid" id="book-grid">
+        <article class="book-card" data-category="fiction">
+          <div class="book-card__cover book-card__cover--red" aria-hidden="true"><span>THE<br>OFF-<br>SEASON</span></div>
+          <p class="book-card__meta">Fiction / £12</p>
+          <h3>The Off-Season</h3>
+          <p>Mara Ellison</p>
+        </article>
+        <article class="book-card" data-category="poetry">
+          <div class="book-card__cover book-card__cover--blue" aria-hidden="true"><span>A SMALL<br>WEATHER</span></div>
+          <p class="book-card__meta">Poetry / £10</p>
+          <h3>A Small Weather</h3>
+          <p>C. M. Vane</p>
+        </article>
+        <article class="book-card" data-category="essays">
+          <div class="book-card__cover book-card__cover--green" aria-hidden="true"><span>THE<br>REPAIR<br>SHOP</span></div>
+          <p class="book-card__meta">Essays / £14</p>
+          <h3>The Repair Shop</h3>
+          <p>Ada Okafor</p>
+        </article>
+        <article class="book-card" data-category="fiction">
+          <div class="book-card__cover book-card__cover--cream" aria-hidden="true"><span>NIGHT<br>BUS</span></div>
+          <p class="book-card__meta">Fiction / £11</p>
+          <h3>Night Bus</h3>
+          <p>Tomás Reed</p>
+        </article>
+        <article class="book-card" data-category="kids">
+          <div class="book-card__cover book-card__cover--yellow" aria-hidden="true"><span>THE WILD<br>INDEX</span></div>
+          <p class="book-card__meta">Kids / £9</p>
+          <h3>The Wild Index</h3>
+          <p>Nell Harrow</p>
+        </article>
+        <article class="book-card" data-category="essays">
+          <div class="book-card__cover book-card__cover--pink" aria-hidden="true"><span>LETTERS<br>FROM THE<br>COAST</span></div>
+          <p class="book-card__meta">Essays / £13</p>
+          <h3>Letters from the Coast</h3>
+          <p>June Park</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="events" id="events" aria-labelledby="events-title">
+      <div>
+        <p class="section-label section-label--light">02 / Events</p>
+        <h2 id="events-title">Things<br>happening<br>upstairs.</h2>
+      </div>
+      <ol class="event-list">
+        <li><span>02 Nov</span><div><h3>Mara Ellison reads</h3><p>The Off-Season / 19:00 / £5</p></div><span aria-hidden="true">↗</span></li>
+        <li><span>09 Nov</span><div><h3>Poetry on a Sunday</h3><p>C. M. Vane + guests / 17:00 / Free</p></div><span aria-hidden="true">↗</span></li>
+        <li><span>21 Nov</span><div><h3>The repair workshop</h3><p>Bring a book that needs help / 11:00 / £8</p></div><span aria-hidden="true">↗</span></li>
+      </ol>
+    </section>
+
+    <section class="club" id="club" aria-labelledby="club-title">
+      <div>
+        <p class="section-label">03 / Book club</p>
+        <h2 id="club-title">One book.<br>One month.</h2>
+      </div>
+      <div class="club__copy">
+        <p>
+          We meet on the last Thursday of the month, upstairs, with wine and
+          too many chairs. The book is included. The argument is optional.
+        </p>
+        <p class="club__price">£12 <span>/ month</span></p>
+        <form class="club__form" id="club-form" novalidate>
+          <label for="email">Email address</label>
+          <div class="club__row">
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="you@somewhere" required>
+            <button type="submit">Join the club</button>
+          </div>
+          <p class="club__note" id="club-note" role="status" aria-live="polite">First book posted within a week. Cancel anytime.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Dog Ear Books</span>
+    <span>Bristol / 51.4545° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bolt — structural brackets and hardware for people who need to know what happens under load.">
+  <meta name="theme-color" content="#1b1b1b">
+  <title>Bolt — Structural Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top"><span class="brand__mark" aria-hidden="true">B</span> Bolt</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#system">System</a>
+      <a href="#load">Load</a>
+      <a href="#order">Order</a>
+    </nav>
+    <p class="top__meta">Rotterdam / 51.9244° N<br>Structural hardware</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">Structural hardware / Netherlands</p>
+        <h1 id="hero-title">A bracket<br>that tells<br><em>the truth.</em></h1>
+        <p class="lede">
+          Powder-coated steel, tested to failure, and shipped with the numbers
+          printed on the box. If it bends, you will know why.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#system">See the system <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#load">Try the load test <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="load-panel" id="load">
+        <div class="load-panel__head"><span>Beam test / B-04</span><span id="status">Within spec</span></div>
+        <svg viewBox="0 0 640 320" role="img" aria-label="A simply supported beam bending under a central load">
+          <rect width="640" height="320" fill="#f1efe8"/>
+          <g stroke="#1b1b1b" stroke-width=".5" opacity=".14">
+            <line x1="0" y1="64" x2="640" y2="64"/><line x1="0" y1="128" x2="640" y2="128"/>
+            <line x1="0" y1="192" x2="640" y2="192"/><line x1="0" y1="256" x2="640" y2="256"/>
+            <line x1="128" y1="0" x2="128" y2="320"/><line x1="256" y1="0" x2="256" y2="320"/>
+            <line x1="384" y1="0" x2="384" y2="320"/><line x1="512" y1="0" x2="512" y2="320"/>
+          </g>
+          <path id="beam" d="M80 180 H 560" fill="none" stroke="#1b1b1b" stroke-width="12" stroke-linecap="round"/>
+          <path d="M60 200 L 80 180 L 100 200 Z" fill="#ff6a00" stroke="#1b1b1b" stroke-width="1.5"/>
+          <path d="M540 200 L 560 180 L 580 200 Z" fill="#ff6a00" stroke="#1b1b1b" stroke-width="1.5"/>
+          <line x1="320" y1="50" x2="320" y2="150" stroke="#e23b2e" stroke-width="3" marker-end="url(#arrow)"/>
+          <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8 Z" fill="#e23b2e"/></marker></defs>
+          <text x="334" y="66" font-family="'IBM Plex Mono', monospace" font-size="9" fill="#e23b2e" id="load-label">1.0 kN</text>
+          <text x="26" y="36" font-family="'IBM Plex Mono', monospace" font-size="9" letter-spacing="2" fill="#1b1b1b">B-04 / SIMPLY SUPPORTED</text>
+          <text x="26" y="300" font-family="'IBM Plex Mono', monospace" font-size="7" letter-spacing="1.5" fill="#6f6c63">SPAN 1.2 M / STEEL 3 MM / POWDER-COATED</text>
+        </svg>
+        <div class="load-control">
+          <div class="load-control__head"><span>Load</span><span id="deflection">0.0 mm</span></div>
+          <input id="load-slider" type="range" min="0" max="100" value="20" aria-label="Load">
+          <div class="load-control__labels"><span>0 kN</span><span>2.0 kN</span></div>
+        </div>
+        <div class="load-panel__foot"><span>Deflection / simulated</span><span id="capacity">4.8 kN safe</span></div>
+      </div>
+    </section>
+
+    <section class="system" id="system" aria-labelledby="system-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / System</p>
+          <h2 id="system-title">Three parts.<br>One load path.</h2>
+        </div>
+        <p class="section-note">
+          The bracket, the beam, and the bolt. We make all three so the weak
+          point is never a surprise.
+        </p>
+      </header>
+      <div class="part-grid">
+        <article><span>01</span><h3>The bracket</h3><p>3 mm steel, folded once. Four M10 holes, 60 mm centres.</p></article>
+        <article><span>02</span><h3>The beam</h3><p>1200 mm span, 80 mm profile. Pre-drilled for the bracket.</p></article>
+        <article><span>03</span><h3>The bolt</h3><p>M10, 8.8 grade, zinc-flake. Torque to 45 Nm and forget it.</p></article>
+      </div>
+    </section>
+
+    <section class="spec" id="spec" aria-labelledby="spec-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">02 / Spec</p>
+          <h2 id="spec-title">The numbers.</h2>
+        </div>
+        <p class="section-note">
+          Tested at the Stevin Lab, Delft. The full report is in the box and
+          on the website. Nothing is rounded up.
+        </p>
+      </header>
+      <dl class="spec-grid">
+        <div><dt>Material</dt><dd>S355 steel / 3 mm</dd></div>
+        <div><dt>Finish</dt><dd>Powder coat / RAL 2004</dd></div>
+        <div><dt>Safe load</dt><dd>4.8 kN</dd></div>
+        <div><dt>Failure load</dt><dd>9.1 kN</dd></div>
+        <div><dt>Weight</dt><dd>2.4 kg / set</dd></div>
+        <div><dt>Warranty</dt><dd>10 years</dd></div>
+      </dl>
+    </section>
+
+    <section class="order" id="order" aria-labelledby="order-title">
+      <div>
+        <p class="section-label">03 / Order</p>
+        <h2 id="order-title">Know the<br>weak point.</h2>
+      </div>
+      <div class="order__copy">
+        <p>
+          Sets ship flat, with the test report, the torque spec, and a pencil.
+          If you need a custom span, write to the engineers.
+        </p>
+        <p class="order__price">€148 / set</p>
+        <a class="button" href="mailto:works@bolt.example">Order a set <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Bolt</span>
+    <span>Rotterdam / 51.9244° N</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

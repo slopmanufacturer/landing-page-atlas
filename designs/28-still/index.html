@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Still — a quiet breathing timer with three patterns. No account, no streaks, no badges.">
+  <meta name="theme-color" content="#dfe9e6">
+  <title>Still — A Quiet Minute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top">
+    <a class="brand" href="#top">Still</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#practice">Practice</a>
+      <a href="#timer">Timer</a>
+      <a href="#about">About</a>
+    </nav>
+    <p class="top__meta">No account / No streaks<br>Always free</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="kicker">A breathing timer</p>
+        <h1 id="hero-title">A quieter<br><em>minute.</em></h1>
+        <p class="lede">
+          Choose a pattern, sit down, and let the circle count. No account.
+          No streak. No notification asking how you feel about it.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#timer">Start breathing <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#practice">See the patterns <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="timer" id="timer">
+        <div class="patterns" role="group" aria-label="Breathing pattern">
+          <button class="is-active" type="button" data-pattern="478" aria-pressed="true">4—7—8</button>
+          <button type="button" data-pattern="box" aria-pressed="false">Box</button>
+          <button type="button" data-pattern="coherent" aria-pressed="false">Coherent</button>
+        </div>
+
+        <div class="orb-wrap">
+          <div class="orb" id="orb" aria-hidden="true"></div>
+          <div class="orb-label">
+            <span class="phase" id="phase">Ready</span>
+            <strong id="seconds">00</strong>
+            <span class="cycle" id="cycle">3 cycles</span>
+          </div>
+        </div>
+
+        <button class="start" type="button" id="start" aria-pressed="false">Begin</button>
+        <p class="timer__note" id="timer-note" role="status" aria-live="polite">Three cycles. About one minute.</p>
+      </div>
+    </section>
+
+    <section class="practice" id="practice" aria-labelledby="practice-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Practice</p>
+          <h2 id="practice-title">Three ways<br>to breathe.</h2>
+        </div>
+        <p class="section-note">
+          Pick the one that fits the day. The circle expands on the inhale and
+          contracts on the exhale. That is the whole instruction.
+        </p>
+      </header>
+
+      <div class="pattern-grid">
+        <article>
+          <span>01</span>
+          <h3>4—7—8</h3>
+          <p>In for four, hold for seven, out for eight. Good for the end of the day.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Box</h3>
+          <p>Four in, four hold, four out, four hold. Good for a loud room.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Coherent</h3>
+          <p>Five in, five out. No holds. Good for the middle of anything.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="section-label section-label--light">02 / About</p>
+        <h2 id="about-title">No streaks.<br>No badges.</h2>
+      </div>
+      <div class="about__copy">
+        <p>
+          Still is a small timer, not a habit tracker. It does not know how
+          many days you have practised, because it does not ask. There is no
+          account and nothing is stored.
+        </p>
+        <p class="about__small">A minute is enough. Two is also enough. Stopping is allowed.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>Still</span>
+    <span>A quiet minute</span>
+    <span><a href="../../index.html">HTM / Designs ↗</a></span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
