@@ -56,6 +56,9 @@ const designs = [
   { folder: "55-iron-bath", title: "Iron Bath House", cat: "night", tags: "Night · Bathhouse", accent: "#b4643c" },
   { folder: "56-long-night", title: "The Long Night", cat: "night", tags: "Night · Supper club", accent: "#c9a227" },
   { folder: "57-corridor", title: "Corridor", cat: "night", tags: "Night · Members' club", accent: "#d8ff3e" },
+  { folder: "58-kerbside", title: "Kerbside", cat: "civic", tags: "Civic · Waste &amp; recycling", accent: "#3f6b2f" },
+  { folder: "59-greengate-baths", title: "Greengate Baths", cat: "civic", tags: "Civic · Public baths", accent: "#156064" },
+  { folder: "60-the-counter", title: "The Counter", cat: "civic", tags: "Civic · Service point", accent: "#5b3a74" },
 ];
 
 const catalog = document.querySelector("#catalog");
