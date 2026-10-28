@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Three more Civic pages — Kerbside, Greengate Baths, and The Counter —
+  completing the family at six. The catalogue now holds 60 designs across ten
+  families, six per family.
 - The Night family: six new pages — Moth, The Blue Room, The Astor,
   Iron Bath House, The Long Night, and Corridor. The catalogue now holds 57
   designs across ten families.

@@ -1,6 +1,6 @@
 # Landing Page Atlas
 
-**57 hand-built landing pages. Ten families. Plain HTML, CSS, and JavaScript.**
+**60 hand-built landing pages. Ten families. Plain HTML, CSS, and JavaScript.**
 
 [![Live site](https://img.shields.io/badge/live_site-view-151412?style=flat-square)](https://vezeqs.github.io/landing-page-atlas/)
 [![Use this template](https://img.shields.io/badge/use_this_template-151412?style=flat-square)](https://github.com/vezeqs/landing-page-atlas/generate)
@@ -34,7 +34,7 @@ Then open <http://localhost:8000>.
 
 ## The catalogue
 
-Ten families, fifty-seven pages. They share a mood, not a stylesheet.
+Ten families, sixty pages. They share a mood, not a stylesheet.
 
 | Family | Temperament | Pages |
 |--------|-------------|-------|
@@ -45,12 +45,12 @@ Ten families, fifty-seven pages. They share a mood, not a stylesheet.
 | **Minimal** | Ceramics, tea, quiet rooms. Few elements, soft palettes, a lot of air. | 6 |
 | **Industrial** | Tools, audio, hardware. Stencil type, hazard yellow, exposed structure. | 6 |
 | **Sport** | Clubs, teams, gyms. Big type, hard schedules, motion. | 6 |
-| **Civic** | Public institutions. Library cards, departure boards, archive indexes. | 3 |
+| **Civic** | Public institutions. Library cards, bin days, queue tickets. | 6 |
 | **Maritime** | Ferries, harbours, tide tables. Charts, signal red, condensed type. | 6 |
 | **Night** | Bars, clubs, late rooms. Saturated dark, neon, type as light. | 6 |
 
 <details>
-<summary><strong>All 57 pages</strong></summary>
+<summary><strong>All 60 pages</strong></summary>
 
 ### Editorial
 
@@ -120,6 +120,9 @@ Ten families, fifty-seven pages. They share a mood, not a stylesheet.
 - [Borrow](designs/43-borrow/index.html) — public library, Ancoats
 - [Line Six](designs/44-line-six/index.html) — light-rail line, Calderford
 - [The Register](designs/45-the-register/index.html) — municipal archive, Leeds
+- [Kerbside](designs/58-kerbside/index.html) — council waste service, Kelwick
+- [Greengate Baths](designs/59-greengate-baths/index.html) — municipal swimming baths, Dunmor
+- [The Counter](designs/60-the-counter/index.html) — one-stop service point, Barrowdale
 
 ### Maritime
 
@@ -143,7 +146,7 @@ Ten families, fifty-seven pages. They share a mood, not a stylesheet.
 
 ## What you get
 
-- 57 complete landing pages, each with its own layout, type, palette, and interaction.
+- 60 complete landing pages, each with its own layout, type, palette, and interaction.
 - Ten distinct directions: newspaper, satellite console, perfume house, riso festival, tea room, synth datasheet, climbing gym, public library, working harbour, and late-night club.
 - No frameworks, bundlers, analytics, cookies, or third-party scripts.
 - Responsive layouts tested at 1440, 768, 390, and 320 px.
@@ -187,13 +190,13 @@ python3 -m pip install selenium
 python3 tools/check_designs.py --browser
 ```
 
-It loads the gallery and all 57 pages at 1440, 768, 390, and 320 px, checks
+It loads the gallery and all 60 pages at 1440, 768, 390, and 320 px, checks
 for horizontal overflow and JavaScript errors, and confirms the gallery
 filters.
 
-## Why 57?
+## Why 60?
 
-Ten families of six pages, plus a three-page Civic family. Each page was
+Ten families of six pages. Each page was
 given a different brief. The only shared rule was that nothing should look
 like a template.
 
@@ -206,11 +209,11 @@ like a template.
 ├── script.js               # Catalogue filters, copy button, FAQ
 ├── 404.html                # Not-found page
 ├── robots.txt
-├── sitemap.xml             # Gallery and all 57 pages
+├── sitemap.xml             # Gallery and all 60 pages
 ├── assets/
 │   ├── favicon.svg
 │   ├── og.png              # Social preview
-│   └── thumbs/             # 57 gallery screenshots
+│   └── thumbs/             # 60 gallery screenshots
 ├── designs/
 │   ├── 01-atelier-nord/
 │   ├── ...

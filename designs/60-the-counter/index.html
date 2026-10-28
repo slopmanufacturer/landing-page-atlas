@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Counter is Barrowdale Council's one-stop service point: six counters, one queue, and a ticket that covers everything from council tax to a blue badge.">
+  <meta name="theme-color" content="#f6f1e8">
+  <title>The Counter — Barrowdale Council</title>
+  <link rel="canonical" href="https://vezeqs.github.io/landing-page-atlas/designs/60-the-counter/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Landing Page Atlas">
+  <meta property="og:title" content="The Counter — Barrowdale Council">
+  <meta property="og:description" content="The Counter is Barrowdale Council's one-stop service point: six counters, one queue, and a ticket that covers everything from council tax to a blue badge.">
+  <meta property="og:url" content="https://vezeqs.github.io/landing-page-atlas/designs/60-the-counter/index.html">
+  <meta property="og:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/60-the-counter.webp">
+  <meta property="og:image:width" content="720">
+  <meta property="og:image:height" content="540">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Counter — Barrowdale Council">
+  <meta name="twitter:description" content="The Counter is Barrowdale Council's one-stop service point: six counters, one queue, and a ticket that covers everything from council tax to a blue badge.">
+  <meta name="twitter:image" content="https://vezeqs.github.io/landing-page-atlas/assets/thumbs/60-the-counter.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <a class="brand" href="#top">
+      <span class="brand__name">The Counter</span>
+      <span class="brand__sub">Barrowdale Council / One-stop</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#counters">Counters</a>
+      <a href="#visit">Visit</a>
+      <a href="#book">Book</a>
+    </nav>
+    <p class="top__meta">1 Co-operative Buildings, Market Square<br>Barrowdale BW4 2QP</p>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__rail">
+        <span>One-stop service</span>
+        <span>Six counters</span>
+        <span>Since 1994</span>
+      </p>
+
+      <div class="hero__copy">
+        <p class="kicker">One door / Six counters / All of it</p>
+        <h1 id="hero-title">Take a ticket.<br><em>We'll call you.</em></h1>
+        <p class="lede">
+          Council tax, housing, permits, pest control, and the allotment waiting
+          list, behind one door on Market Square. Six counters. One queue. The
+          ticket machine is by the door, and it is also this page.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#counters">Which counter? <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#book">Book instead <span aria-hidden="true">↗</span></a>
+        </div>
+        <dl class="hero__facts">
+          <div><dt>Counters</dt><dd>6</dd></div>
+          <div><dt>Visitors a day</dt><dd>~310</dd></div>
+          <div><dt>Average wait</dt><dd>11 min</dd></div>
+          <div><dt>Opens</dt><dd>08:45</dd></div>
+        </dl>
+      </div>
+
+      <figure class="board">
+        <div class="board__head">
+          <span id="board-title">Now serving / <span id="board-day">Tuesday 27 October</span></span>
+          <span class="board__live"><i aria-hidden="true"></i><span id="board-state">Open</span></span>
+        </div>
+
+        <ul class="board__streams">
+          <li class="stream">
+            <span class="stream__letter" aria-hidden="true">A</span>
+            <p class="stream__body">
+              <strong>Council tax &amp; benefits</strong>
+              <span>Counters 1—2</span>
+            </p>
+            <span class="stream__num" id="serving-a">A-214</span>
+          </li>
+          <li class="stream">
+            <span class="stream__letter" aria-hidden="true">B</span>
+            <p class="stream__body">
+              <strong>Permits &amp; passes</strong>
+              <span>Counters 3—4</span>
+            </p>
+            <span class="stream__num" id="serving-b">B-068</span>
+          </li>
+          <li class="stream">
+            <span class="stream__letter" aria-hidden="true">C</span>
+            <p class="stream__body">
+              <strong>Housing &amp; general</strong>
+              <span>Counters 5—6</span>
+            </p>
+            <span class="stream__num" id="serving-c">C-141</span>
+          </li>
+        </ul>
+
+        <div class="board__take">
+          <div class="board__field">
+            <label for="service-select">Ticket for</label>
+            <select id="service-select">
+              <option value="a">Council tax</option>
+              <option value="a">Housing benefit</option>
+              <option value="b">Blue badge renewal</option>
+              <option value="b">Bus pass</option>
+              <option value="b">Parking permit</option>
+              <option value="c">Housing repair</option>
+              <option value="c">Pest control</option>
+              <option value="c">Allotment waiting list</option>
+              <option value="c">Registrar appointment</option>
+            </select>
+          </div>
+          <button type="button" id="take-ticket">Take a ticket</button>
+        </div>
+
+        <p class="board__status" id="ticket-status" role="status">Choose a service, then take a ticket.</p>
+
+        <figcaption class="board__foot">
+          The board updates every 30 seconds and holds the last numbers of the
+          day overnight. The machine switches off at closing.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="counters" id="counters" aria-labelledby="counters-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label">01 / Counters</p>
+          <h2 id="counters-title">Three streams, six counters.</h2>
+        </div>
+        <p class="section-note">
+          Your ticket letter tells you where to sit. If you picked the wrong
+          service, tell a steward; they will swap the ticket rather than send
+          you to the back of the queue.
+        </p>
+      </header>
+
+      <div class="counters__grid">
+        <article class="counter">
+          <header class="counter__head">
+            <span class="counter__letter" aria-hidden="true">A</span>
+            <div>
+              <h3>Council tax &amp; benefits</h3>
+              <span>Counters 1—2</span>
+            </div>
+          </header>
+          <ul class="counter__list">
+            <li>Council tax bills, discounts, and single-person reduction</li>
+            <li>Housing benefit and council tax reduction</li>
+            <li>Payment arrangements, before 16:45</li>
+          </ul>
+          <p class="counter__bring"><span>Bring</span> Your bill reference, or the last four digits of your National Insurance number.</p>
+        </article>
+
+        <article class="counter">
+          <header class="counter__head">
+            <span class="counter__letter" aria-hidden="true">B</span>
+            <div>
+              <h3>Permits &amp; passes</h3>
+              <span>Counters 3—4</span>
+            </div>
+          </header>
+          <ul class="counter__list">
+            <li>Blue badge, new applications and renewals</li>
+            <li>Concessionary bus pass</li>
+            <li>Residents' parking permits and visitor books</li>
+          </ul>
+          <p class="counter__bring"><span>Bring</span> Photo ID and proof of address. Renewals: bring the old badge, and come before 15:30.</p>
+        </article>
+
+        <article class="counter">
+          <header class="counter__head">
+            <span class="counter__letter" aria-hidden="true">C</span>
+            <div>
+              <h3>Housing &amp; general</h3>
+              <span>Counters 5—6</span>
+            </div>
+          </header>
+          <ul class="counter__list">
+            <li>Housing repairs and tenancy questions</li>
+            <li>Pest control bookings</li>
+            <li>Allotment waiting list and registrar appointments</li>
+          </ul>
+          <p class="counter__bring"><span>Bring</span> Your tenancy number, or the address the repair is about. Repairs are logged here and fixed by the repair team, who ring within two working days.</p>
+        </article>
+      </div>
+
+      <div class="counters__note">
+        <div>
+          <span>Not at the counter</span>
+          <p>Payments after 16:45, marriage ceremonies, and school admissions. Admissions are handled at the Guildhall, which has its own queue and its own coffee.</p>
+        </div>
+        <div>
+          <span>Wrong stream</span>
+          <p>It happens. A steward will reissue the ticket without sending you to the back. We would rather move one ticket than argue about it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <header class="section-head">
+        <div>
+          <p class="section-label section-label--light">02 / Visit</p>
+          <h2 id="visit-title">In the room.</h2>
+        </div>
+        <p class="section-note section-note--light">
+          The building was a co-operative store until 1991, which is why the
+          ceilings are high and the doors are heavy. The queue is on the ground
+          floor; the quiet room is not.
+        </p>
+      </header>
+
+      <div class="visit__grid">
+        <div class="hours">
+          <h3>Opening hours</h3>
+          <table>
+            <caption class="visually-hidden">The Counter opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday—Wednesday</th><td>08:45—17:00</td></tr>
+              <tr><th scope="row">Thursday</th><td>08:45—18:30</td></tr>
+              <tr><th scope="row">Friday</th><td>08:45—17:00</td></tr>
+              <tr><th scope="row">Saturday</th><td>09:00—12:30</td></tr>
+              <tr><th scope="row">Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="hours__note">Saturday is permits and passes only. The last ticket is issued 20 minutes before closing, and the machine is firm about it.</p>
+        </div>
+
+        <div class="rules">
+          <h3>The house rules</h3>
+          <ul class="rules__list">
+            <li><strong>Numbers</strong><span>Your number is called three times, then the board moves on. If you miss it, take a fresh ticket; the steward will try to slot you in.</span></li>
+            <li><strong>Quiet room</strong><span>Second door on the left, no ticket needed. It is for forms, phone calls, and sitting down.</span></li>
+            <li><strong>Hearing loop</strong><span>Counters 1 and 4. Tell the steward if you would rather sign; two of them can.</span></li>
+          </ul>
+        </div>
+
+        <div class="rules">
+          <h3>Privacy and access</h3>
+          <ul class="rules__list rules__list--plain">
+            <li><strong>Privacy screens</strong><span>Every counter has one. If you need longer than a screen allows, ask for the side room.</span></li>
+            <li><strong>Step-free</strong><span>Level entrance from Market Square, lift to the first floor, accessible toilet on the ground floor.</span></li>
+            <li><strong>Children</strong><span>There is a box of pencils by the door. It has never run out, and nobody knows who refills it.</span></li>
+          </ul>
+        </div>
+
+        <div class="rules">
+          <h3>Getting here</h3>
+          <ul class="rules__list rules__list--plain">
+            <li><strong>Address</strong><span>1 Co-operative Buildings, Market Square, Barrowdale BW4 2QP.</span></li>
+            <li><strong>Buses</strong><span>2, 2A, and 9 stop on Market Square. The 9 is the one that runs late on Thursdays.</span></li>
+            <li><strong>Phone</strong><span><a href="tel:+441632960077">01632 960 077</a>, answered 09:00—16:30 on the same days the door is open.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="book" id="book" aria-labelledby="book-title">
+      <div class="book__copy">
+        <p class="section-label">03 / Book</p>
+        <h2 id="book-title">Skip the queue.</h2>
+        <p>
+          Booked appointments go straight to counters 3 and 6, which handle
+          permits, passes, and the general stream. Council tax and benefits stay
+          walk-in only; those conversations take as long as they take, and we
+          will not rush them to fit a slot.
+        </p>
+        <p class="book__note">
+          We confirm by email within one working day. If the day you want is
+          full, we will offer the next one rather than leave you guessing.
+        </p>
+      </div>
+
+      <form class="book__form" id="book-form" novalidate>
+        <div class="field">
+          <label for="book-name">Name</label>
+          <input id="book-name" name="name" type="text" autocomplete="name" placeholder="Nell Braddock" required>
+        </div>
+        <div class="field">
+          <label for="book-email">Email</label>
+          <input id="book-email" name="email" type="email" autocomplete="email" placeholder="nell@example.com" required>
+        </div>
+        <div class="field">
+          <label for="book-service">Service</label>
+          <select id="book-service" name="service">
+            <option>Blue badge renewal</option>
+            <option>Bus pass</option>
+            <option>Parking permit</option>
+            <option>Housing repair</option>
+            <option>Pest control</option>
+            <option>Registrar appointment</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="book-day">Day</label>
+          <select id="book-day" name="day">
+            <option>Any weekday morning</option>
+            <option>Any weekday afternoon</option>
+            <option>Thursday evening</option>
+            <option>Saturday morning</option>
+          </select>
+        </div>
+        <button type="submit">Request an appointment</button>
+        <p class="form__status" id="book-status" role="status">We confirm by email within one working day.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>The Counter / Barrowdale Council</span>
+    <span>53.9020° N / 2.6400° W</span>
+    <span>Civic / Service point</span>
+    <a href="../../index.html">Landing Page Atlas ↗</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

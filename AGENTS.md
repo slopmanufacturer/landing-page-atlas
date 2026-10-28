@@ -5,8 +5,8 @@ Read this before you copy a design or add one.
 
 ## What this repository is
 
-Landing Page Atlas is a catalogue of 57 self-contained landing pages across
-ten families. Nine families have six pages; Civic has three. Each design
+Landing Page Atlas is a catalogue of 60 self-contained landing pages across
+ten families. Every family has six pages. Each design
 lives in its own folder under `designs/` and contains exactly three files:
 `index.html`, `style.css`, and `script.js`.
 
@@ -77,8 +77,8 @@ with no build step, no package manager, and no shared stylesheet.
 
 ## Add a design to the atlas
 
-1. Use the next free two-digit number: `designs/58-your-name/`. A new family
-   takes the next block of six (`58`–`63`).
+1. Use the next free two-digit number: `designs/61-your-name/`. A new family
+   takes the next block of six (`61`–`66`).
 2. Create `index.html`, `style.css`, and `script.js` in that folder. Follow
    the house rules and the quality bar below.
 3. Add a 720×540 WebP thumbnail to `assets/thumbs/<folder>.webp`, under
@@ -86,7 +86,7 @@ with no build step, no package manager, and no shared stylesheet.
 4. Add an entry to the `designs` array in `script.js`:
 
    ```js
-   { folder: "58-your-name", title: "Your Name", cat: "family", tags: "Family · What it is", accent: "#c2410c" },
+   { folder: "61-your-name", title: "Your Name", cat: "family", tags: "Family · What it is", accent: "#c2410c" },
    ```
 
 5. If it is a new family, add a filter button and a palette card in
@@ -134,7 +134,7 @@ sitemap, `robots.txt`, canonical URLs, and the catalogue's structured data.
 It needs only Python 3.9+.
 
 The browser pass needs Selenium and geckodriver. It loads the gallery and all
-57 pages at 1440, 768, 390, and 320 px inside a same-origin frame, checks for
+60 pages at 1440, 768, 390, and 320 px inside a same-origin frame, checks for
 horizontal overflow and JavaScript errors, and confirms the gallery filters.
 
 Manual checks before a pull request:
