@@ -94,7 +94,7 @@ with no build step, no package manager, and no shared stylesheet.
 6. Add a `<url>` entry to `sitemap.xml` with the absolute address and today's
    `lastmod`. Copy the canonical, Open Graph, and Twitter tags from an
    existing page and change the folder name in each address.
-7. Update the counts in `index.html`, `README.md`, and `CONTRIBUTING.md` if
+7. Update the counts in `index.html`, `README.md`, and `AGENTS.md` if
    the total changes.
 8. Run both checks:
 

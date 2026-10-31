@@ -40,6 +40,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The repository moved to `vezeqs/landing-page-atlas`; every link and
   canonical URL now points at the new Pages address.
 
+### Fixed
+
+- The add-a-design checklist said to update the total in `CONTRIBUTING.md`,
+  which no longer carries one. It now names `AGENTS.md`, which does. Recorded
+  in `AUDIT.md` with the verification run.
+
 ## [1.2.0] - 2026-10-27
 
 ### Added
